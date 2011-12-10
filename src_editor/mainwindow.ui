@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/icone/gameka_icon.png</normaloff>:/icone/gameka_icon.png</iconset>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Visualizador de mapas</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Zoom:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QSlider" name="horizontalSliderZoom">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+      <property name="pageStep">
+       <number>5</number>
+      </property>
+      <property name="value">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="MainWindowWidget" name="mainWindowWidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>980</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="actionNovo_Projeto"/>
+    <addaction name="actionAbrir_Projeto"/>
+    <addaction name="actionSalvar_Projeto"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionDesfazer"/>
+    <addaction name="actionRefazer"/>
+   </widget>
+   <widget class="QMenu" name="menuProjeto">
+    <property name="title">
+     <string>Projeto</string>
+    </property>
+    <addaction name="actionRodar"/>
+    <addaction name="actionConfiguracoes"/>
+   </widget>
+   <widget class="QMenu" name="menuAjuda">
+    <property name="title">
+     <string>Ajuda</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionSobre_Qt"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuProjeto"/>
+   <addaction name="menuAjuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNovo_Projeto"/>
+   <addaction name="actionAbrir_Projeto"/>
+   <addaction name="actionSalvar_Projeto"/>
+   <addaction name="separator"/>
+   <addaction name="actionRodar"/>
+   <addaction name="separator"/>
+   <addaction name="actionDesfazer"/>
+   <addaction name="actionRefazer"/>
+   <addaction name="separator"/>
+   <addaction name="actionPintaTile"/>
+   <addaction name="actionPintaBloco"/>
+   <addaction name="actionPintaQuadrado"/>
+   <addaction name="actionApagaBloco"/>
+   <addaction name="separator"/>
+   <addaction name="actionMapMode"/>
+   <addaction name="actionObjectMode"/>
+   <addaction name="actionEventMode"/>
+   <addaction name="separator"/>
+   <addaction name="actionConfiguracoes"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionNovo_Projeto">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/document-new.png</normaloff>:/icones_interface/data/icons/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Novo Projeto</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionAbrir_Projeto">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/document-open.png</normaloff>:/icones_interface/data/icons/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir Projeto</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionSalvar_Projeto">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/document-save.png</normaloff>:/icones_interface/data/icons/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salvar Projeto</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionRodar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/media-playback-start.png</normaloff>:/icones_interface/data/icons/media-playback-start.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rodar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F10</string>
+   </property>
+  </action>
+  <action name="actionDesfazer">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/edit-undo.png</normaloff>:/icones_interface/data/icons/edit-undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Desfazer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRefazer">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/edit-redo.png</normaloff>:/icones_interface/data/icons/edit-redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refazer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionPintaTile">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/Pencil.png</normaloff>:/icones_interface/data/icons/Pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>PintaTile</string>
+   </property>
+  </action>
+  <action name="actionPintaBloco">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/paint-icons-by-simiographics/png/128/Bucket.png</normaloff>:/icones_interface/data/icons/paint-icons-by-simiographics/png/128/Bucket.png</iconset>
+   </property>
+   <property name="text">
+    <string>PintaBloco</string>
+   </property>
+  </action>
+  <action name="actionPintaQuadrado">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/lapis_selecao_quadrada.png</normaloff>:/icones_interface/data/icons/lapis_selecao_quadrada.png</iconset>
+   </property>
+   <property name="text">
+    <string>PintaQuadrado</string>
+   </property>
+  </action>
+  <action name="actionPintaCirculo">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/lapis_selecao_redonda.png</normaloff>:/icones_interface/data/icons/lapis_selecao_redonda.png</iconset>
+   </property>
+   <property name="text">
+    <string>PintaCirculo</string>
+   </property>
+  </action>
+  <action name="actionSelecionaQuadrado">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/selecao_quadrada.png</normaloff>:/icones_interface/data/icons/selecao_quadrada.png</iconset>
+   </property>
+   <property name="text">
+    <string>SelecionaQuadrado</string>
+   </property>
+  </action>
+  <action name="actionSelecaoCirculo">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/selecao_redonda.png</normaloff>:/icones_interface/data/icons/selecao_redonda.png</iconset>
+   </property>
+   <property name="text">
+    <string>SelecaoCirculo</string>
+   </property>
+  </action>
+  <action name="actionConfiguracoes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/Gear.png</normaloff>:/icones_interface/data/icons/Gear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Configurações</string>
+   </property>
+  </action>
+  <action name="actionMapMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/map_icon.png</normaloff>:/icones_interface/data/icons/map_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Modo de Mapa</string>
+   </property>
+  </action>
+  <action name="actionObjectMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/object_icon.png</normaloff>:/icones_interface/data/icons/object_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Modo de Objetos</string>
+   </property>
+  </action>
+  <action name="actionEventMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/event_icon.png</normaloff>:/icones_interface/data/icons/event_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Modo de Eventos</string>
+   </property>
+   <property name="toolTip">
+    <string>Adicione áreas com eventos/teletransportes. </string>
+   </property>
+  </action>
+  <action name="actionApagaBloco">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/icones_interface/data/icons/Trash.png</normaloff>:/icones_interface/data/icons/Trash.png</iconset>
+   </property>
+   <property name="text">
+    <string>ApagaBloco</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>Sobre o Gameka</string>
+   </property>
+  </action>
+  <action name="actionQuestion_rio_01">
+   <property name="text">
+    <string>Questionário 1</string>
+   </property>
+   <property name="toolTip">
+    <string>Questionário 1</string>
+   </property>
+  </action>
+  <action name="actionQuestion_rio_02">
+   <property name="text">
+    <string>Questionário 2</string>
+   </property>
+   <property name="toolTip">
+    <string>Questionário 2</string>
+   </property>
+  </action>
+  <action name="actionQuestion_rio_03">
+   <property name="text">
+    <string>Questionário 3</string>
+   </property>
+  </action>
+  <action name="actionQuestion_rio_4">
+   <property name="text">
+    <string>Questionário 4</string>
+   </property>
+  </action>
+  <action name="actionPersonagens">
+   <property name="text">
+    <string>Personagens</string>
+   </property>
+  </action>
+  <action name="actionPersonagens_e_monstros">
+   <property name="text">
+    <string>Personagens e monstros</string>
+   </property>
+  </action>
+  <action name="actionSobre_Qt">
+   <property name="text">
+    <string>Sobre Qt</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainWindowWidget</class>
+   <extends>QWidget</extends>
+   <header>mainwindowwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

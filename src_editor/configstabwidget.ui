@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigsTabWidget</class>
+ <widget class="QTabWidget" name="ConfigsTabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>422</width>
+    <height>304</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>TabWidget</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="ConfigsGeneralWidget" name="tab_gerais">
+   <attribute name="title">
+    <string>Iniciais</string>
+   </attribute>
+  </widget>
+  <widget class="ConfigsObjectsWidget" name="tab_objetos">
+   <attribute name="title">
+    <string>Objetos</string>
+   </attribute>
+  </widget>
+  <widget class="ConfigsTilesetWidget" name="tab_tilesets">
+   <attribute name="title">
+    <string>Tilesets</string>
+   </attribute>
+  </widget>
+  <widget class="ConfigsAnimations" name="tab_animations">
+   <attribute name="title">
+    <string>Animações</string>
+   </attribute>
+  </widget>
+  <widget class="ConfigsBackgrounds" name="tab_fundos">
+   <attribute name="title">
+    <string>Fundos</string>
+   </attribute>
+  </widget>
+  <widget class="EventsWidget" name="tab_eventos_globais">
+   <attribute name="title">
+    <string>Eventos</string>
+   </attribute>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ConfigsTilesetWidget</class>
+   <extends>QWidget</extends>
+   <header>configstilesetwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ConfigsGeneralWidget</class>
+   <extends>QWidget</extends>
+   <header>configsgeneralwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ConfigsObjectsWidget</class>
+   <extends>QWidget</extends>
+   <header>configsobjectswidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ConfigsAnimations</class>
+   <extends>QWidget</extends>
+   <header>configsanimations.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ConfigsBackgrounds</class>
+   <extends>QWidget</extends>
+   <header>configsbackgrounds.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EventsWidget</class>
+   <extends>QWidget</extends>
+   <header>eventswidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

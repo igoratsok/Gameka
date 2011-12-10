@@ -1,0 +1,54 @@
+<RCC>
+    <qresource prefix="/icones_movimentos">
+        <file>data/movement_icons/eightmovement.png</file>
+        <file>data/movement_icons/carmovement.png</file>
+        <file>data/movement_icons/bouncing_movement.png</file>
+        <file>data/movement_icons/fighting_movement.png</file>
+        <file>data/movement_icons/mouse_movement.png</file>
+        <file>data/movement_icons/platformer.png</file>
+        <file>data/movement_icons/static_movement.png</file>
+        <file>data/movement_icons/inimigo_icon.png</file>
+        <file>data/movement_icons/item_icon.png</file>
+        <file>data/movement_icons/npc_icon.png</file>
+    </qresource>
+    <qresource prefix="/icones_interface">
+        <file>data/icons/document-new.png</file>
+        <file>data/icons/document-open.png</file>
+        <file>data/icons/document-save.png</file>
+        <file>data/icons/document-save-as.png</file>
+        <file>data/icons/edit-redo.png</file>
+        <file>data/icons/edit-undo.png</file>
+        <file>data/icons/go-next.png</file>
+        <file>data/icons/go-previous.png</file>
+        <file>data/icons/lapis_selecao_quadrada.png</file>
+        <file>data/icons/lapis_selecao_redonda.png</file>
+        <file>data/icons/list-add.png</file>
+        <file>data/icons/Pencil.png</file>
+        <file>data/icons/selecao_quadrada.png</file>
+        <file>data/icons/selecao_redonda.png</file>
+        <file>data/icons/paint-icons-by-simiographics/png/128/Bucket.png</file>
+        <file>data/icons/Gear.png</file>
+        <file>data/icons/media-playback-start.png</file>
+        <file>data/icons/map_icon.png</file>
+        <file>data/icons/object_icon.png</file>
+        <file>data/icons/event_icon.png</file>
+        <file>data/icons/Trash.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>data/splash/splash.jpg</file>
+        <file>data/splash/gameka_logo.png</file>
+        <file>data/splash/gameka_logo_medium.png</file>
+    </qresource>
+    <qresource prefix="/icones_editor_eventos">
+        <file>data/event_editor_icons/new_event_icon.png</file>
+        <file>data/event_editor_icons/action_icon.png</file>
+        <file>data/event_editor_icons/condition_icon.png</file>
+        <file>data/event_editor_icons/music-icon.png</file>
+        <file>data/event_editor_icons/joystick-icon.png</file>
+        <file>data/event_editor_icons/globe-icon.png</file>
+        <file>data/event_editor_icons/clock-icon.png</file>
+    </qresource>
+    <qresource prefix="/icone">
+        <file>gameka_icon.png</file>
+    </qresource>
+</RCC>

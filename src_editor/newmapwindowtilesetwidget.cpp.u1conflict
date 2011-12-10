@@ -1,0 +1,99 @@
+#include "newmapwindowtilesetwidget.h"
+#include "ui_newmapwindowtilesetwidget.h"
+
+NewMapWindowTilesetWidget::NewMapWindowTilesetWidget(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::NewMapWindowTilesetWidget)
+{
+    ui->setupUi(this);
+
+}
+
+NewMapWindowTilesetWidget::~NewMapWindowTilesetWidget()
+{
+    delete ui;
+}
+
+void NewMapWindowTilesetWidget::changeEvent(QEvent *e)
+{
+    QWidget::changeEvent(e);
+    switch (e->type()) {
+    case QEvent::LanguageChange:
+        ui->retranslateUi(this);
+        break;
+    default:
+        break;
+    }
+}
+
+void NewMapWindowTilesetWidget::populaListaDisponiveis() {
+    GameData *gameData;
+    gameData = GameData::getInstance();
+
+    std::vector<TileSet*>* tileSetList;
+
+
+    tileSetList = gameData->tileSetList;
+
+    ui->listTilesetsDispon->clear();
+
+    for(std::vector<TileSet*>::iterator it = tileSetList->begin(); it != tileSetList->end(); ++it) {
+        TileSet *iterationItem;
+
+        iterationItem = *it;
+
+        if(std::find(map->tileSets->begin(), map->tileSets->end(), iterationItem) == map->tileSets->end()) {
+            QListWidgetItem *newItem = new QListWidgetItem();
+            newItem->setText(QString(iterationItem->name.c_str()));
+            newItem->setData(Qt::UserRole, QVariant::fromValue((void*) iterationItem));
+            ui->listTilesetsDispon->addItem(newItem);
+        }
+
+
+    }
+}
+
+void NewMapWindowTilesetWidget::populaListaEscolhidos() {
+    GameData *gameData;
+    gameData = GameData::getInstance();
+
+    std::vector<TileSet*>* tileSetList;
+
+
+    tileSetList = map->tileSets;
+
+    ui->listTilesetsEscolhidas->clear();
+
+    for(std::vector<TileSet*>::iterator it = tileSetList->begin(); it != tileSetList->end(); ++it) {
+        TileSet *iterationItem;
+
+        iterationItem = *it;
+        QListWidgetItem *newItem = new QListWidgetItem();
+        newItem->setText(QString(iterationItem->name.c_str()));
+        newItem->setData(Qt::UserRole, QVariant::fromValue((void*) iterationItem));
+        ui->listTilesetsEscolhidas->addItem(newItem);
+
+    }
+}
+
+void NewMapWindowTilesetWidget::on_pushButton_clicked()
+{
+
+    if(ui->listTilesetsDispon->currentItem() != NULL) {
+        QList<QListWidgetItem*> selectedItems = ui->listTilesetsDispon->selectedItems();
+
+        TileSet* selectedTileset = (TileSet*) ui->listTilesetsDispon->currentItem()->data(Qt::UserRole).value<void*>();
+
+
+
+        // o if abaixo verifica se o selectedTileset não está na lista de tilesets do map
+        if(std::find(map->tileSets->begin(), map->tileSets->end(), selectedTileset) == map->tileSets->end()) {
+            map->tileSets->push_back(selectedTileset);
+        }
+
+        populaListaDisponiveis();
+        populaListaEscolhidos();
+    }
+
+
+}

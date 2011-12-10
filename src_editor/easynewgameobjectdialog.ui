@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EasyNewGameObjectDialog</class>
+ <widget class="QDialog" name="EasyNewGameObjectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>448</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Gerais</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Nome:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEditName"/>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Tipo de Objeto:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QComboBox" name="comboBoxType">
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Personagem - Oito Direções</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/eightmovement.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Personagem - Carro</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/carmovement.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Personagem - Plataforma</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/platformer.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Personagem - Luta</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/fighting_movement.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Personagem - Bola de Pong</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/bouncing_movement.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Personagem - Segue mouse</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/mouse_movement.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Objeto - Estático</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/icones_movimentos/data/movement_icons/static_movement.png</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Aliado</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icones_movimentos/data/movement_icons/npc_icon.png</normaloff>:/icones_movimentos/data/movement_icons/npc_icon.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Inimigo</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icones_movimentos/data/movement_icons/inimigo_icon.png</normaloff>:/icones_movimentos/data/movement_icons/inimigo_icon.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Item</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icones_movimentos/data/movement_icons/item_icon.png</normaloff>:/icones_movimentos/data/movement_icons/item_icon.png</iconset>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Velocidade de movimentação:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QComboBox" name="comboBoxMovementType">
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Lento</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Devagar</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Rápido</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Muito rápido</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mega rápido</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Estilo de movimentação:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QComboBox" name="comboBoxMovementStyle"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Forma gráfica</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButtonEditGraphics">
+        <property name="text">
+         <string>Editar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Habilidades</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="checkBoxObjectThrow">
+        <property name="text">
+         <string>Atira objeto</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="checkBoxObjectThrowClick">
+        <property name="text">
+         <string>Atira objeto  (clique)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="checkBoxWallKick">
+        <property name="text">
+         <string>Quicar paredes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBoxSwordUse">
+        <property name="text">
+         <string>Usa espada</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QCheckBox" name="checkBoxFly">
+        <property name="text">
+         <string>Voar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="checkBoxRun">
+        <property name="text">
+         <string>Correr</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="checkBoxGlide">
+        <property name="text">
+         <string>Planar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QComboBox" name="comboBoxObjectThrow"/>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QComboBox" name="comboBoxObjectThrowClick"/>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QComboBox" name="comboBoxObjectSword"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QCheckBox" name="checkBoxDoubleJump">
+        <property name="text">
+         <string>Pulo duplo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="checkBoxJump">
+        <property name="text">
+         <string>Pulo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QCheckBox" name="checkBoxAttackLeaning">
+        <property name="text">
+         <string>Ataca encostando</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="2">
+       <widget class="QCheckBox" name="checkBoxAttackedLeaning">
+        <property name="text">
+         <string>Leva dano encostando</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

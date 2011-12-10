@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NewMapWindow</class>
+ <widget class="QDialog" name="NewMapWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>373</width>
+    <height>418</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="NewMapWindowGeneralWidget" name="tab_geral">
+      <attribute name="title">
+       <string>Gerais</string>
+      </attribute>
+     </widget>
+     <widget class="NewMapWindowTilesetWidget" name="tab_tilesets">
+      <attribute name="title">
+       <string>Tilesets</string>
+      </attribute>
+     </widget>
+     <widget class="NewMapWindowObjectWidget" name="tab_objetos">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="title">
+       <string>Objetos</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox_2">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>NewMapWindowGeneralWidget</class>
+   <extends>QWidget</extends>
+   <header>newmapwindowgeneralwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NewMapWindowTilesetWidget</class>
+   <extends>QWidget</extends>
+   <header>newmapwindowtilesetwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NewMapWindowObjectWidget</class>
+   <extends>QWidget</extends>
+   <header>newmapwindowobjectwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

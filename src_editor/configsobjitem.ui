@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigsObjItem</class>
+ <widget class="QWidget" name="ConfigsObjItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>375</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Configurações de Item</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Efeito:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="checkBoxConcedePontos">
+        <property name="text">
+         <string>Concede pontos:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QSpinBox" name="spinBoxConcedePontos">
+        <property name="minimum">
+         <number>-99</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBoxGanhaPerdeVida">
+        <property name="text">
+         <string>Ganha/perde vida:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QSpinBox" name="spinBoxGanhaPerdeVida">
+        <property name="minimum">
+         <number>-99</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="checkBoxGanhaPerdeMagia">
+        <property name="text">
+         <string>Ganha/perde magia:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QSpinBox" name="spinBoxGanhaPerdeMagia">
+        <property name="minimum">
+         <number>-99</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="checkBoxIncrementaVariavel">
+        <property name="text">
+         <string>Incrementa variável:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QComboBox" name="comboBoxIncrementaVariavel"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QCheckBox" name="checkBoxAtivaEvento">
+        <property name="text">
+         <string>Ativa evento:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="2">
+       <widget class="QComboBox" name="comboBoxAtivaEvento"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="checkBoxConcedeHabilidade">
+        <property name="text">
+         <string>Concede habilidade:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="2">
+       <widget class="QComboBox" name="comboBoxConcedeHabilidade"/>
+      </item>
+      <item row="7" column="0" colspan="3">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>*use valores negativos para PERDER vida, pontos, magia, etc</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ao encostar no personagem:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="3">
+       <widget class="QRadioButton" name="radioButtonAtivaEfeitoImediatamente">
+        <property name="text">
+         <string>Ativa o efeito do item imediatamente</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0" colspan="4">
+       <widget class="QRadioButton" name="radioButtonEnviaInventario">
+        <property name="text">
+         <string>Envia para o inventario, onde pode ser usado</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Comportamento:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="labelMovimentacao">
+        <property name="text">
+         <string>Movimentação:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1" colspan="3">
+       <widget class="QComboBox" name="comboMovimentacaoItem"/>
+      </item>
+      <item row="13" column="0" colspan="3">
+       <widget class="QCheckBox" name="checkBoxComportamentoDesapareceEncPers">
+        <property name="text">
+         <string>Desaparece ao encostar em personagem</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0" colspan="3">
+       <widget class="QCheckBox" name="checkBoxComportamentoDesapareceEncParedes">
+        <property name="text">
+         <string>Desaparece ao encostar em paredes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QSpinBox" name="spinBoxIncrementaVariavel">
+        <property name="minimum">
+         <number>-99</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

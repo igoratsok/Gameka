@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigsObjNpcBehaviorWidget</class>
+ <widget class="QWidget" name="ConfigsObjNpcBehaviorWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>479</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBoxNPC">
+     <property name="maximumSize">
+      <size>
+       <width>350</width>
+       <height>99999</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Comportamento de NPC</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Forma de movimentação:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QComboBox" name="comboBoxFormaMovimentacaoNpc">
+        <item>
+         <property name="text">
+          <string>Parado</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Segue personagem</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Foge do personagem</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Move esquerda/direita</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Move cima/baixo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Movimento circular</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Velocidade de movimentação:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="spinBoxVelocidadeMovimentacao"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>Raio de movimentação</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="spinBoxRaioMovimentacao"/>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Movimenta apenas quando dentro da tela</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBoxInimigo">
+     <property name="maximumSize">
+      <size>
+       <width>350</width>
+       <height>9999999</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Comportamento de Inimigo</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Formas de derrotar:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="checkBoxDerrotaEncostandoInimigo">
+        <property name="text">
+         <string>Encostando no inimigo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkBoxDerrotaAtirandoItemMagia">
+        <property name="text">
+         <string>Atirando item/magia sobre inimigo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="checkBoxDerrotaAcertandoEspada">
+        <property name="text">
+         <string>Acertando espada sobre inimigo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="3">
+       <widget class="QCheckBox" name="checkBoxDerrotaPulandoSobre">
+        <property name="text">
+         <string>Pulando sobre inimigo (caso do objeto de plataforma)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Formas de ataque:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="checkBoxAtacaEncostaNoPersonagem">
+        <property name="text">
+         <string>Encosta no personagem</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Dano*:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QSpinBox" name="spinBoxDanoEncostaPersonagem"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QCheckBox" name="checkBoxAtacaUsaEspada">
+        <property name="text">
+         <string>Usa espada</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Dano*:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QSpinBox" name="spinBoxDanoUsaEspada"/>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>Item:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="2">
+       <widget class="QComboBox" name="comboBoxItemEspada"/>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkBoxAtacaAtiraItemMagiaDirEstiver">
+        <property name="text">
+         <string>Atira item/magia direção que estiver</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Item:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <widget class="QComboBox" name="comboBoxItemDirecaoEstiver"/>
+      </item>
+      <item row="11" column="0" colspan="3">
+       <widget class="QCheckBox" name="checkBoxAtacaAtiraItemMagiaDirPers">
+        <property name="text">
+         <string>Atira item/magia direção do personagem principal</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Item:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QComboBox" name="comboBoxItemDirecaoPersonagem"/>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Periodicidade de ataque (segundos):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="2">
+       <widget class="QDoubleSpinBox" name="spinBoxPeriodicidade">
+        <property name="minimum">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>Custo de magia:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="2">
+       <widget class="QSpinBox" name="spinBoxMagicCost"/>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>* atençao: o dano é multiplicado pelo ataque do inimigo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ao derrotar:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="0" rowspan="2">
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>XP concedido ao derrotar:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="2">
+       <widget class="QSpinBox" name="spinBoxExperiencePoints"/>
+      </item>
+      <item row="18" column="2" rowspan="2">
+       <widget class="QSpinBox" name="spinBoxPontosDerrotar"/>
+      </item>
+      <item row="19" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string>Pontos concedidos ao derrotar:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

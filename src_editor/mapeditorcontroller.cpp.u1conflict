@@ -1,0 +1,164 @@
+#include "mapeditorcontroller.h"
+
+MapEditorController::MapEditorController()
+{
+}
+
+void MapEditorController::setMainController(MainController *mainController)
+{
+    this->mainController = mainController;
+}
+
+
+void MapEditorController::init(MainWindow *mainWindow, QWidget *parent, QVBoxLayout *layout)
+{
+    this->mainWindow = mainWindow;
+
+    /* criando as docks */
+    tilesetDock = new TilesetDock(mainWindow, this);
+    mapSelectDock = new MapSelectDock(mainWindow, this);
+    objectsDock = new ObjectsDock(mainWindow, this);
+
+
+    mainWindow->addDockWidget(Qt::LeftDockWidgetArea, tilesetDock);
+    mainWindow->addDockWidget(Qt::LeftDockWidgetArea, mapSelectDock);
+    mainWindow->addDockWidget(Qt::RightDockWidgetArea, objectsDock);
+
+    /* criando o mapView e o mapScene */
+    tilemapView = new TilemapView(parent);
+    layout->addWidget(tilemapView);
+
+
+    tilemapView->hide();
+    mapSelectDock->widget->hide();
+
+
+}
+
+void MapEditorController::initMapScene() {
+    GameData *gameData = GameData::getInstance();
+
+    if(gameData->editingMap != NULL) {
+        tilemapScene = new TilemapScene(32, gameData->editingMap->width, gameData->editingMap->height, this);
+        tilemapView->setScene(tilemapScene);
+        tilemapView->setAlignment(Qt::AlignLeft);
+        tilemapView->horizontalScrollBar()->setValue(tilemapView->horizontalScrollBar()->minimum());
+
+        tilemapView->show();
+        initTileScene();
+    }
+
+}
+
+void MapEditorController::initTileScene() {
+    tilesetDock->initTileSetScene();
+}
+
+void MapEditorController::initMapSelectScene() {
+    mapSelectDock->widget->show();
+}
+
+void MapEditorController::setDrawTile(int iDrawTile, int jDrawTile, int diDrawTile, int djDrawTile) {
+    this->iDrawTile = iDrawTile;
+    this->jDrawTile = jDrawTile;
+    this->diDrawTile = diDrawTile;
+    this->djDrawTile = djDrawTile;
+
+    tilemapScene->setSelectionRectangleSize(diDrawTile, djDrawTile);
+
+}
+
+void MapEditorController::changeTile(int i, int j) {
+    int m, n;
+    GameData *gameData = GameData::getInstance();
+
+    // printf("%d %d %d %d %d %d", i, j, iTile, jTile, diTile, djTile);
+    for(m = 0; m <= diDrawTile; m++) {
+        for(n = 0; n <= djDrawTile; n++) {
+            tilemapScene->changeTile(i + m, j + n, iDrawTile + m, jDrawTile + n);
+            if(i + m < gameData->editingMap->height &&
+               j + n < gameData->editingMap->width && i + m >= 0 && j + n >= 0) {
+                gameData->editingMap->map[i + m][j + n][0].x = iDrawTile + m;
+                gameData->editingMap->map[i + m][j + n][0].y = jDrawTile + n;
+            }
+
+        }
+    }
+
+    tilemapView->update();
+    tilemapScene->update();
+
+
+}
+
+void MapEditorController::openNewMapWindow() {
+    newMapWindow = new NewMapWindow(this, mainWindow);
+    newMapWindow->setWindowTitle("Novo Mapa");
+    newMapWindow->setModal(true);
+    newMapWindow->setVisible(true);
+}
+
+void MapEditorController::createNewMap(Map *newMap) {
+    GameData *gameData = GameData::getInstance();
+    Map *mapaSelecionado;
+
+    mapaSelecionado = mapSelectDock->getMapaSelecionado();
+
+
+    if((mapaSelecionado == NULL) || ((mapaSelecionado != NULL) && (mapaSelecionado->filhos == NULL))) {
+        gameData->mapList->push_back(newMap);
+    } else {
+        mapaSelecionado->filhos->push_back(newMap);
+    }
+
+    mapSelectDock->populaArvore();
+
+    if(newMap->filhos == NULL) {
+        gameData->editingMap = newMap;
+        initMapScene();
+    }
+
+
+}
+
+void MapEditorController::createFolder() {
+    GameData* gameData = GameData::getInstance();
+
+    Map *newFolder;
+    Map *mapaSelecionado;
+
+    bool ok;
+
+    QString text = QInputDialog::getText(mainWindow, *(new QString("Nova pasta")),
+                                         *(new QString("Nome:")), QLineEdit::Normal,
+                                            *(new QString("")), &ok);
+
+    if(ok && !text.isEmpty()) {
+        newFolder = new Map(text.toStdString(), new std::vector<Map*>());
+
+        mapaSelecionado = mapSelectDock->getMapaSelecionado();
+
+        if((mapaSelecionado == NULL) || ((mapaSelecionado != NULL) && (mapaSelecionado->filhos == NULL))) {
+            gameData->mapList->push_back(newFolder);
+        } else {
+            mapaSelecionado->filhos->push_back(newFolder);
+        }
+
+        mapSelectDock->populaArvore();
+    }
+
+
+}
+
+void MapEditorController::selectMap(Map *map) {
+    GameData *gameData = GameData::getInstance();
+
+    gameData->editingMap = map;
+
+    initMapScene();
+
+}
+
+Map* MapEditorController::getSelectedMap() {
+    return mapSelectDock->getMapaSelecionado();
+}
