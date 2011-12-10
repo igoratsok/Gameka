@@ -188,6 +188,7 @@ private slots:
     void on_toolButtonColorkey_pressed();
     void on_toolButtonColorkeyX_pressed();
     void on_removeButton_pressed();
+    void on_pushButtonChangeImage_pressed();
 };
 
 #endif // CONFIGSANIMATIONS_H

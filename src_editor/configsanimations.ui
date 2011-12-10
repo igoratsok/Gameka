@@ -249,6 +249,13 @@
         </property>
        </widget>
       </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButtonChangeImage">
+        <property name="text">
+         <string>Trocar imagem da animação</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>

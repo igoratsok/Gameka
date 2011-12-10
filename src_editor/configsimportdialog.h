@@ -120,6 +120,7 @@ public:
     static const int IMPORT_BACKGROUND = 4; /**< Impotação de fundos, para usar em importType. */
     static const int IMPORT_LAYER = 5; /**< Importação de camadas, para usar em importType. */
     static const int IMPORT_RETURN_EXEC = 6; /**< Importação a ser retornada uma string, para usar em importType. */
+    static const int REIMPORT_ANIMATION = 7; /**< Reimportação a ser retornada uma string, para usar em importType. */
 
 private:
     Ui::ConfigsImportDialog *ui; /**<  */

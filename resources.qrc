@@ -26,13 +26,13 @@
         <file>data/icons/Pencil.png</file>
         <file>data/icons/selecao_quadrada.png</file>
         <file>data/icons/selecao_redonda.png</file>
-        <file>data/icons/Bucket.png</file>
         <file>data/icons/Gear.png</file>
         <file>data/icons/media-playback-start.png</file>
         <file>data/icons/map_icon.png</file>
         <file>data/icons/object_icon.png</file>
         <file>data/icons/event_icon.png</file>
         <file>data/icons/Trash.png</file>
+        <file>data/icons/Bucket.png</file>
     </qresource>
     <qresource prefix="/images">
         <file>data/splash/splash.jpg</file>

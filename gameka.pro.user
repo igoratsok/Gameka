@@ -36,7 +36,7 @@
    <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Target.DesktopTarget</value>
    <value key="ProjectExplorer.Target.ActiveBuildConfiguration" type="int">3</value>
    <value key="ProjectExplorer.Target.ActiveDeployConfiguration" type="int">0</value>
-   <value key="ProjectExplorer.Target.ActiveRunConfiguration" type="int">1</value>
+   <value key="ProjectExplorer.Target.ActiveRunConfiguration" type="int">0</value>
    <valuemap key="ProjectExplorer.Target.BuildConfiguration.0" type="QVariantMap">
     <value key="ProjectExplorer.BuildCOnfiguration.ToolChain" type="QString">ProjectExplorer.ToolChain.Gcc:/usr/bin/g++.x86-linux-generic-elf-32bit.</value>
     <valuemap key="ProjectExplorer.BuildConfiguration.BuildStepList.0" type="QVariantMap">

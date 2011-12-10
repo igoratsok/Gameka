@@ -341,3 +341,24 @@ void ConfigsAnimations::on_removeButton_pressed()
 
 }
 
+
+void ConfigsAnimations::on_pushButtonChangeImage_pressed()
+{
+    ConfigsImportDialog *configsImportDialog;
+    configsImportDialog = new ConfigsImportDialog(optionsController, ConfigsImportDialog::REIMPORT_ANIMATION,
+                                                  this);
+
+    configsImportDialog->exec();
+    std::string *returnString = configsImportDialog->getReturnString();
+
+    if(returnString != NULL) {
+
+
+        currentAnimationData->fileName = std::string("animations/").append(*returnString);
+        delete returnString;
+
+        animationsGraphicsScene->addAnimationData(currentAnimationData);
+
+        ui->graphicsView->setScene(animationsGraphicsScene);
+    }
+}

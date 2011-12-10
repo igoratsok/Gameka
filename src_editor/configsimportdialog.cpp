@@ -112,6 +112,11 @@ void ConfigsImportDialog::populaLista() {
         filters << "*.png" << "*.jpg" << "*.gif" << "*.bmp";
 
         break;
+    case REIMPORT_ANIMATION:
+        dir = new QDir(gameData->getProjectDirectory().append("/animations/").c_str());
+        filters << "*.png" << "*.jpg" << "*.gif" << "*.bmp";
+
+        break;
     }
 
 
@@ -156,6 +161,9 @@ void ConfigsImportDialog::on_botaoSelecionar_clicked()
             break;
 
         case IMPORT_LAYER:
+            returnString = new std::string(ui->listWidget->currentItem()->text().toStdString().c_str());
+            break;
+        case REIMPORT_ANIMATION:
             returnString = new std::string(ui->listWidget->currentItem()->text().toStdString().c_str());
             break;
         }
@@ -221,6 +229,9 @@ void ConfigsImportDialog::on_listWidget_currentItemChanged(QListWidgetItem* curr
             break;
         case IMPORT_LAYER:
             diretorio = gameData->getProjectDirectory().append("/images/");
+            break;
+        case REIMPORT_ANIMATION:
+            diretorio = gameData->getProjectDirectory().append("/animations/");
             break;
         }
 
