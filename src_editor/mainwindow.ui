@@ -277,7 +277,7 @@
    </property>
    <property name="icon">
     <iconset resource="../resources.qrc">
-     <normaloff>:/icones_interface/data/icons/paint-icons-by-simiographics/png/128/Bucket.png</normaloff>:/icones_interface/data/icons/paint-icons-by-simiographics/png/128/Bucket.png</iconset>
+     <normaloff>:/icones_interface/data/icons/Bucket.png</normaloff>:/icones_interface/data/icons/Bucket.png</iconset>
    </property>
    <property name="text">
     <string>PintaBloco</string>
