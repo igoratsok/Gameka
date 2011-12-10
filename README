@@ -1,0 +1,41 @@
+Gameka: A game development tool for non-programmers
+Copyright (C) 2011 Igor Augusto de Faria Costa
+
+This is Gameka, an open-source multiplatform game creator for non-programmers. It is written in C++ 
+and uses frameworks like SDL/Qt. It's licensed under LGPL.
+
+== Dependencies ==
+Gameka depencies are:
+ - SDL ( >= 1.2.14) (http://www.libsdl.org/)
+ - SDL_image ( >= 1.2.10) (http://www.libsdl.org/projects/SDL_image/)
+ - SDL_ttf ( >= 2.0) (http://www.libsdl.org/projects/SDL_ttf/)
+ - SDL_gfx ( >= 2.0.22) (http://www.ferzkopp.net/joomla/content/view/19/14/)
+ - SDL_mixer ( >= 1.2.11) (http://www.libsdl.org/projects/SDL_mixer/)
+ - Boost ( >= 1.47.0) (http://www.boost.org/)
+ - Qt ( >= 4.7.3) (http://qt.nokia.com/products/)
+
+=== Installation ==
+Open the project (gameka.pro) in Qt Creator (http://qt.nokia.com/products/developer-tools/) and
+build it. It will create two binaries: 
+1. gameka_windows or gameka_linux or gameka_mac (depending on your OS), which is the gameka itself.
+2. runtime_linux or runtime_mac or runtime_w32 (depending on your OS), which is the runtime.
+
+Copy the editor to the project root; and copy the runtime to data/project_data/runtime-common. Run.
+
+=== Credits ===
+
+Development: Ígor Augusto de Faria Costa 
+Orientation: Profª Drª Carla Denise Castanho 
+Educational assistance Alessandra Silva de Souza 
+
+Colaboration:
+Tilesets: 
+- Silveira Neto 
+- Kevin Hansen
+
+Icons:
+Mihaiciuc Bogdan 
+
+Special thanks:
+Júlio César Kiyuna Higa (por ajudar a compilar a ferramenta no Mac OSX...)
+

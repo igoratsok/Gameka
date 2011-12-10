@@ -1,5 +1,8 @@
 TEMPLATE = app
-TARGET = ../gameka
+unix:!macx:TARGET = ../gameka_linux
+macx:TARGET = ../gameka_mac
+win32:TARGET = ../gameka_windows
+
 INCLUDEPATH += .
 QT += core \
     gui \

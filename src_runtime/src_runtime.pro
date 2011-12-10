@@ -8,7 +8,9 @@ QT       -= core
 
 QT       -= gui
 
-TARGET = ../runtime
+unix:!macx:TARGET = ../runtime_linux
+macx:TARGET = ../runtime_mac
+win32:TARGET = ../runtime_w32
 CONFIG   += console
 CONFIG   -= app_bundle
 
