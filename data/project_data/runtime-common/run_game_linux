@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+LIBS=./libs
+BIN=./game_linux
+
+# Run Gameka
+export LD_LIBRARY_PATH=$LIBS:"$LD_LIBRARY_PATH"
+$BIN $@
+
+
