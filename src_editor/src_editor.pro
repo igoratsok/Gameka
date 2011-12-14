@@ -102,7 +102,10 @@ HEADERS += maincontroller.h \
     dataloader.h \
     imagecolorpicker.h \
     imagecolorpickerscene.h \
-    welcomescreen.h
+    welcomescreen.h \
+    updatemanagerwindow.h \
+    updatemanagercontroller.h \
+    updatefilepair.h
 SOURCES += main.cpp \
     maincontroller.cpp \
     mapeditorcontroller.cpp \
@@ -193,7 +196,10 @@ SOURCES += main.cpp \
     dataloader.cpp \
     imagecolorpicker.cpp \
     imagecolorpickerscene.cpp \
-    welcomescreen.cpp
+    welcomescreen.cpp \
+    updatemanagerwindow.cpp \
+    updatemanagercontroller.cpp \
+    updatefilepair.cpp
 FORMS += mainwindow.ui \
     newprojectwindow.ui \
     configstabwidget.ui \
@@ -230,7 +236,8 @@ FORMS += mainwindow.ui \
     newdialoguedialog.ui \
     about.ui \
     imagecolorpicker.ui \
-    welcomescreen.ui
+    welcomescreen.ui \
+    updatemanagerwindow.ui
 
 
 TRANSLATIONS = ../translations/gameka_tr_en.qph
