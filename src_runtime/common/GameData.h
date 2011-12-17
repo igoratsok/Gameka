@@ -150,6 +150,7 @@ public:
     void clearInstancesFromClasses();
 
     static int MAGIC_NUMBER;
+    static int SOFTWARE_CURRENT_VERSION;
 
     int version;
 

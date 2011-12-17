@@ -79,6 +79,8 @@ public:
     static GameData *getInstance();
 
     static int MAGIC_NUMBER; /**< Número mágico */
+    static int SOFTWARE_CURRENT_VERSION;
+
     int version; /**< Versão. */
 
     std::string *gameName; /**< Nome do jogo. */
@@ -259,6 +261,19 @@ public:
     bool verifyObjectUsedAtEventsById(int id, std::list<EventData*> eventList);
     void removeObject(GameObject *gameObject);
 
+
+    /**
+     * @brief Verifica se um mapa está sendo utilizado.
+     *
+     * @return  true,   caso esteja sendo utilizado;
+     *          false,  caso contrário.
+     */
+    bool verifyIfMapUsedById(int id);
+    bool verifyIfMapUsedAtMapListById(int id, std::vector<Map*>* mapList);
+    bool verifyIfMapUsedAtEventsById(int id, std::list<EventData*> eventList);
+    void removeMap(int id, std::vector<Map*>* mapList = 0);
+
+
     /**
      * @brief Verifica se um Tileset foi usado. Retorna o mapa em que foi usado.
      *
@@ -286,6 +301,8 @@ public:
      *
      */
     int generateNewMapId();
+
+    Map* searchAnyMap(std::vector<Map*> *mapList = 0);
 
     static const int DEATH_ACTION_RESET_MAP = 0; /**<  */
     static const int DEATH_ACTION_RESET_GAME = 1; /**< */

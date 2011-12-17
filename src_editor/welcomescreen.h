@@ -41,6 +41,8 @@ private slots:
 
     void on_listWidget_2_currentTextChanged(const QString &currentText);
 
+    void on_pushButtonUpdate_pressed();
+
 private:
     Ui::WelcomeScreen *ui;
     MainController *mainController;

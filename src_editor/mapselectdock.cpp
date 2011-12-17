@@ -96,6 +96,7 @@ MapSelectDock::MapSelectDock(QWidget *parent, MapEditorController *mapEditorCont
     QObject::connect(botaoCriaPasta, SIGNAL(clicked()), this, SLOT(botaoCriaPastaClicked()));
     QObject::connect(treeWidget, SIGNAL(itemClicked(QTreeWidgetItem*,int)), this, SLOT(treeWidgetItemClicked(QTreeWidgetItem*,int)));
     QObject::connect(botaoEditaMapa, SIGNAL(clicked()), this, SLOT(botaoEditaMapaClicked()));
+    QObject::connect(botaoDeletaMapa, SIGNAL(clicked()), this, SLOT(botaoDeletaMapaClicked()));
 
     hboxLayout->addWidget(botaoCriaMapa);
     hboxLayout->addWidget(botaoEditaMapa);
@@ -206,5 +207,27 @@ void MapSelectDock::treeWidgetItemClicked(QTreeWidgetItem *item, int index) {
 void MapSelectDock::botaoEditaMapaClicked() {
     if(treeWidget->currentItem() != NULL) {
         mapEditorController->openEditMapWindow((Map*) treeWidget->currentItem()->data(0, Qt::UserRole).value<void*>());
+    }
+}
+
+void MapSelectDock::botaoDeletaMapaClicked() {
+    GameData *gameData = GameData::getInstance();
+    if(treeWidget->currentItem() != NULL) {
+        Map *currentMap = (Map*) treeWidget->currentItem()->data(0, Qt::UserRole).value<void*>();
+
+        if(currentMap != NULL && !currentMap->isFolder()) {
+            if(MessageBoxes::showConfirmBox(QString::fromUtf8("Deseja remover o mapa?").toStdString())) {
+                if(gameData->verifyIfMapUsedById(currentMap->id)) {
+                    MessageBoxes::showMessageBox(QString::fromUtf8("Não é possível deletar o mapa, pois ele é referenciado em outro lugar."));
+                } else {
+                    gameData->removeMap(currentMap->id);
+                    populaArvore();
+                    mapEditorController->selectMap(NULL);
+                }
+            }
+
+        } else {
+            MessageBoxes::showMessageBox(QString::fromUtf8("Ainda não é possível deletar pastas."));
+        }
     }
 }

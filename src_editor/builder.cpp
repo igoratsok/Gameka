@@ -33,17 +33,20 @@ MainController* Builder::build()
     MapEditorController *mapEditorController;
     OptionsController *optionsController;
     WizardController *wizardController;
+    UpdateManagerController *updateManagerController;
 
     mainController = new MainController();
     eventsEditorController = new EventsEditorController();
     mapEditorController = new MapEditorController();
     optionsController = new OptionsController();
     wizardController = new WizardController();
+    updateManagerController = new UpdateManagerController();
 
     mainController->setEventsEditorController(eventsEditorController);
     mainController->setMapEditorController(mapEditorController);
     mainController->setOptionsController(optionsController);
     mainController->setWizardController(wizardController);
+    mainController->setUpdateManagerController(updateManagerController);
 
 
     eventsEditorController->setMainController(mainController);

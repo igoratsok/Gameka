@@ -135,3 +135,8 @@ void WelcomeScreen::on_listWidget_2_currentTextChanged(const QString &currentTex
 void WelcomeScreen::openNewProjectWindow() {
     mainController->openNewProjectWindow(ui->lineEdit->text(), this);
 }
+
+void WelcomeScreen::on_pushButtonUpdate_pressed()
+{
+    mainController->openUpdateManagerWindow();
+}

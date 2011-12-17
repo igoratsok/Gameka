@@ -21,8 +21,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include "GameData.h"
 
+int GameData::SOFTWARE_CURRENT_VERSION = 0;
 int GameData::MAGIC_NUMBER = 0xAFACABBE;
 GameData *GameData::singleton = NULL;
+
 
 GameData::GameData() {
 	// TODO Auto-generated constructor stub
@@ -31,6 +33,7 @@ GameData::GameData() {
 	nextMap = NULL;
 	gameObjectsToCreate = new std::list<GameObjectCreationData*>();
 	variableList = new std::vector<VariableData*>();
+
 }
 
 GameData::~GameData() {

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Gameka</string>
   </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -145,14 +148,14 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>330</x>
      <y>160</y>
-     <width>81</width>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>v 0.9.2 &quot;Naka&quot;</string>
+    <string>v 0.9.2 &quot;Nakamura&quot;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -169,6 +172,45 @@
    </property>
    <property name="text">
     <string>Deletar Projeto</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonUpdate">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>250</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atualizar!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>230</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+     <stylestrategy>PreferDefault</stylestrategy>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 0, 0)</string>
+   </property>
+   <property name="text">
+    <string>Atualização disponível!</string>
    </property>
   </widget>
  </widget>

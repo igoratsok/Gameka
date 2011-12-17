@@ -126,6 +126,10 @@ void MapEditorController::initMapScene() {
 
 }
 
+void MapEditorController::turnOffMapScene() {
+    tilemapView->setVisible(false);
+}
+
 void MapEditorController::initTileScene() {
     tilesetDock->initTileSetScene();
     tileSceneInitializated = true;
@@ -695,13 +699,19 @@ void MapEditorController::createFolder() {
 void MapEditorController::selectMap(Map *map) {
     GameData *gameData = GameData::getInstance();
 
-    // só muda se NÃO for pasta
-    if(map->filhos == NULL) {
-        gameData->editingMap = map;
+    if(map == NULL) {
+        turnOffMapScene();
+    } else {
+        // só muda se NÃO for pasta
+        if(map->filhos == NULL) {
+            gameData->editingMap = map;
 
-        objectsDock->populaArvoreObjetos();
-        initMapScene();
+            objectsDock->populaArvoreObjetos();
+            initMapScene();
+        }
     }
+
+
 
 
 }

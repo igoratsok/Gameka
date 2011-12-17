@@ -48,6 +48,10 @@ void MainController::setWizardController(WizardController *wizardController)
     this->wizardController = wizardController;
 }
 
+void MainController::setUpdateManagerController(UpdateManagerController *updateManagerController) {
+    this->updateManagerController = updateManagerController;
+}
+
 
 
 void MainController::init()
@@ -71,12 +75,14 @@ void MainController::init()
 
 
     mapEditorController->init(mainWindow, mainWindow->getMainWindowWidget(), layout);
-    splash->finish(mainWindow);
+
 
     //mainWindow->show();
 
     welcomeScreen = new WelcomeScreen(mainWindow);
     welcomeScreen->setMainController(this);
+
+    splash->finish(mainWindow);
     welcomeScreen->exec();
 
 
@@ -604,4 +610,8 @@ void MainController::setEditorZoom(int zoom) {
 
 void MainController::enableZoomBar() {
     mainWindow->enableZoomBar();
+}
+
+void MainController::openUpdateManagerWindow() {
+    updateManagerController->openUpdateManagerWindow();
 }

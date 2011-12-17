@@ -249,6 +249,14 @@ public:
      */
     bool verifyIfOnlyOneAnimation();
 
+    /**
+     * @brief Verifica se o objeto possui apenas uma animação em "Parado".
+     *
+     * @return  true,   caso ele tenha apenas um AnimationData e nenhum Sprite;
+     *          false,  caso contrário.
+     */
+    bool verifyIfOnlyOneAnimationStopped();
+
 
 
 

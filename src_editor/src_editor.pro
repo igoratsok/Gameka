@@ -6,7 +6,8 @@ win32:TARGET = ../gameka_windows
 INCLUDEPATH += .
 QT += core \
     gui \
-    xml
+    xml \
+    network
 
 
 MOC_DIR = .moc

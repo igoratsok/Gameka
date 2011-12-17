@@ -42,10 +42,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include "mapeditorcontroller.h"
 #include "gamedata.h"
 #include "map.h"
+#include "messageboxes.h"
 
 class MapEditorController;
 class GameData;
 class Map;
+class MessageBoxes;
 
 
 /**
@@ -120,6 +122,9 @@ private slots:
      *
      */
     void botaoEditaMapaClicked();
+
+    void botaoDeletaMapaClicked();
+
     /**
      * @brief
      *

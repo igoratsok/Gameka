@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include "gamedata.h"
 
-
+int GameData::SOFTWARE_CURRENT_VERSION = 0;
 int GameData::MAGIC_NUMBER = 0xAFACABBE;
 GameData* GameData::singleton = NULL;
 
@@ -65,6 +65,8 @@ GameData::GameData()
     procedureGlobalEnd = new ProcedureData();
     procedureGlobalEnd->name = QString::fromUtf8("Fim do jogo").toStdString();
     procedureGlobalEnd->nameEditable = false;
+
+    version = SOFTWARE_CURRENT_VERSION;
 
 }
 
@@ -292,6 +294,123 @@ bool GameData::verifyObjectUsedAtEventsById(int id, std::list<EventData*> eventL
     return false;
 }
 
+bool GameData::verifyIfMapUsedById(int id) {
+
+
+    // verifica os procedimentos
+    if(verifyIfMapUsedAtEventsById(id, procedureGlobalAlways->events)) {
+        return true;
+    }
+
+    if(verifyIfMapUsedAtEventsById(id, procedureGlobalStart->events)) {
+        return true;
+    }
+
+    if(verifyIfMapUsedAtEventsById(id, procedureGlobalEnd->events)) {
+        return true;
+    }
+
+    foreach(ProcedureData *procedure, *procedureList) {
+        if(verifyIfMapUsedAtEventsById(id, procedure->events)) {
+            return true;
+        }
+    }
+
+    // verifica nos objetos
+    foreach(GameObject *gameObject, *objectList) {
+
+        // verifica nos procedimentos do objeto
+        if(verifyIfMapUsedAtEventsById(id, gameObject->procedureGlobalAlways->events)) {
+            return true;
+        }
+
+        if(verifyIfMapUsedAtEventsById(id, gameObject->procedureGlobalEnd->events)) {
+            return true;
+        }
+
+        if(verifyIfMapUsedAtEventsById(id, gameObject->procedureGlobalStart->events)) {
+            return true;
+        }
+
+        foreach(ProcedureData *procedure, *gameObject->procedureList) {
+            if(verifyIfMapUsedAtEventsById(id, procedure->events)) {
+                return true;
+            }
+        }
+
+
+    }
+
+    // verifica se é usado em um evento de teletransporte
+    if(verifyIfMapUsedAtMapListById(id, mapList)) {
+        return true;
+    }
+
+    return false;
+}
+
+bool GameData::verifyIfMapUsedAtMapListById(int id, std::vector<Map*>* mapList) {
+
+    foreach(Map *map, *mapList) {
+        if(map->id != id) {
+
+
+            if(map->isFolder()) {
+                verifyIfMapUsedAtMapListById(id, map->filhos);
+            } else {
+                if(map->teleportAreas != NULL) {
+                    foreach(TeleportArea *teleportArea, *map->teleportAreas) {
+                        if(teleportArea->mapId == id) {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    return false;
+}
+
+bool GameData::verifyIfMapUsedAtEventsById(int id, std::list<EventData*> eventList) {
+    foreach(EventData *eventData, eventList) {
+        if(eventData->type == 1 && eventData->opcode == EventComboDataProvider::ACTION_SET_MAP) {
+            if((int)eventData->value01 == id) {
+                return true;
+            }
+        } else if(eventData->type == 0 && eventData->opcode == EventComboDataProvider::COND_IS_CURRENT_MAP) {
+            if((int)eventData->value01 == id) {
+                return true;
+            }
+        }
+
+
+        if(!eventData->subEvents.empty()) {
+            if(verifyIfMapUsedAtEventsById(id, eventData->subEvents)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+void GameData::removeMap(int id, std::vector<Map*>* mapList) {
+    if(mapList == NULL) {
+        mapList = this->mapList;
+    }
+
+    foreach(Map *map, *mapList) {
+        if(!map->isFolder() && map->id == id) {
+            mapList->erase(std::find(mapList->begin(), mapList->end(), map));
+            idFirstMap = 0;
+
+        }
+    }
+
+}
+
 Map* GameData::verifyTilesetUsed(int id) {
     foreach(Map *map, *mapList) {
         for(int i = 0; i < map->width; i++) {
@@ -372,7 +491,7 @@ bool GameData::verifyAnimationUsedOnlyOnce(int id) {
                 AnimationData *currentAnimation = goa->animations->at(i);
                 if(currentAnimation != NULL) {
                     if(currentAnimation->id == id) {
-                        if(gameObject->verifyIfOnlyOneAnimation()) {
+                        if(gameObject->verifyIfOnlyOneAnimationStopped()) {
                             return true;
                         }
                     }
@@ -420,6 +539,7 @@ void GameData::removeAnimation(AnimationData *animationData) {
                 if(currentAnimation != NULL) {
                     if(currentAnimation->id == animationData->id) {
                         goa->animations->at(i) = NULL;
+                        goa->types->at(i) = 0;
                     }
                 }
             }
@@ -634,3 +754,11 @@ void GameData::setGameOverScreenFile(std::string fileName) {
 }
 
 
+Map* GameData::searchAnyMap(std::vector<Map *> *mapList) {
+    if(mapList == NULL) {
+        mapList = this->mapList;
+    }
+
+    // depois continuo a implementar
+    return NULL;
+}

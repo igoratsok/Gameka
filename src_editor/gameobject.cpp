@@ -355,10 +355,10 @@ bool GameObject::verifyIfOnlyOneAnimation() {
     int animationCount = 0;
     foreach(GameObjectAnimation *goa, *gameObjectAnimations) {
         for(int i = 0; i < 32; i++) {
-            if(goa->sprites->at(i) != NULL) {
+            if(goa->types->at(i) == GameObjectAnimation::STATIC && goa->sprites->at(i) != NULL) {
                 return false;
             }
-            if(goa->animations->at(i) != NULL) {
+            if(goa->types->at(i) == GameObjectAnimation::ANIMATED && goa->animations->at(i) != NULL) {
                 animationCount++;
                 if(animationCount == 2) {
                     return false;
@@ -368,4 +368,25 @@ bool GameObject::verifyIfOnlyOneAnimation() {
     }
 
     return true;
+}
+
+bool GameObject::verifyIfOnlyOneAnimationStopped() {
+    int animationCount = 0;
+    GameObjectAnimation *goa = gameObjectAnimations->at(0);
+
+    for(int i = 0; i < 32; i++) {
+        if(goa->types->at(i) == GameObjectAnimation::STATIC && goa->sprites->at(i) != NULL) {
+            return false;
+        }
+        if(goa->types->at(i) == GameObjectAnimation::ANIMATED && goa->animations->at(i) != NULL) {
+            animationCount++;
+            if(animationCount == 2) {
+                return false;
+            }
+        }
+
+
+    }
+    return true;
+
 }

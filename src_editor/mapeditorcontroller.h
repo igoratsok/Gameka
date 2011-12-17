@@ -105,6 +105,12 @@ public:
      *
      */
     void initMapScene();
+
+    /**
+     * @brief Desliga a MapScene.
+     *
+     */
+    void turnOffMapScene();
     /**
      * @brief Inicializa o TilesetScene.
      *

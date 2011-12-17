@@ -37,6 +37,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include "optionscontroller.h"
 #include "wizardcontroller.h"
 #include "eventseditorcontroller.h"
+#include "updatemanagercontroller.h"
 #include "mainwindow.h"
 #include "newprojectwindow.h"
 #include "gamedata.h"
@@ -48,6 +49,7 @@ class MapEditorController;
 class OptionsController;
 class WizardController;
 class EventsEditorController;
+class UpdateManagerController;
 class MainWindow;
 class NewProjectWindow;
 class DataWriter;
@@ -93,6 +95,8 @@ public:
      * @param
      */
     void setEventsEditorController(EventsEditorController*);
+
+    void setUpdateManagerController(UpdateManagerController*);
 
     /**
      * @brief Determina o modo do editor.
@@ -240,6 +244,8 @@ public:
     void init();
 
     void reopenWelcomeScreen(bool openNewProject);
+
+    void openUpdateManagerWindow();
 private:
     /**
      * @brief Cria uma instância da GameData.
@@ -291,10 +297,12 @@ private:
 
 
 
+
     MapEditorController *mapEditorController; /**<  */
     OptionsController *optionsController; /**<  */
     WizardController *wizardController; /**<  */
     EventsEditorController *eventsEditorController; /**<  */
+    UpdateManagerController *updateManagerController;
 
 
     MainWindow *mainWindow; /**<  */
