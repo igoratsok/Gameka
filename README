@@ -16,7 +16,7 @@ Gameka depencies are:
 
 === Installation ==
 Open the project (gameka.pro) in Qt Creator (http://qt.nokia.com/products/developer-tools/) and
-build it. It will create two binaries: 
+build it (or run: "qmake gameka.pro -r" on terminal). It will create two binaries: 
 1. gameka_windows or gameka_linux or gameka_mac (depending on your OS), which is the gameka itself.
 2. runtime_linux or runtime_mac or runtime_w32 (depending on your OS), which is the runtime.
 
