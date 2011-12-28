@@ -58,13 +58,29 @@ void MainController::init()
 {
 
 
+#ifdef Q_WS_X11
+    dataFolder = QString("data/");
+#endif
+#ifdef Q_WS_MACX
+    QString argv0 = GameData::getInstance()->argv0;
+    QString appBundlePath = QString(argv0.toStdString().substr(0, argv0.lastIndexOf('/')).c_str());
+    dataFolder = appBundlePath.append("/../Resources/data/");
+
+
+#endif
+#ifdef Q_WS_WIN32
+    dataFolder = QString("data/");
+#endif
+#ifdef Q_WS_WIN64
+    dataFolder = QString("data/");
+#endif
+
     mainWindow = new MainWindow(0, this);
     QSplashScreen *splash = new QSplashScreen(mainWindow, QPixmap(":/images/data/splash/splash.jpg"));
     splash->show();
 
     mainWindow->moveToCenter();
     mainWindow->setWindowTitle("Gameka");
-
 
 
     /* inicializando o vboxlayout */
@@ -245,7 +261,7 @@ void MainController::runRuntime() {
     myProcess->start(QString(gameData->getProjectDirectory().append("/").append("game_linux").c_str()), QStringList());
 #endif
 #ifdef Q_WS_MACX
-    myProcess->start(QString(gameData->getProjectDirectory().append("/").append("game_mac").c_str()), QStringList());
+    myProcess->start(QString(gameData->getProjectDirectory().append("/").append("runtime_mac.app/Contents/MacOS/runtime_mac").c_str()), QStringList());
 
 #endif
 #ifdef Q_WS_WIN32
@@ -369,13 +385,13 @@ void MainController::createGameDataInstance(int preProjectId, std::string gameNa
         switch(preProjectId) {
         case 1:
 
-            if(!QFile().copy(QString("data/pre-projects/template01.ldo"), QString(std::string(destPath.c_str()).append("/game.gmk").c_str()))) {
+            if(!QFile().copy(QString(dataFolder).append("pre-projects/template01.ldo"), QString(std::string(destPath.c_str()).append("/game.gmk").c_str()))) {
                 printf("Falha no carregamento do template01.ldo.");
                 exit(1);
             }
             break;
         case 2:
-            if(!QFile().copy(QString("data/pre-projects/template02.ldo"), QString(std::string(destPath.c_str()).append("/game.gmk").c_str()))) {
+            if(!QFile().copy(QString(dataFolder).append("pre-projects/template02.ldo"), QString(std::string(destPath.c_str()).append("/game.gmk").c_str()))) {
                 printf("Falha no carregamento do template01.ldo.");
                 exit(1);
             }
@@ -439,79 +455,73 @@ void MainController::createDirectoryStructure(std::string *filePath) {
 
     destPath = std::string(filePath->c_str());
 
-    if(!QFile().copy(QString("data/project_data/default_object_sprite.png"), QString(std::string(destPath.c_str()).append("/objects/default_object_sprite.png").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/default_object_sprite.png"), QString(std::string(destPath.c_str()).append("/objects/default_object_sprite.png").c_str()))) {
         printf("Falha no carregamento do default_object_sprite.");
 
         exit(1);
     }
 
-    if(!QFile().copy(QString("data/project_data/default_title_screen.png"), QString(std::string(destPath.c_str()).append("/images/default_title_screen.png").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/default_title_screen.png"), QString(std::string(destPath.c_str()).append("/images/default_title_screen.png").c_str()))) {
         printf("Falha no carregamento do default_title_screen.png.");
         exit(1);
     }
 
-    if(!QFile().copy(QString("data/project_data/default_options_screen.png"), QString(std::string(destPath.c_str()).append("/images/default_options_screen.png").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/default_options_screen.png"), QString(std::string(destPath.c_str()).append("/images/default_options_screen.png").c_str()))) {
         printf("Falha no carregamento do default_options_screen.png.");
         exit(1);
     }
 
-    if(!QFile().copy(QString("data/project_data/default_gameover_screen.png"), QString(std::string(destPath.c_str()).append("/images/default_gameover_screen.png").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/default_gameover_screen.png"), QString(std::string(destPath.c_str()).append("/images/default_gameover_screen.png").c_str()))) {
         printf("Falha no carregamento do default_gameover_screen.png.");
         exit(1);
     }
 
-    if(!QFile().copy(QString("data/project_data/runtime-common/dialog_bar1.png"), QString(std::string(destPath.c_str()).append("/runtime-common/dialog_bar1.png").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/dialog_bar1.png"), QString(std::string(destPath.c_str()).append("/runtime-common/dialog_bar1.png").c_str()))) {
         printf("Falha no carregamento do dialog_bar1.png.");
         exit(1);
     }
 
-    if(!QFile().copy(QString("data/project_data/runtime-common/iconsolata.ttf"), QString(std::string(destPath.c_str()).append("/runtime-common/iconsolata.ttf").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/iconsolata.ttf"), QString(std::string(destPath.c_str()).append("/runtime-common/iconsolata.ttf").c_str()))) {
         printf("Falha no carregamento do dialog_bar1.png.");
         exit(1);
     }
 
-    if(!QFile().copy(QString("data/project_data/runtime-common/oldsansblack.ttf"), QString(std::string(destPath.c_str()).append("/runtime-common/oldsansblack.ttf").c_str()))) {
+    if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/oldsansblack.ttf"), QString(std::string(destPath.c_str()).append("/runtime-common/oldsansblack.ttf").c_str()))) {
         printf("Falha no carregamento do oldsansblack.ttf .");
         exit(1);
     }
 
 
 
-    if(QFile().exists(QString("data/project_data/runtime-common/runtime_linux"))) {
-        if(!QFile().copy(QString("data/project_data/runtime-common/runtime_linux"), QString(std::string(destPath.c_str()).append("/game_linux").c_str()))) {
+    if(QFile().exists(QString(dataFolder).append("project_data/runtime-common/runtime_linux"))) {
+        if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/runtime_linux"), QString(std::string(destPath.c_str()).append("/game_linux").c_str()))) {
             printf("Falha no carregamento do runtime_linux.");
             exit(1);
         }
     }
 
-    if(QFile().exists(QString("data/project_data/runtime-common/run_game_linux"))) {
-        if(!QFile().copy(QString("data/project_data/runtime-common/run_game_linux"), QString(std::string(destPath.c_str()).append("/run_game_linux").c_str()))) {
+    if(QFile().exists(QString(dataFolder).append("project_data/runtime-common/run_game_linux"))) {
+        if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/run_game_linux"), QString(std::string(destPath.c_str()).append("/run_game_linux").c_str()))) {
             printf("Falha no carregamento do run_game_linux.");
             exit(1);
         }
     }
 
-    if(QFile().exists(QString("data/project_data/runtime-common/runtime_w32.exe"))) {
-        if(!QFile().copy(QString("data/project_data/runtime-common/runtime_w32.exe"), QString(std::string(destPath.c_str()).append("/game_w32.exe").c_str()))) {
+    if(QFile().exists(QString(dataFolder).append("project_data/runtime-common/runtime_w32.exe"))) {
+        if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/runtime_w32.exe"), QString(std::string(destPath.c_str()).append("/game_w32.exe").c_str()))) {
             printf("Falha no carregamento do runtime_w32.exe.");
             exit(1);
         }
     }
 
-    if(QFile().exists(QString("data/project_data/runtime-common/runtime_w64.exe"))) {
-        if(!QFile().copy(QString("data/project_data/runtime-common/runtime_w64.exe"), QString(std::string(destPath.c_str()).append("/game_w64.exe").c_str()))) {
+    if(QFile().exists(QString(dataFolder).append("project_data/runtime-common/runtime_w64.exe"))) {
+        if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/runtime_w64.exe"), QString(std::string(destPath.c_str()).append("/game_w64.exe").c_str()))) {
             printf("Falha no carregamento do runtime_w64.exe.");
             exit(1);
         }
     }
 
-    if(QFile().exists(QString("data/project_data/runtime-common/runtime_mac.exe"))) {
-        if(!QFile().copy(QString("data/project_data/runtime-common/runtime_mac"), QString(std::string(destPath.c_str()).append("/game_mac").c_str()))) {
-            printf("Falha no carregamento do runtime_mac.");
-            exit(1);
-        }
-    }
-
+    copyFolder(QString("runtime_mac.app"), destPath);
 
     copyFolder(QString("animations"), destPath);
     copyFolder(QString("images"), destPath);
@@ -525,15 +535,27 @@ void MainController::createDirectoryStructure(std::string *filePath) {
 }
 
 void MainController::copyFolder(QString folder, std::string destPath) {
-    QDir dir = QDir(QString("data/").append(folder).append("/"));
+    QDir dir = QDir(QString(dataFolder).append("").append(folder).append("/"));
     if(dir.exists()) {
         QStringList files = dir.entryList();
+
+        if(!QDir(QString(destPath.c_str()).append("/").append(folder)).exists()) {
+            QDir().mkpath(QString(destPath.c_str()).append("/").append(folder));
+        }
 
 
         foreach(QString file, files) {
             if(!file.isEmpty() && file.at(0) != '.') {
-                copyFileToProject(QString(folder).append("/").append(file), destPath);
+                if(QDir(QString(dataFolder).append("").append(folder).append("/").append(file)).exists()) {
+                    QDir().mkpath(QString(destPath.c_str()).append("/").append(folder).append("/").append(file));
+                    copyFolder(QString(folder).append("/").append(file), destPath);
+                } else {
+
+                    copyFileToProject(QString(folder).append("/").append(file), destPath);
+
+                }
             }
+
 
         }
     }
@@ -542,7 +564,7 @@ void MainController::copyFolder(QString folder, std::string destPath) {
 
 
 void MainController::copyWin32dll(QString destPath) {
-    QDir dir = QDir(QString("data/windll/"));
+    QDir dir = QDir(QString(dataFolder).append("windll/"));
     QStringList files = dir.entryList();
 
 
@@ -551,7 +573,7 @@ void MainController::copyWin32dll(QString destPath) {
 
 
 
-            if(!QFile().copy(QString("data/windll/").append(file), QString(destPath).append("/").append(file))) {
+            if(!QFile().copy(QString(dataFolder).append("windll/").append(file), QString(destPath).append("/").append(file))) {
                 std::cout << "Falha no carregamento do " << file.toStdString() << std::endl;
                 exit(1);
             }
@@ -562,7 +584,7 @@ void MainController::copyWin32dll(QString destPath) {
 
 
 void MainController::copyFileToProject(QString path, std::string destPath) {
-    if(!QFile().copy(QString("data/").append(path), QString(std::string(destPath.c_str()).append("/").c_str()).append(path))) {
+    if(!QFile().copy(QString(dataFolder).append("").append(path), QString(std::string(destPath.c_str()).append("/").c_str()).append(path))) {
         std::cout << "Falha no carregamento do " << path.toStdString() << std::endl;
         exit(1);
     }

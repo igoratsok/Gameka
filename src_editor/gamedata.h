@@ -310,6 +310,7 @@ public:
 
 
 
+    QString argv0;
 
 private:
     /**
@@ -356,7 +357,6 @@ private:
      * @param id
      */
     int generateNewMapIdPercorreArvore(std::vector<Map*> *mapList, int id);
-
 
 
 

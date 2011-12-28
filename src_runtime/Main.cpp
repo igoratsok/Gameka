@@ -35,8 +35,6 @@ class Sphere;
 
 #include <string>
 
-#undef main
-
 int main(int argc, char **argv) {
         GameData *gameData;
 	gameData = GameData::getInstance();
@@ -116,4 +114,6 @@ int main(int argc, char **argv) {
 	GameManager *gameManager;
 	gameManager = new GameManager(gameData);
 	gameManager->run();
+
+        return 0;
 }

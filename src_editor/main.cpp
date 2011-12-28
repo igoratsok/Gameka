@@ -49,8 +49,8 @@ int main(int argc, char **argv)
     /* inicializando uma instância do GameData */
     GameData *gameData;
     gameData = GameData::getInstance();
+    gameData->argv0 = QString(argv[0]);
 
-    system("pwd");
 
     /* construindo o sistema */
     Builder *builder;
