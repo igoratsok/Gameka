@@ -1,6 +1,6 @@
 TEMPLATE = app
 unix:!macx:TARGET = ../gameka_linux
-macx:TARGET = ../gameka_mac
+macx:TARGET = ../Gameka
 win32:TARGET = ../gameka_windows
 
 INCLUDEPATH += .

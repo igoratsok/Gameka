@@ -35,9 +35,9 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>465</x>
+     <x>445</x>
      <y>13</y>
-     <width>131</width>
+     <width>151</width>
      <height>20</height>
     </rect>
    </property>
@@ -74,9 +74,9 @@
   <widget class="QPushButton" name="buttonNewProject">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>310</x>
      <y>200</y>
-     <width>111</width>
+     <width>141</width>
      <height>27</height>
     </rect>
    </property>
@@ -90,9 +90,9 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>310</x>
      <y>230</y>
-     <width>111</width>
+     <width>141</width>
      <height>27</height>
     </rect>
    </property>
@@ -148,14 +148,14 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>240</x>
      <y>160</y>
-     <width>111</width>
+     <width>191</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>v 0.9.2 &quot;Nakamura&quot;</string>
+    <string>v 0.9.1.5 (mac alpha bundle)</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -164,9 +164,9 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>310</x>
      <y>260</y>
-     <width>111</width>
+     <width>141</width>
      <height>27</height>
     </rect>
    </property>
@@ -187,7 +187,10 @@
     <string>Atualizar!</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="labelUpdate">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>80</x>

@@ -6,6 +6,8 @@ WelcomeScreen::WelcomeScreen(QWidget *parent) :
     ui(new Ui::WelcomeScreen)
 {
     ui->setupUi(this);
+    ui->labelUpdate->setVisible(false);
+    ui->pushButtonUpdate->setVisible(false);
 
 
     ui->lineEdit->setText(QDir::homePath().append("/GamekaProjects"));
@@ -19,13 +21,13 @@ WelcomeScreen::WelcomeScreen(QWidget *parent) :
 
     gameka_settings_xml.appendChild(directoryElement);
 
-    QFile gameka_settings_file("gameka_settings.xml");
-    gameka_settings_file.open(QIODevice::ReadWrite);
+    //QFile gameka_settings_file("gameka_settings.xml");
+    //gameka_settings_file.open(QIODevice::ReadWrite);
 
-    QTextStream ts(&gameka_settings_file);
-    ts << doc.toString();
+    //QTextStream ts(&gameka_settings_file);
+    //ts << doc.toString();
 
-    gameka_settings_file.close();
+    //gameka_settings_file.close();
 
 
 

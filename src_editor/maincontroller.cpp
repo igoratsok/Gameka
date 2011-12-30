@@ -77,7 +77,9 @@ void MainController::init()
 
     mainWindow = new MainWindow(0, this);
     QSplashScreen *splash = new QSplashScreen(mainWindow, QPixmap(":/images/data/splash/splash.jpg"));
+#ifndef Q_WS_MACX
     splash->show();
+#endif
 
     mainWindow->moveToCenter();
     mainWindow->setWindowTitle("Gameka");
