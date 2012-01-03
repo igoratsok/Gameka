@@ -78,12 +78,12 @@ QListWidgetItem* NewDialogueDialog::createNewItem(DialogueItemData *dialogueItem
     QListWidgetItem *newItem;
     if(dialogueItemData->type == DialogueItemData::TYPE_MESSAGE) {
         std::stringstream ss;
-        ss << "Mensagem: " << dialogueItemData->message;
+        ss << tr("Mensagem: ").toStdString() << dialogueItemData->message;
 
         newItem = new QListWidgetItem(QString(ss.str().c_str()));
     } else {
         std::stringstream ss;
-        ss << "Chama procedimento: ";
+        ss << tr("Chama procedimento: ").toStdString();
 
         if(dialogueItemData->procedureId > 0) {
             GameData *gameData = GameData::getInstance();
@@ -258,7 +258,7 @@ void NewDialogueDialog::on_textEditMessage_textChanged()
 void NewDialogueDialog::on_pushButtonAddProcedure_pressed()
 {
     if(ui->comboBoxProcedure->count() == 0) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Não há procedimentos para adicionar."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Não há procedimentos para adicionar.").toStdString().c_str()));
         return;
     }
 
@@ -293,7 +293,7 @@ void NewDialogueDialog::on_comboBoxProcedure_currentIndexChanged(int index)
         dialogueItemData->procedureId = ui->comboBoxProcedure->itemData(index, Qt::UserRole).toInt();
 
         std::stringstream ss;
-        ss << "Chama procedimento: ";
+        ss << tr("Chama procedimento: ").toStdString().c_str();
 
         if(dialogueItemData->procedureId > 0) {
             GameData *gameData = GameData::getInstance();

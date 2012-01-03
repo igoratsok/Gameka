@@ -50,8 +50,8 @@ void TeleportAreaGraphicsItem::contextMenuEvent(QGraphicsSceneContextMenuEvent *
     QGraphicsRectItem::contextMenuEvent(event);
 
     QMenu menu;
-    QAction *actionEdit = menu.addAction("Editar teletransporte");
-    QAction *actionRemove = menu.addAction("Remover teletransporte");
+    QAction *actionEdit = menu.addAction(QApplication::tr("Editar teletransporte"));
+    QAction *actionRemove = menu.addAction(QApplication::tr("Remover teletransporte"));
 
     QAction *selectedAction = menu.exec(event->screenPos());
 
@@ -62,7 +62,7 @@ void TeleportAreaGraphicsItem::contextMenuEvent(QGraphicsSceneContextMenuEvent *
         delete newTeleportAreaDialog;
     } else if(selectedAction == actionRemove) {
         // TODO: melhorar isso aqui depois, ficou meio tosco
-        if(MessageBoxes::showConfirmBox(std::string("Deseja mesmo remover?"))) {
+        if(MessageBoxes::showConfirmBox(std::string(QApplication::tr("Deseja mesmo remover?").toStdString().c_str()))) {
             GameData *gameData = GameData::getInstance();
             gameData->editingMap->teleportAreas->erase(
                     std::find(gameData->editingMap->teleportAreas->begin(),

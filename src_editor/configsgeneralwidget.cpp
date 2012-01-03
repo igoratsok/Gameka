@@ -90,7 +90,7 @@ void ConfigsGeneralWidget::on_buttonAlterarTelaInicial_clicked()
 {
     ConfigsImportDialog *newDialog;
     newDialog = new ConfigsImportDialog(optionsController, ConfigsImportDialog::IMPORT_TITLESCREENS, EditorConstants::IMPORT_OPTION_TITLE_SCREEN);
-    newDialog->setWindowTitle("Alterar tela inicial");
+    newDialog->setWindowTitle(tr("Alterar tela inicial"));
     newDialog->setModal(true);
     newDialog->show();
 }
@@ -99,7 +99,7 @@ void ConfigsGeneralWidget::on_buttonAlterarTelaOpcoes_clicked()
 {
     ConfigsImportDialog *newDialog;
     newDialog = new ConfigsImportDialog(optionsController, ConfigsImportDialog::IMPORT_TITLESCREENS, EditorConstants::IMPORT_OPTION_OPTION_SCREEN);
-    newDialog->setWindowTitle("Alterar tela de opções");
+    newDialog->setWindowTitle(tr("Alterar tela de opções"));
     newDialog->setModal(true);
     newDialog->show();
 }
@@ -108,7 +108,7 @@ void ConfigsGeneralWidget::on_buttonAlterarTelaGameOver_clicked()
 {
     ConfigsImportDialog *newDialog;
     newDialog = new ConfigsImportDialog(optionsController, ConfigsImportDialog::IMPORT_TITLESCREENS, EditorConstants::IMPORT_OPTION_GAME_OVER_SCREEN);
-    newDialog->setWindowTitle("Alterar tela de Game Over");
+    newDialog->setWindowTitle(tr("Alterar tela de Game Over"));
     newDialog->setModal(true);
     newDialog->show();
 }
@@ -311,7 +311,7 @@ void ConfigsGeneralWidget::on_toolButtonMusicaTelaInicial_clicked()
     GameData *gameData = GameData::getInstance();
 
     SoundPickerDialog *soundPickerDialog = new SoundPickerDialog(SoundPickerDialog::MUSICA, this);
-    soundPickerDialog->setWindowTitle(QString::fromUtf8("Música da tela inicial"));
+    soundPickerDialog->setWindowTitle(QString::fromUtf8(tr("Música da tela inicial").toStdString().c_str()));
     soundPickerDialog->exec();
 
     if(soundPickerDialog->okPressed()) {
@@ -328,7 +328,7 @@ void ConfigsGeneralWidget::on_toolButtonMusicaTelaOpcoes_clicked()
     GameData *gameData = GameData::getInstance();
 
     SoundPickerDialog *soundPickerDialog = new SoundPickerDialog(SoundPickerDialog::MUSICA, this);
-    soundPickerDialog->setWindowTitle(QString::fromUtf8("Música da tela de opções"));
+    soundPickerDialog->setWindowTitle(QString::fromUtf8(tr("Música da tela de opções").toStdString().c_str()));
     soundPickerDialog->exec();
 
     if(soundPickerDialog->okPressed()) {
@@ -345,7 +345,7 @@ void ConfigsGeneralWidget::on_toolButtonMusicaTelaGameOver_clicked()
     GameData *gameData = GameData::getInstance();
 
     SoundPickerDialog *soundPickerDialog = new SoundPickerDialog(SoundPickerDialog::MUSICA, this);
-    soundPickerDialog->setWindowTitle(QString::fromUtf8("Música da tela de Game Over"));
+    soundPickerDialog->setWindowTitle(QString::fromUtf8(tr("Música da tela de Game Over").toStdString().c_str()));
     soundPickerDialog->exec();
 
     if(soundPickerDialog->okPressed()) {

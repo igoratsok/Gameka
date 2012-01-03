@@ -57,13 +57,13 @@ GameData::GameData()
     totalLives = 5;
 
     procedureGlobalAlways = new ProcedureData();
-    procedureGlobalAlways->name = QString::fromUtf8("Sempre").toStdString();
+    procedureGlobalAlways->name = QString::fromUtf8(QApplication::tr("Sempre").toStdString().c_str()).toStdString();
     procedureGlobalAlways->nameEditable = false;
     procedureGlobalStart = new ProcedureData();
-    procedureGlobalStart->name = QString::fromUtf8("Início do jogo").toStdString();
+    procedureGlobalStart->name = QString::fromUtf8(QApplication::tr("Início do jogo").toStdString().c_str()).toStdString();
     procedureGlobalStart->nameEditable = false;
     procedureGlobalEnd = new ProcedureData();
-    procedureGlobalEnd->name = QString::fromUtf8("Fim do jogo").toStdString();
+    procedureGlobalEnd->name = QString::fromUtf8(QApplication::tr("Fim do jogo").toStdString().c_str()).toStdString();
     procedureGlobalEnd->nameEditable = false;
 
     version = SOFTWARE_CURRENT_VERSION;

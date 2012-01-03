@@ -60,7 +60,7 @@ void OptionsController::setGameScreen(std::string fileName, int option) {
 void OptionsController::openConfigsTabWindow(QWidget *parent)
 {
     this->configsTabWindow = new ConfigsTabWindow(this, eventsEditorController, parent);
-    this->configsTabWindow->setWindowTitle(QString::fromUtf8("Configurações"));
+    this->configsTabWindow->setWindowTitle(QString::fromUtf8(QApplication::tr("Configurações").toStdString().c_str()));
 
 
     this->configsTabWindow->exec();
@@ -180,7 +180,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Parado Baixo";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Parado Baixo").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -195,7 +195,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Parado Esquerda";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Parado Esquerda").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -210,7 +210,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Parado Direita";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Parado Direita").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -225,7 +225,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Parado Cima";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Parado Cima").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -240,7 +240,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Andando Baixo";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Andando Baixo").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -255,7 +255,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Andando Esquerda";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Andando Esquerda").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -270,7 +270,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Andando Direita";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Andando Direita").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -285,7 +285,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Andando Cima";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Andando Cima").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -300,7 +300,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
                     animationData = new AnimationData();
                     animationData->fileName = filePath;
                     ss.str("");
-                    ss << fileName << " (" << k << ")" << " Girando";
+                    ss << fileName << " (" << k << ")" << QApplication::tr(" Girando").toStdString().c_str();
                     animationData->name = ss.str();
 
                     animationData->setHorizontalFrameNumber(12);
@@ -327,7 +327,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName << " Parado Baixo";
+            ss << fileName << QApplication::tr(" Parado Baixo").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -342,7 +342,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName <<  " Parado Esquerda";
+            ss << fileName <<  QApplication::tr(" Parado Esquerda").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -357,7 +357,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName << " Parado Direita";
+            ss << fileName << QApplication::tr(" Parado Direita").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -372,7 +372,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName << " Parado Cima";
+            ss << fileName << QApplication::tr(" Parado Cima").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -387,7 +387,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName << " Andando Baixo";
+            ss << fileName << QApplication::tr(" Andando Baixo").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -402,7 +402,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName << " Andando Esquerda";
+            ss << fileName << QApplication::tr(" Andando Esquerda").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -417,7 +417,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName <<  " Andando Direita";
+            ss << fileName <<  QApplication::tr(" Andando Direita").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -432,7 +432,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName << " Andando Cima";
+            ss << fileName << QApplication::tr(" Andando Cima").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -447,7 +447,7 @@ void OptionsController::addAnimation(std::string fileName, int animationImportPa
             animationData = new AnimationData();
             animationData->fileName = filePath;
             ss.str("");
-            ss << fileName <<  " Girando";
+            ss << fileName <<  QApplication::tr(" Girando").toStdString().c_str();
             animationData->name = ss.str();
 
             animationData->setHorizontalFrameNumber(3);
@@ -570,7 +570,7 @@ void OptionsController::determinaValorResolucaoCombo(int index) {
 
 void OptionsController::openEasyNewGameObjectDialog() {
     EasyNewGameObjectDialog *easyNewGameObjectDialog = new EasyNewGameObjectDialog(this);
-    easyNewGameObjectDialog->setWindowTitle(QString("Criar objeto"));
+    easyNewGameObjectDialog->setWindowTitle(QString(QApplication::tr("Criar objeto")));
     GameObject *gameObject = easyNewGameObjectDialog->exec();
 
     delete easyNewGameObjectDialog;
@@ -584,7 +584,7 @@ void OptionsController::openEasyNewGameObjectDialog() {
 
 void OptionsController::openNewDialogueDialog() {
     NewDialogueDialog *newDialogueDialog = new NewDialogueDialog(this);
-    newDialogueDialog->setWindowTitle(QString::fromUtf8("Editar diálogos"));
+    newDialogueDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Editar diálogos").toStdString().c_str()));
 
     DialogueData *dialogueData = newDialogueDialog->exec();
 
@@ -593,7 +593,7 @@ void OptionsController::openNewDialogueDialog() {
 
 void OptionsController::openNewDialogueDialog(DialogueData *dialogueData) {
     NewDialogueDialog *newDialogueDialog = new NewDialogueDialog(this, dialogueData);
-    newDialogueDialog->setWindowTitle(QString::fromUtf8("Editar diálogos"));
+    newDialogueDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Editar diálogos").toStdString().c_str()));
 
     dialogueData = newDialogueDialog->exec();
 
@@ -602,7 +602,7 @@ void OptionsController::openNewDialogueDialog(DialogueData *dialogueData) {
 
 void OptionsController::openNewDialogueDialog(GameObjectInstance *gameObject) {
     NewDialogueDialog *newDialogueDialog = new NewDialogueDialog(this, gameObject);
-    newDialogueDialog->setWindowTitle(QString::fromUtf8("Editar diálogos"));
+    newDialogueDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Editar diálogos").toStdString().c_str()));
 
 
     DialogueData *returnDialogueData = newDialogueDialog->exec();
@@ -618,7 +618,7 @@ void OptionsController::openNewDialogueDialog(GameObjectInstance *gameObject) {
 
 void OptionsController::openNewDialogueDialog(Map *map) {
     NewDialogueDialog *newDialogueDialog = new NewDialogueDialog(this, map->dialogueData);
-    newDialogueDialog->setWindowTitle(QString::fromUtf8("Editar diálogos"));
+    newDialogueDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Editar diálogos").toStdString().c_str()));
 
 
     DialogueData *returnDialogueData = newDialogueDialog->exec();
@@ -634,7 +634,7 @@ void OptionsController::openNewDialogueDialog(Map *map) {
 
 void OptionsController::openNewDialogueDialog(EventData *eventData) {
     NewDialogueDialog *newDialogueDialog = new NewDialogueDialog(this, eventData->dialogueData);
-    newDialogueDialog->setWindowTitle(QString::fromUtf8("Editar diálogos"));
+    newDialogueDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Editar diálogos").toStdString().c_str()));
 
 
     DialogueData *returnDialogueData = newDialogueDialog->exec();

@@ -217,7 +217,7 @@ std::vector<Map*>* DataLoader::loadMapList(FILE *fp) {
                if(tileSetItem != NULL) {
                    map->tileSets->push_back(tileSetItem);
                } else {
-                   printf("Erro na população dos tilesets de um mapa");
+                   printf(QApplication::tr("Erro na população dos tilesets de um mapa").toStdString().c_str());
                    exit(1);
                }
 

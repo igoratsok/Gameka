@@ -107,11 +107,11 @@ void NewMapWindowGeneralWidget::on_toolButtonSound_clicked()
 void NewMapWindowGeneralWidget::on_toolButtonBackgroundChooser_pressed()
 {
     if(mapEditorController->getBackgroundList()->empty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Nao existe nenhum fundo cadastrado."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Nao existe nenhum fundo cadastrado.").toStdString().c_str()));
     } else {
         BackgroundPickerDialog *backgroundPickerDialog;
         backgroundPickerDialog = new BackgroundPickerDialog(mapEditorController, this);
-        backgroundPickerDialog->setWindowTitle("Selecionar fundo");
+        backgroundPickerDialog->setWindowTitle(tr("Selecionar fundo"));
 
         Background *bg = backgroundPickerDialog->exec();
 
@@ -124,7 +124,7 @@ void NewMapWindowGeneralWidget::on_toolButtonBackgroundChooser_pressed()
 
 void NewMapWindowGeneralWidget::on_toolButtonRemoveBackground_pressed()
 {
-    if(MessageBoxes::showConfirmBox(std::string("Tem certeza que deseja remover o fundo do mapa?"))) {
+    if(MessageBoxes::showConfirmBox(std::string(tr("Tem certeza que deseja remover o fundo do mapa?").toStdString().c_str()))) {
         map->background = NULL;
         ui->lineEditBackground->setText(QString(""));
     }
@@ -133,7 +133,7 @@ void NewMapWindowGeneralWidget::on_toolButtonRemoveBackground_pressed()
 
 void NewMapWindowGeneralWidget::on_toolButtonRemoveMusic_pressed()
 {
-    if(MessageBoxes::showConfirmBox(std::string("Tem certeza que deseja remover a musica do mapa?"))) {
+    if(MessageBoxes::showConfirmBox(std::string(tr("Tem certeza que deseja remover a musica do mapa?").toStdString().c_str()))) {
         map->music = std::string("");
         ui->musica_input->setText(QString(""));
     }
@@ -141,7 +141,7 @@ void NewMapWindowGeneralWidget::on_toolButtonRemoveMusic_pressed()
 
 void NewMapWindowGeneralWidget::on_toolButtonRemoveSound_pressed()
 {
-    if(MessageBoxes::showConfirmBox(std::string("Tem certeza que deseja remover o som do mapa?"))) {
+    if(MessageBoxes::showConfirmBox(std::string(tr("Tem certeza que deseja remover o som do mapa?").toStdString().c_str()))) {
         map->sound = std::string("");
         ui->som_input->setText(QString(""));
     }

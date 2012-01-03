@@ -28,7 +28,7 @@ UndoChangeTileCommand::UndoChangeTileCommand(MapEditorController* mapEditorContr
     QUndoCommand(parent),
     mapEditorController(mapEditorController)
 {
-    setText("Comando..");
+    setText(QApplication::tr("Comando.."));
 }
 
 void UndoChangeTileCommand::redo() {

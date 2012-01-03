@@ -106,7 +106,9 @@ HEADERS += maincontroller.h \
     welcomescreen.h \
     updatemanagerwindow.h \
     updatemanagercontroller.h \
-    updatefilepair.h
+    updatefilepair.h \
+    scriptseditorwidget.h \
+    luahighlighter.h
 SOURCES += main.cpp \
     maincontroller.cpp \
     mapeditorcontroller.cpp \
@@ -200,7 +202,9 @@ SOURCES += main.cpp \
     welcomescreen.cpp \
     updatemanagerwindow.cpp \
     updatemanagercontroller.cpp \
-    updatefilepair.cpp
+    updatefilepair.cpp \
+    scriptseditorwidget.cpp \
+    luahighlighter.cpp
 FORMS += mainwindow.ui \
     newprojectwindow.ui \
     configstabwidget.ui \
@@ -238,10 +242,11 @@ FORMS += mainwindow.ui \
     about.ui \
     imagecolorpicker.ui \
     welcomescreen.ui \
-    updatemanagerwindow.ui
+    updatemanagerwindow.ui \
+    scriptseditorwidget.ui
 
 
-TRANSLATIONS = ../translations/gameka_tr_en.qph
+TRANSLATIONS = ../translations/gameka_tr_en.ts
 
 unix:!macx:LIBS += -L/usr/local/lib -lGL -lGLU -lSDL -lSDLmain -lSDL_ttf -lSDL_gfx -lSDL_mixer
 

@@ -289,7 +289,7 @@ void ConfigsBackgrounds::on_pushButtonAddLayer_pressed()
 void ConfigsBackgrounds::on_pushButtonRemoveLayer_pressed()
 {
     if(ui->listWidgetLayers->count() == 1) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Necessária ao menos uma camada."));
+        MessageBoxes::showMessageBox((QString::fromUtf8(tr("Necessária ao menos uma camada.").toStdString().c_str()).toStdString()));
     } else {
         if(ui->listWidgetLayers->currentItem() != NULL) {
             BgLayer *bgLayer = ((BgLayer*) ui->listWidgetLayers->currentItem()->data(Qt::UserRole).value<void*>());
@@ -318,9 +318,10 @@ void ConfigsBackgrounds::on_buttonRemoveBg_pressed()
     if(ui->listWidgetBgs->currentItem() != NULL) {
         Background *bg = ((Background*) ui->listWidgetBgs->currentItem()->data(Qt::UserRole).value<void*>());
         if(bg != NULL) {
-            if(MessageBoxes::showConfirmBox(QString::fromUtf8("Deseja remover o fundo?").toStdString())) {
+            if(MessageBoxes::showConfirmBox(tr("Deseja remover o fundo?").toStdString())) {
+
                 if(gameData->verifyBackgroundUsed(bg->id)) {
-                    if(!MessageBoxes::showConfirmBox(QString::fromUtf8("O fundo é utilizado em um mapa. Deseja remover mesmo assim?").toStdString())) {
+                    if(!MessageBoxes::showConfirmBox(QString::fromUtf8(tr("O fundo é utilizado em um mapa. Deseja remover mesmo assim?").toStdString().c_str()).toStdString())) {
                         return;
                     }
 

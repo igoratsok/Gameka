@@ -625,14 +625,14 @@ void MapEditorController::floodFillBrute(int nodeI, int nodeJ, int targetI, int 
 
 void MapEditorController::openNewMapWindow() {
     newMapWindow = new NewMapWindow(this, NULL, mainWindow);
-    newMapWindow->setWindowTitle("Novo Mapa");
+    newMapWindow->setWindowTitle(QApplication::tr("Novo Mapa"));
     newMapWindow->setModal(true);
     newMapWindow->setVisible(true);
 }
 
 void MapEditorController::openEditMapWindow(Map *map) {
     newMapWindow = new NewMapWindow(this, map, mainWindow);
-    newMapWindow->setWindowTitle("Editar Mapa");
+    newMapWindow->setWindowTitle(QApplication::tr("Editar Mapa"));
     newMapWindow->setModal(true);
     newMapWindow->setVisible(true);
 }
@@ -675,8 +675,8 @@ void MapEditorController::createFolder() {
 
     bool ok;
 
-    QString text = QInputDialog::getText(mainWindow, *(new QString("Nova pasta")),
-                                         *(new QString("Nome:")), QLineEdit::Normal,
+    QString text = QInputDialog::getText(mainWindow, *(new QString(QApplication::tr("Nova pasta"))),
+                                         *(new QString(QApplication::tr("Nome:"))), QLineEdit::Normal,
                                             *(new QString("")), &ok);
 
     if(ok && !text.isEmpty()) {

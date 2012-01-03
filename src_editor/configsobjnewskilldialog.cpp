@@ -123,7 +123,7 @@ void ConfigsObjNewSkillDialog::populaComboHabilidades() {
 
     ui->comboBoxSkill->clear();
 
-    ui->comboBoxSkill->insertItem(ui->comboBoxSkill->count() + 1, QString("-- Escolha a habilidade --"), QVariant::fromValue((void*) NULL));
+    ui->comboBoxSkill->insertItem(ui->comboBoxSkill->count() + 1, QString(tr("-- Escolha a habilidade --")), QVariant::fromValue((void*) NULL));
 
     for(std::vector<Skill*>::iterator it = skillList->begin(); it != skillList->end(); ++it) {
         Skill *skill = *it;
@@ -273,7 +273,7 @@ void ConfigsObjNewSkillDialog::on_checkBoxLevel_released()
 void ConfigsObjNewSkillDialog::on_checkBoxGetItem_released()
 {
     if(ui->comboBoxProviderObject->count() == 0) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Nío existem itens para serem escolhidos."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Não existem itens para serem escolhidos.").toStdString().c_str()));
         ui->checkBoxGetItem->setChecked(false);
     }
 
@@ -292,14 +292,14 @@ void ConfigsObjNewSkillDialog::on_buttonBox_accepted()
     Skill *skill = (Skill*) ui->comboBoxSkill->itemData(ui->comboBoxSkill->currentIndex(), Qt::UserRole).value<void*>();
 
     if(skill == NULL) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Selecione uma habilidade."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Selecione uma habilidade.").toStdString().c_str()));
         return;
     }
 
 
     if(skill->hasObject) {
         if(((GameObject*) ui->comboBoxSkillObject->itemData(ui->comboBoxSkillObject->currentIndex(), Qt::UserRole).value<void*>()) == NULL) {
-            MessageBoxes::showMessageBox(QString::fromUtf8("Um objeto deve ser selecionado."));
+            MessageBoxes::showMessageBox(QString::fromUtf8(tr("Um objeto deve ser selecionado.").toStdString().c_str()));
             return;
         }
 
@@ -319,7 +319,7 @@ void ConfigsObjNewSkillDialog::on_buttonBox_rejected()
 void ConfigsObjNewSkillDialog::on_toolButtonSound_pressed()
 {
     SoundPickerDialog *soundPickerDialog = new SoundPickerDialog(SoundPickerDialog::SOM, this);
-    soundPickerDialog->setWindowTitle(QString::fromUtf8("Som"));
+    soundPickerDialog->setWindowTitle(QString::fromUtf8(tr("Som").toStdString().c_str()));
     soundPickerDialog->exec();
 
     if(soundPickerDialog->okPressed()) {

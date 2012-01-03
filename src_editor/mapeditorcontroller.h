@@ -30,6 +30,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include <QInputDialog>
 #include <QUndoStack>
 #include <QUndoView>
+#include <QApplication>
 
 #include <list>
 #include <algorithm>

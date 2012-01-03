@@ -92,7 +92,7 @@ void ConfigsObjDadosGeraisWidget::on_botaoEditarFormaGrafica_clicked()
                                                        currentListItem,
                                                        this);
 
-    configsObjAnimationChooserWindow->setWindowTitle("Graficos do objeto");
+    configsObjAnimationChooserWindow->setWindowTitle(tr("Graficos do objeto"));
 
     configsObjAnimationChooserWindow->exec();
 
@@ -121,7 +121,7 @@ void ConfigsObjDadosGeraisWidget::on_checkBoxDrag_toggled(bool checked)
 void ConfigsObjDadosGeraisWidget::on_comboTipo_currentIndexChanged(int index)
 {
     if(ativaTrocaCombos && MessageBoxes::showConfirmBox(
-                QString::fromUtf8("Deseja realmente trocar o tipo do objeto? Todas as informações, exceto forma gráfica, serão apagadas.").toStdString())) {
+                QString::fromUtf8(tr("Deseja realmente trocar o tipo do objeto? Todas as informações, exceto forma gráfica, serão apagadas.").toStdString().c_str()).toStdString())) {
         executandoTroca = true;
         optionsController->resetObject(gameObject, index);
 

@@ -451,8 +451,8 @@ void TilemapScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
     } else if(mapEditorController->editorMode == MapEditorController::MODE_EVENT) {
         if(event->button() == Qt::LeftButton) {
             QMenu menu;
-            QAction *newTeleportAction = menu.addAction("Novo teletransporte");
-            //QAction *newEventAction = menu.addAction("Novo evento");
+            QAction *newTeleportAction = menu.addAction(tr("Novo teletransporte"));
+            //QAction *newEventAction = menu.addAction(tr("Novo evento"));
 
             QAction *selectedAction = menu.exec(event->screenPos());
 
@@ -465,7 +465,7 @@ void TilemapScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
                 GameData *gameData = GameData::getInstance();
                 TeleportArea *newTeleportArea;
                 NewTeleportAreaDialog *newTeleportAreaDialog = new NewTeleportAreaDialog(mapEditorController);
-                newTeleportAreaDialog->setWindowTitle(QString("Novo teletransporte"));
+                newTeleportAreaDialog->setWindowTitle(QString(tr("Novo teletransporte")));
                 newTeleportArea = newTeleportAreaDialog->exec();
 
                 delete newTeleportAreaDialog;

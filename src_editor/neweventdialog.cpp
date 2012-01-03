@@ -36,7 +36,7 @@ NewEventDialog::NewEventDialog(EventsEditorController *eventsEditorController, E
     ui->setupUi(this);
 
     if(type == EventData::TYPE_ACTION) {
-        ui->labelCondAction->setText(QString::fromUtf8("Ação:"));
+        ui->labelCondAction->setText(QString::fromUtf8(tr("Ação:").toStdString().c_str()));
     }
 
     populaListaObjects();
@@ -82,7 +82,7 @@ void NewEventDialog::populaListaObjects() {
     QListWidgetItem *specialNewItem;
 
     specialNewItem = new QListWidgetItem();
-    specialNewItem->setText(QString::fromUtf8("Especiais: "));
+    specialNewItem->setText(QString::fromUtf8(tr("Especiais: ").toStdString().c_str()));
     specialNewItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     ui->listWidgetObject1->addItem(specialNewItem);
@@ -114,13 +114,13 @@ void NewEventDialog::populaListaObjects() {
 
 
     specialNewItem = new QListWidgetItem();
-    specialNewItem->setText(QString::fromUtf8("Objetos de classe:"));
+    specialNewItem->setText(QString::fromUtf8(tr("Objetos de classe:").toStdString().c_str()));
     specialNewItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     ui->listWidgetObject1->addItem(specialNewItem);
 
     specialNewItem = new QListWidgetItem();
-    specialNewItem->setText(QString::fromUtf8("Objetos de classe:"));
+    specialNewItem->setText(QString::fromUtf8(tr("Objetos de classe:").toStdString().c_str()));
     specialNewItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     ui->listWidgetObject2->addItem(specialNewItem);
@@ -154,13 +154,13 @@ void NewEventDialog::populaListaObjects() {
 
     if(!contextObjects.empty() || gameObject != NULL) {
         QListWidgetItem *newItem = new QListWidgetItem();
-        newItem->setText(QString::fromUtf8("Objetos de instância:"));
+        newItem->setText(QString::fromUtf8(tr("Objetos de instância:").toStdString().c_str()));
         newItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
         ui->listWidgetObject1->addItem(newItem);
 
         newItem = new QListWidgetItem();
-        newItem->setText(QString::fromUtf8("Objetos de instância:"));
+        newItem->setText(QString::fromUtf8(tr("Objetos de instância:").toStdString().c_str()));
         newItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
         ui->listWidgetObject2->addItem(newItem);
@@ -168,14 +168,14 @@ void NewEventDialog::populaListaObjects() {
 
     if(gameObject != NULL) {
         QListWidgetItem *newItem = new QListWidgetItem();
-        newItem->setText(QString("Este objeto"));
+        newItem->setText(QString(QApplication::tr("Este objeto").toStdString().c_str()));
         newItem->setData(Qt::UserRole, QVariant::fromValue((void*) new std::pair<int, GameObject*>(std::make_pair(0, gameObject))));
         newItem->setIcon(QIcon(QPixmap::fromImage(gameObject->getIconImage())));
 
         ui->listWidgetObject1->addItem(newItem);
 
         newItem = new QListWidgetItem();
-        newItem->setText(QString("Este objeto"));
+        newItem->setText(QString(QApplication::tr("Este objeto").toStdString().c_str()));
         newItem->setData(Qt::UserRole, QVariant::fromValue((void*) new std::pair<int, GameObject*>(std::make_pair(0, gameObject))));
         newItem->setIcon(QIcon(QPixmap::fromImage(gameObject->getIconImage())));
 
@@ -198,7 +198,7 @@ void NewEventDialog::populaListaObjects() {
 
         if(contextObject != NULL) {
             ss.str("");
-            ss << QString::fromUtf8("Inst. de Contexto ").toStdString() <<  contextObjectsSize - i + ajusteIndice << " (" << i << " )";
+            ss << QString::fromUtf8(tr("Inst. de Contexto ").toStdString().c_str()).toStdString() <<  contextObjectsSize - i + ajusteIndice << " (" << i << " )";
 
             QListWidgetItem *newItem = new QListWidgetItem();
             newItem->setText(QString(ss.str().c_str()));
@@ -209,7 +209,7 @@ void NewEventDialog::populaListaObjects() {
 
 
             ss.str("");
-            ss << QString::fromUtf8("Inst. de Contexto ").toStdString() << contextObjectsSize - i + ajusteIndice << " (" << i << " )";
+            ss << QString::fromUtf8(tr("Inst. de Contexto ").toStdString().c_str()).toStdString() << contextObjectsSize - i + ajusteIndice << " (" << i << " )";
 
             newItem = new QListWidgetItem();
             newItem->setText(QString(ss.str().c_str()));
@@ -528,7 +528,7 @@ void NewEventDialog::on_buttonBox_2_accepted()
             !ui->checkBoxNumber->isChecked() &&
             !ui->checkBoxSpecial->isChecked() &&
             !ui->checkBoxVariable->isChecked()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Ao menos uma das caixas de valores deve ser marcada."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Ao menos uma das caixas de valores deve ser marcada.").toStdString().c_str()));
         return;
     }
 

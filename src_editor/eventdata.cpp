@@ -36,7 +36,7 @@ EventData::EventData()
 
 QString EventData::getEventString(EventsEditorController *eventsEditorController, GameObject *currentGameObject) {
     if(newEvent) {
-        return QString("< Novo evento >");
+        return QString(QApplication::tr("< Novo evento >").toStdString().c_str());
     } else {
         if(type == TYPE_CONDITION || type == TYPE_ACTION) {
             GameData *gameData = GameData::getInstance();
@@ -50,7 +50,7 @@ QString EventData::getEventString(EventsEditorController *eventsEditorController
 
                     ss << ".";
                 } else {
-                    ss << "Global.";
+                    ss << QApplication::tr("Global.").toStdString();
                 }
 
 
@@ -68,7 +68,7 @@ QString EventData::getEventString(EventsEditorController *eventsEditorController
 
 
             if(negate) {
-                ss << QString::fromUtf8(" NÃO ").toStdString();
+                ss << QString::fromUtf8(QApplication::tr(" NÃO ").toStdString().c_str()).toStdString();
             }
 
 
@@ -96,7 +96,7 @@ QString EventData::getEventString(EventsEditorController *eventsEditorController
                 if(value01 < 0) {
                     ss << currentGameObject->name << "." << currentGameObject->getVariableById(-value01)->name;
                 } else {
-                    ss << "Global." << gameData->getVariableById(value01)->name;
+                    ss << QApplication::tr("Global.").toStdString() << gameData->getVariableById(value01)->name;
                 }
                 break;
             case VALUE_TYPE_OBJECT_ATTRIBUTE:
@@ -184,7 +184,7 @@ QString EventData::getEventString(EventsEditorController *eventsEditorController
 
             return QString(ss.str().c_str());
         } else {
-            return QString::fromUtf8("Mostra diálogo");
+            return QString::fromUtf8(QApplication::tr("Mostra diálogo").toStdString().c_str());
         }
 
     }

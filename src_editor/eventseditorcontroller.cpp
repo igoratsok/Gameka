@@ -35,7 +35,7 @@ void EventsEditorController::setMainController(MainController *mainController)
 
 void EventsEditorController::openNewConditionWindow(EventData *eventData, GameObject *gameObject = NULL) {
     NewEventDialog *newEventDialog = new NewEventDialog(this, eventData, gameObject, EventData::TYPE_CONDITION);
-    newEventDialog->setWindowTitle(QString::fromUtf8("Nova condição"));
+    newEventDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Nova condição").toStdString().c_str()));
     newEventDialog->exec();
 
     delete newEventDialog;
@@ -43,7 +43,7 @@ void EventsEditorController::openNewConditionWindow(EventData *eventData, GameOb
 
 void EventsEditorController::openNewActionWindow(EventData *eventData, GameObject *gameObject = NULL) {
     NewEventDialog *newEventDialog = new NewEventDialog(this, eventData, gameObject, EventData::TYPE_ACTION);
-    newEventDialog->setWindowTitle(QString::fromUtf8("Nova ação"));
+    newEventDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Nova ação").toStdString().c_str()));
     newEventDialog->exec();
 
     delete newEventDialog;
@@ -51,7 +51,7 @@ void EventsEditorController::openNewActionWindow(EventData *eventData, GameObjec
 
 void EventsEditorController::openEditEventWindow(EventData *eventData, GameObject *gameObject) {
     NewEventDialog *newEventDialog = new NewEventDialog(this, eventData, gameObject, eventData->type);
-    newEventDialog->setWindowTitle(QString::fromUtf8("Nova ação"));
+    newEventDialog->setWindowTitle(QString::fromUtf8(QApplication::tr("Nova ação").toStdString().c_str()));
     newEventDialog->exec();
 
     delete newEventDialog;

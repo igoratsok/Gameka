@@ -63,7 +63,7 @@ void ConfigsTilesetWidget::on_pushButton_clicked()
     ConfigsImportDialog *newWindow;
 
     newWindow = new ConfigsImportDialog(optionsController, ConfigsImportDialog::IMPORT_TILESETS, this);
-    newWindow->setWindowTitle(QString("Importar tilesets"));
+    newWindow->setWindowTitle(QString(tr("Importar tilesets")));
     newWindow->setModal(true);
     newWindow->show();
 }
@@ -169,13 +169,13 @@ void ConfigsTilesetWidget::on_pushButtonUpdateSizeValue_pressed()
 
 
     if(optionsController->verifyUsedTileset(currentTileset)) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Não é possível mudar este valor para um Tileset que estiver sendo utilizado em um mapa."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Não é possível mudar este valor para um Tileset que estiver sendo utilizado em um mapa.").toStdString().c_str()));
 
         return;
     }
 
     if(currentTileset->tileSize != ui->spinBox->value() &&
-            MessageBoxes::showConfirmBox(QString::fromUtf8("Tem certeza que deseja alterar o valor? A matriz de colisão será reinicializada.").toStdString())) {
+            MessageBoxes::showConfirmBox(QString::fromUtf8(tr("Tem certeza que deseja alterar o valor? A matriz de colisão será reinicializada.").toStdString().c_str()).toStdString())) {
         currentTileset->tileSize = ui->spinBox->value();
         currentTileset->calculateCollisionMatrix();
 
@@ -201,7 +201,7 @@ void ConfigsTilesetWidget::on_pushButtonTransparentColor_pressed()
 
         if(currentTileset != NULL) {
             ImageColorPicker *imageColorPicker = new ImageColorPicker(QPixmap::fromImage(*currentTileset->tilesetImage), this);
-            imageColorPicker->setWindowTitle("Escolher cor transparente");
+            imageColorPicker->setWindowTitle(tr("Escolher cor transparente"));
             QColor *color = imageColorPicker->exec();
 
             if(color != NULL) {
@@ -277,16 +277,16 @@ void ConfigsTilesetWidget::on_removeTilesetButton_pressed()
     if(ui->listWidget->currentItem() != NULL) {
         currentTileset = (TileSet*) ui->listWidget->currentItem()->data(Qt::UserRole).value<void*>();
         if(currentTileset != NULL) {
-            if(MessageBoxes::showConfirmBox(QString::fromUtf8("Deseja mesmo eliminar o Tileset?").toStdString())) {
+            if(MessageBoxes::showConfirmBox(QString::fromUtf8(tr("Deseja mesmo eliminar o Tileset?").toStdString().c_str()).toStdString())) {
                 Map *map = gameData->verifyTilesetUsed(currentTileset->id);
 
                 if(map != NULL) {
                     if(gameData->verifyTilesetUsedOnlyOne(currentTileset->id)) {
-                        MessageBoxes::showMessageBox(QString::fromUtf8("Este Tileset é o único de um mapa e não pode ser removido."));
+                        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Este Tileset é o único de um mapa e não pode ser removido.").toStdString().c_str()));
                         return;
                     }
 
-                    if(MessageBoxes::showConfirmBox(QString::fromUtf8("O Tileset já é usado em um mapa. Deseja remover mesmo assim?").toStdString())) {
+                    if(MessageBoxes::showConfirmBox(QString::fromUtf8(tr("O Tileset já é usado em um mapa. Deseja remover mesmo assim?").toStdString().c_str()).toStdString())) {
                         optionsController->removeTileset(currentTileset);
                         populaLista();
 

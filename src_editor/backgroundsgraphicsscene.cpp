@@ -43,8 +43,6 @@ void BackgroundsGraphicsScene::setBackground(Background *background) {
         for(std::vector<BgLayer*>::iterator it = background->layerList->begin(); it != background->layerList->end(); ++it) {
            BgLayer *bgLayer = *it;
 
-           std::cout << "pixmapitem dir: " << gameData->getProjectDirectory().append("/").append(bgLayer->fileName).c_str() << std::endl;
-
            QGraphicsPixmapItem *graphicsPixmapItem = new QGraphicsPixmapItem(QPixmap(QString(gameData->getProjectDirectory().append("/").append(bgLayer->fileName).c_str())));
            pixmapItems.push_back(graphicsPixmapItem);
 

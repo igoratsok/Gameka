@@ -32,6 +32,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include <stdlib.h>
 
 #include <QDir>
+#include <QApplication>
 
 #include "map.h"
 #include "tileset.h"

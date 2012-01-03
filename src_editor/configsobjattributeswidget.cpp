@@ -70,7 +70,7 @@ void ConfigsObjAttributesWidget::populaCampos() {
     ui->checkBoxLevelEvolution->setChecked(gameObject->evolucaoPorNivel);
     ui->horizontalSliderEvolutionVelocity->setValue(gameObject->velocidadeEvolucao);
     std::stringstream ss;
-    ss << QString::fromUtf8("Velocidade de evolução: ").toStdString() << gameObject->velocidadeEvolucao;
+    ss << QString::fromUtf8(tr("Velocidade de evolução: ").toStdString().c_str()).toStdString() << gameObject->velocidadeEvolucao;
     ui->labelEvoVelocity->setText(QString(ss.str().c_str()));
 
 }

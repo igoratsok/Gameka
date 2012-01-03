@@ -23,6 +23,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #ifndef DATALOADER_H
 #define DATALOADER_H
 
+#include <QApplication>
+
 #include "gamedata.h"
 #include "proceduredata.h"
 

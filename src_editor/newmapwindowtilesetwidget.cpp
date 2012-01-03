@@ -131,7 +131,7 @@ void NewMapWindowTilesetWidget::on_pushButton_pressed()
             if(!sameSize) {
                 map->tileSets->push_back(selectedTileset);
             } else {
-                MessageBoxes::showMessageBox(QString::fromUtf8("O tileset adicionado precisa ter o mesmo tamanho dos outros do mapa.").toStdString());
+                MessageBoxes::showMessageBox(QString::fromUtf8(tr("O tileset adicionado precisa ter o mesmo tamanho dos outros do mapa.").toStdString().c_str()).toStdString());
             }
 
         }

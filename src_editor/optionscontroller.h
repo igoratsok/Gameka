@@ -28,6 +28,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include <stdlib.h>
 #include <sstream>
 #include <string>
+#include <QApplication>
 
 #include "maincontroller.h"
 #include "eventseditorcontroller.h"

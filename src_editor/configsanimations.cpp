@@ -278,7 +278,7 @@ void ConfigsAnimations::on_toolButtonColorkey_pressed()
         QImage image = QImage(QString(directory.c_str()));
 
         ImageColorPicker *imageColorPicker = new ImageColorPicker(QPixmap::fromImage(image), this);
-        imageColorPicker->setWindowTitle("Escolha a cor transparente");
+        imageColorPicker->setWindowTitle(tr("Escolha a cor transparente"));
 
         QColor *color = imageColorPicker->exec();
 
@@ -320,11 +320,11 @@ void ConfigsAnimations::on_removeButton_pressed()
         currentAnimationData = (AnimationData*) ui->listWidget->currentItem()->data(Qt::UserRole).value<void*>();
 
         if(currentAnimationData != NULL) {
-            if(MessageBoxes::showConfirmBox(QString::fromUtf8("Deseja remover uma animação?").toStdString())) {
+            if(MessageBoxes::showConfirmBox(QString::fromUtf8(tr("Deseja remover uma animação?").toStdString().c_str()).toStdString())) {
                 GameObject *gameObject = gameData->verifyAnimationUsed(currentAnimationData->id);
                 if(gameObject != NULL) {
                     if(gameData->verifyAnimationUsedOnlyOnce(currentAnimationData->id)) {
-                        MessageBoxes::showMessageBox(QString::fromUtf8("Não é possível remover a Animação, pois é a única que um objeto usa."));
+                        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Não é possível remover a Animação, pois é a única que um objeto usa.").toStdString().c_str()));
                         return;
                     }
                 }

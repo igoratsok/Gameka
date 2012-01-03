@@ -29,6 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #include <QPushButton>
 #include <QMessageBox>
 #include <QProcess>
+#include <QApplication>
 
 
 #include <string>

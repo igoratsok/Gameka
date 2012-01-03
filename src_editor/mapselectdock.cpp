@@ -87,10 +87,10 @@ MapSelectDock::MapSelectDock(QWidget *parent, MapEditorController *mapEditorCont
     vboxLayout->addLayout(hboxLayout);
 
     /* inicializando os botoes */
-    botaoCriaMapa = new QPushButton("Cria Mapa", widget);
-    botaoEditaMapa = new QPushButton("Edita Mapa", widget);
-    botaoDeletaMapa = new QPushButton("Deleta Mapa", widget);
-    botaoCriaPasta = new QPushButton("Cria Pasta", widget);
+    botaoCriaMapa = new QPushButton(tr("Cria Mapa"), widget);
+    botaoEditaMapa = new QPushButton(tr("Edita Mapa"), widget);
+    botaoDeletaMapa = new QPushButton(tr("Deleta Mapa"), widget);
+    botaoCriaPasta = new QPushButton(tr("Cria Pasta"), widget);
 
     QObject::connect(botaoCriaMapa, SIGNAL(clicked()), this, SLOT(botaoCriaMapaClicked()));
     QObject::connect(botaoCriaPasta, SIGNAL(clicked()), this, SLOT(botaoCriaPastaClicked()));
@@ -216,9 +216,9 @@ void MapSelectDock::botaoDeletaMapaClicked() {
         Map *currentMap = (Map*) treeWidget->currentItem()->data(0, Qt::UserRole).value<void*>();
 
         if(currentMap != NULL && !currentMap->isFolder()) {
-            if(MessageBoxes::showConfirmBox(QString::fromUtf8("Deseja remover o mapa?").toStdString())) {
+            if(MessageBoxes::showConfirmBox(QString::fromUtf8(tr("Deseja remover o mapa?").toStdString().c_str()).toStdString())) {
                 if(gameData->verifyIfMapUsedById(currentMap->id)) {
-                    MessageBoxes::showMessageBox(QString::fromUtf8("Não é possível deletar o mapa, pois ele é referenciado em outro lugar."));
+                    MessageBoxes::showMessageBox(QString::fromUtf8(tr("Não é possível deletar o mapa, pois ele é referenciado em outro lugar.").toStdString().c_str()));
                 } else {
                     gameData->removeMap(currentMap->id);
                     populaArvore();
@@ -227,7 +227,7 @@ void MapSelectDock::botaoDeletaMapaClicked() {
             }
 
         } else {
-            MessageBoxes::showMessageBox(QString::fromUtf8("Ainda não é possível deletar pastas."));
+            MessageBoxes::showMessageBox(QString::fromUtf8(QApplication::tr("Ainda não é possível deletar pastas.").toStdString().c_str()));
         }
     }
 }

@@ -103,7 +103,7 @@ TilesetDock::TilesetDock(QWidget *parent, MapEditorController *mapEditorControll
     QObject::connect(layerButton4, SIGNAL(toggled(bool)), this, SLOT(layerButton4_toggled(bool)));
     QObject::connect(layerButton5, SIGNAL(toggled(bool)), this, SLOT(layerButton5_toggled(bool)));
 
-    layerButtons->layout()->addWidget(new QLabel(QString("Camada:")));
+    layerButtons->layout()->addWidget(new QLabel(QString(tr("Camada:"))));
     layerButtons->layout()->addWidget(layerButton1);
     layerButtons->layout()->addWidget(layerButton2);
     layerButtons->layout()->addWidget(layerButton3);

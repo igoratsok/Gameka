@@ -29,6 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include <QString>
 #include <QIcon>
+#include <QApplication>
 
 #include "eventcombodataprovider.h"
 #include "gamedata.h"

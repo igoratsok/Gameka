@@ -452,7 +452,7 @@ void ConfigsObjAnimationChooserWindow::on_buttonBox_accepted()
         limpaDadosAntigos();
         gameObject->gameObjectAnimations = gameObjectAnimations;
     } else {
-        MessageBoxes::showMessageBox(QString::fromUtf8("É necessário ter ao menos uma representação gráfica em \"Parado\""));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("É necessário ter ao menos uma representação gráfica em \"Parado\"").toStdString().c_str()));
     }
 
 

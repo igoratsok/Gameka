@@ -89,10 +89,10 @@ std::list<SpecialComboValueData*> EventComboDataProvider::getSpecialComboValueLi
     switch(specialType) {
     case EventAttributeData::COMBO_TYPE_KEY:
 
-        pushSpecialComboData(&list, SDLK_UP, "Cima");
-        pushSpecialComboData(&list, SDLK_RIGHT, "Direita");
-        pushSpecialComboData(&list, SDLK_DOWN, "Baixo");
-        pushSpecialComboData(&list, SDLK_LEFT, "Esquerda");
+        pushSpecialComboData(&list, SDLK_UP, QApplication::tr("Cima").toStdString());
+        pushSpecialComboData(&list, SDLK_RIGHT, QApplication::tr("Direita").toStdString());
+        pushSpecialComboData(&list, SDLK_DOWN, QApplication::tr("Baixo").toStdString());
+        pushSpecialComboData(&list, SDLK_LEFT, QApplication::tr("Esquerda").toStdString());
 
         pushSpecialComboData(&list, SDLK_a, "A");
         pushSpecialComboData(&list, SDLK_b, "B");
@@ -121,14 +121,14 @@ std::list<SpecialComboValueData*> EventComboDataProvider::getSpecialComboValueLi
         pushSpecialComboData(&list, SDLK_y, "Y");
         pushSpecialComboData(&list, SDLK_z, "Z");
 
-        pushSpecialComboData(&list, SDLK_RETURN, "ENTER");
+        pushSpecialComboData(&list, SDLK_RETURN, QApplication::tr("ENTER").toStdString());
         pushSpecialComboData(&list, SDLK_SPACE, QString::fromUtf8("ESPAÇO").toStdString());
-        pushSpecialComboData(&list, SDLK_RSHIFT, "SHIFT DIREITO");
-        pushSpecialComboData(&list, SDLK_LSHIFT, "SHIFT ESQUERDO");
-        pushSpecialComboData(&list, SDLK_RCTRL, "CTRL DIREITO");
-        pushSpecialComboData(&list, SDLK_LCTRL, "CTRL ESQUERDO");
-        pushSpecialComboData(&list, SDLK_RALT, "ALT DIREITO");
-        pushSpecialComboData(&list, SDLK_LALT, "ALT ESQUERDO");
+        pushSpecialComboData(&list, SDLK_RSHIFT, QApplication::tr("SHIFT DIREITO").toStdString());
+        pushSpecialComboData(&list, SDLK_LSHIFT, QApplication::tr("SHIFT ESQUERDO").toStdString());
+        pushSpecialComboData(&list, SDLK_RCTRL, QApplication::tr("CTRL DIREITO").toStdString());
+        pushSpecialComboData(&list, SDLK_LCTRL, QApplication::tr("CTRL ESQUERDO").toStdString());
+        pushSpecialComboData(&list, SDLK_RALT, QApplication::tr("ALT DIREITO").toStdString());
+        pushSpecialComboData(&list, SDLK_LALT, QApplication::tr("ALT ESQUERDO").toStdString());
 
 
         break;
@@ -141,9 +141,9 @@ std::list<SpecialComboValueData*> EventComboDataProvider::getSpecialComboValueLi
 
         break;
     case EventAttributeData::COMBO_TYPE_MOUSE:
-            pushSpecialComboData(&list, 1, QString::fromUtf8("Botão esquerdo").toStdString());
-            pushSpecialComboData(&list, 3, QString::fromUtf8("Botão direito").toStdString());
-            pushSpecialComboData(&list, 2, QString::fromUtf8("Botão do meio").toStdString());
+            pushSpecialComboData(&list, 1, QString::fromUtf8(QApplication::tr("Botão esquerdo").toStdString().c_str()).toStdString());
+            pushSpecialComboData(&list, 3, QString::fromUtf8(QApplication::tr("Botão direito").toStdString().c_str()).toStdString());
+            pushSpecialComboData(&list, 2, QString::fromUtf8(QApplication::tr("Botão do meio").toStdString().c_str()).toStdString());
 
 
         break;
@@ -313,7 +313,7 @@ EventComboDataProvider::EventComboDataProvider()
 
     actions = new std::list<int>();
 
-    pushAttributeData(ATT_COLISION, QString::fromUtf8("Colisão"), conds, actions,
+    pushAttributeData(ATT_COLISION, QString::fromUtf8(QApplication::tr("Colisão").toStdString().c_str()), conds, actions,
                       false, false, false, false, true, false);
 
 
@@ -337,38 +337,38 @@ EventComboDataProvider::EventComboDataProvider()
     pushAttributeData(ATT_VARIABLES, QString::fromUtf8("[[VariableName]]"), conds, actions,
                      true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
 
-    pushAttributeData(ATT_POSITION_X, QString::fromUtf8("Posição X"), conds, actions,
+    pushAttributeData(ATT_POSITION_X, QString::fromUtf8(QApplication::tr("Posição X").toStdString().c_str()), conds, actions,
                      true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_POSITION_Y, QString::fromUtf8("Posição Y"), conds, actions,
+    pushAttributeData(ATT_POSITION_Y, QString::fromUtf8(QApplication::tr("Posição Y").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_VELOCITY, QString::fromUtf8("Velocidade"), conds, actions,
+    pushAttributeData(ATT_VELOCITY, QString::fromUtf8(QApplication::tr("Velocidade").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_VELOCITY_X, QString::fromUtf8("Velocidade X"), conds, actions,
+    pushAttributeData(ATT_VELOCITY_X, QString::fromUtf8(QApplication::tr("Velocidade X").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_VELOCITY_Y, QString::fromUtf8("Velocidade Y"), conds, actions,
+    pushAttributeData(ATT_VELOCITY_Y, QString::fromUtf8(QApplication::tr("Velocidade Y").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_ACCELERATION, QString::fromUtf8("Aceleração"), conds, actions,
+    pushAttributeData(ATT_ACCELERATION, QString::fromUtf8(QApplication::tr("Aceleração").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_ACCELERATION_X, QString::fromUtf8("Aceleração X"),conds, actions,
+    pushAttributeData(ATT_ACCELERATION_X, QString::fromUtf8(QApplication::tr("Aceleração X").toStdString().c_str()),conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_ACCELERATION_Y, QString::fromUtf8("Aceleração Y"), conds, actions,
+    pushAttributeData(ATT_ACCELERATION_Y, QString::fromUtf8(QApplication::tr("Aceleração Y").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
 
-    pushAttributeData(ATT_GRAVITY, QString::fromUtf8("Gravidade"), conds, actions,
+    pushAttributeData(ATT_GRAVITY, QString::fromUtf8(QApplication::tr("Gravidade").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_JUMP_INTENSITY, QString::fromUtf8("Intensidade do pulo"), conds, actions,
+    pushAttributeData(ATT_JUMP_INTENSITY, QString::fromUtf8(QApplication::tr("Intensidade do pulo").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_HP, QString::fromUtf8("HP (vida)"), conds, actions,
+    pushAttributeData(ATT_HP, QString::fromUtf8(QApplication::tr("HP (vida)").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_MP, QString::fromUtf8("MP (magia)"), conds, actions,
+    pushAttributeData(ATT_MP, QString::fromUtf8(QApplication::tr("MP (magia)").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_ATK, QString::fromUtf8("Ataque"), conds, actions,
+    pushAttributeData(ATT_ATK, QString::fromUtf8(QApplication::tr("Ataque").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_DEF, QString::fromUtf8("Defesa"), conds, actions,
+    pushAttributeData(ATT_DEF, QString::fromUtf8(QApplication::tr("Defesa").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_INT, QString::fromUtf8("Inteligência"), conds, actions,
+    pushAttributeData(ATT_INT, QString::fromUtf8(QApplication::tr("Inteligência").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_OBJECT_LEVEL, QString::fromUtf8("Nível"), conds, actions,
+    pushAttributeData(ATT_OBJECT_LEVEL, QString::fromUtf8(QApplication::tr("Nível").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
 
 
@@ -378,13 +378,13 @@ EventComboDataProvider::EventComboDataProvider()
     conds->push_back((int)COND_EQUAL);
     conds->push_back((int)COND_DIFFERENT);
 
-    pushAttributeData(ATT_DIRECTION, QString::fromUtf8("Direção"), conds, actions,
+    pushAttributeData(ATT_DIRECTION, QString::fromUtf8(QApplication::tr("Direção").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
 
     actions = new std::list<int>();
     actions->push_back((int)ACTION_SET_VALUE);
 
-    pushAttributeData(ATT_ANIMATION, QString::fromUtf8("Animação"), conds, actions,
+    pushAttributeData(ATT_ANIMATION, QString::fromUtf8(QApplication::tr("Animação").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
 
     actions = new std::list<int>();
@@ -393,9 +393,9 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_MULT_VALUE);
     actions->push_back((int)ACTION_DIV_VALUE);
 
-    pushAttributeData(ATT_ROTATION, QString::fromUtf8("Rotação"), conds, actions,
+    pushAttributeData(ATT_ROTATION, QString::fromUtf8(QApplication::tr("Rotação").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE );
-    pushAttributeData(ATT_ZOOM, QString::fromUtf8("Zoom"), conds, actions,
+    pushAttributeData(ATT_ZOOM, QString::fromUtf8(QApplication::tr("Zoom").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
     actions = new std::list<int>();
@@ -404,7 +404,7 @@ EventComboDataProvider::EventComboDataProvider()
     conds->push_back((int)COND_BUTTON_PRESSED);
     conds->push_back((int)COND_BUTTON_DOWN);
 
-    pushAttributeData(ATT_KEY, QString::fromUtf8("Teclado"), conds, actions,
+    pushAttributeData(ATT_KEY, QString::fromUtf8(QApplication::tr("Teclado").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_KEY );
 
     actions = new std::list<int>();
@@ -413,7 +413,7 @@ EventComboDataProvider::EventComboDataProvider()
     conds->push_back((int)COND_MOUSE_BUTTON_PRESSED);
     conds->push_back((int)COND_MOUSE_BUTTON_DOWN);
 
-    pushAttributeData(ATT_MOUSE, QString::fromUtf8("Mouse"), conds, actions,
+    pushAttributeData(ATT_MOUSE, QString::fromUtf8(QApplication::tr("Mouse").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_MOUSE );
 
 
@@ -425,7 +425,7 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_TOOGLE_PAUSE_MUSIC);
     actions->push_back((int)ACTION_STOP_MUSIC);
 
-    pushAttributeData(ATT_MUSIC, QString::fromUtf8("Música"), conds, actions,
+    pushAttributeData(ATT_MUSIC, QString::fromUtf8(QApplication::tr("Música").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_MUSIC );
 
     actions = new std::list<int>();
@@ -436,7 +436,7 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_TOGGLE_PAUSE_SOUND);
     actions->push_back((int)ACTION_STOP_SOUND);
 
-    pushAttributeData(ATT_SOUND, QString::fromUtf8("Som"), conds, actions,
+    pushAttributeData(ATT_SOUND, QString::fromUtf8(QApplication::tr("Som").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_SOUND );
 
     actions = new std::list<int>();
@@ -447,14 +447,14 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_RESET_MAP);
     actions->push_back((int)ACTION_NEXT_MAP);
 
-    pushAttributeData(ATT_MAP, QString::fromUtf8("Mapa"), conds, actions,
+    pushAttributeData(ATT_MAP, QString::fromUtf8(QApplication::tr("Mapa").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_MAP );
 
     actions = new std::list<int>();
     conds = new std::list<int>();
     actions->push_back((int)ACTION_CALL_PROCEDURE);
 
-    pushAttributeData(ATT_PROCEDURE, QString::fromUtf8("Procedimentos"), conds, actions,
+    pushAttributeData(ATT_PROCEDURE, QString::fromUtf8(QApplication::tr("Procedimentos").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_PROCEDURE );
 
     actions = new std::list<int>();
@@ -463,7 +463,7 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_RESET_MAP_TIMER);
     actions->push_back((int)ACTION_RESET_GAME_TIMER);
 
-    pushAttributeData(ATT_TIMER, QString::fromUtf8("Tempo"), conds, actions,
+    pushAttributeData(ATT_TIMER, QString::fromUtf8(QApplication::tr("Tempo").toStdString().c_str()), conds, actions,
                       true, true, false, false, false, EventAttributeData::COMBO_TYPE_NONE);
 
 
@@ -472,7 +472,7 @@ EventComboDataProvider::EventComboDataProvider()
     conds = new std::list<int>();
     actions->push_back((int)ACTION_PLATFORM_JUMP);
 
-    pushAttributeData(ATT_SPECIAL_PLATFORM_MOVEMENT, QString::fromUtf8("Especiais (Plataforma)"), conds, actions,
+    pushAttributeData(ATT_SPECIAL_PLATFORM_MOVEMENT, QString::fromUtf8(QApplication::tr("Especiais (Plataforma)").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
     actions = new std::list<int>();
@@ -480,7 +480,7 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_BOUNCE);
     actions->push_back((int)ACTION_BOOST);
 
-    pushAttributeData(ATT_MOVEMENT, QString::fromUtf8("Movimentos Extras"), conds, actions,
+    pushAttributeData(ATT_MOVEMENT, QString::fromUtf8(QApplication::tr("Movimentos Extras").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
     actions = new std::list<int>();
@@ -492,14 +492,14 @@ EventComboDataProvider::EventComboDataProvider()
     conds->push_back((int)COND_GREATER);
     conds->push_back((int)COND_GREATER_EQUAL);
 
-    pushAttributeData(ATT_INSTANCE_NUMBER, QString::fromUtf8("Número de objetos"), conds, actions,
+    pushAttributeData(ATT_INSTANCE_NUMBER, QString::fromUtf8(QApplication::tr("Número de objetos").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
     actions = new std::list<int>();
     conds = new std::list<int>();
     actions->push_back((int)ACTION_THROW_OBJECT);
 
-    pushAttributeData(ATT_THROWER, QString::fromUtf8("Atirar objetos"), conds, actions,
+    pushAttributeData(ATT_THROWER, QString::fromUtf8(QApplication::tr("Atirar objetos").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
     actions = new std::list<int>();
@@ -507,7 +507,7 @@ EventComboDataProvider::EventComboDataProvider()
     actions->push_back((int)ACTION_FOLLOW_OBJECT);
     actions->push_back((int)ACTION_UNFOLLOW_OBJECT);
 
-    pushAttributeData(ATT_FOLLOWER, QString::fromUtf8("Seguir/Afastar"), conds, actions,
+    pushAttributeData(ATT_FOLLOWER, QString::fromUtf8(QApplication::tr("Seguir/Afastar").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
     actions = new std::list<int>();
@@ -517,7 +517,7 @@ EventComboDataProvider::EventComboDataProvider()
     conds->push_back((int)COND_IS_RIGHT_SIDE);
     conds->push_back((int)COND_IS_DOWN_SIDE);
 
-    pushAttributeData(ATT_SIDES, QString::fromUtf8("Canto da tela"), conds, actions,
+    pushAttributeData(ATT_SIDES, QString::fromUtf8(QApplication::tr("Canto da tela").toStdString().c_str()), conds, actions,
                       false, false, false, false, false, EventAttributeData::COMBO_TYPE_NONE);
 
 
@@ -532,95 +532,95 @@ EventComboDataProvider::EventComboDataProvider()
     conds->push_back((int)COND_GREATER);
     conds->push_back((int)COND_GREATER_EQUAL);
 
-    pushAttributeData(ATT_GAME_TIMER, QString::fromUtf8("Timer global"), conds, actions,
+    pushAttributeData(ATT_GAME_TIMER, QString::fromUtf8(QApplication::tr("Timer global").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
-    pushAttributeData(ATT_MAP_TIMER, QString::fromUtf8("Timer do mapa"), conds, actions,
+    pushAttributeData(ATT_MAP_TIMER, QString::fromUtf8(QApplication::tr("Timer do mapa").toStdString().c_str()), conds, actions,
                       true, true, true, false, true, EventAttributeData::COMBO_TYPE_NONE);
 
-    pushConditionData(COND_EQUAL, QString::fromUtf8("Igual a"));
-    pushConditionData(COND_DIFFERENT, QString::fromUtf8("Diferente de"));
-    pushConditionData(COND_LESS, QString::fromUtf8("Menor que"));
-    pushConditionData(COND_LESS_EQUAL, QString::fromUtf8("Menor ou igual a"));
-    pushConditionData(COND_GREATER, QString::fromUtf8("Maior que"));
-    pushConditionData(COND_GREATER_EQUAL, QString::fromUtf8("Maior ou igual a"));
+    pushConditionData(COND_EQUAL, QString::fromUtf8(QApplication::tr("Igual a").toStdString().c_str()));
+    pushConditionData(COND_DIFFERENT, QString::fromUtf8(QApplication::tr("Diferente de").toStdString().c_str()));
+    pushConditionData(COND_LESS, QString::fromUtf8(QApplication::tr("Menor que").toStdString().c_str()));
+    pushConditionData(COND_LESS_EQUAL, QString::fromUtf8(QApplication::tr("Menor ou igual a").toStdString().c_str()));
+    pushConditionData(COND_GREATER, QString::fromUtf8(QApplication::tr("Maior que").toStdString().c_str()));
+    pushConditionData(COND_GREATER_EQUAL, QString::fromUtf8(QApplication::tr("Maior ou igual a").toStdString().c_str()));
 
-    pushConditionData(COND_DETECT_SIMPLE_COLLISION, QString("Colide com"));
-    pushConditionData(COND_DETECT_PIXEL_COLLISION, QString("Colide (por pixel) com"));
+    pushConditionData(COND_DETECT_SIMPLE_COLLISION, QString(QApplication::tr("Colide com").toStdString().c_str()));
+    pushConditionData(COND_DETECT_PIXEL_COLLISION, QString(QApplication::tr("Colide (por pixel) com").toStdString().c_str()));
 
-    pushConditionData(COND_BUTTON_PRESSED, QString::fromUtf8("Botão apertado"));
-    pushConditionData(COND_BUTTON_DOWN, QString::fromUtf8("Botão segurado"));
+    pushConditionData(COND_BUTTON_PRESSED, QString::fromUtf8(QApplication::tr("Botão apertado").toStdString().c_str()));
+    pushConditionData(COND_BUTTON_DOWN, QString::fromUtf8(QApplication::tr("Botão segurado").toStdString().c_str()));
 
-    pushConditionData(COND_MOUSE_BUTTON_PRESSED, QString::fromUtf8("Mouse apertado"));
-    pushConditionData(COND_MOUSE_BUTTON_DOWN, QString::fromUtf8("Mouse segurado"));
+    pushConditionData(COND_MOUSE_BUTTON_PRESSED, QString::fromUtf8(QApplication::tr("Mouse apertado").toStdString().c_str()));
+    pushConditionData(COND_MOUSE_BUTTON_DOWN, QString::fromUtf8(QApplication::tr("Mouse segurado").toStdString().c_str()));
 
-    pushConditionData(COND_IS_MUSIC_PLAYING, QString::fromUtf8("Existe música tocando?"));
-    pushConditionData(COND_IS_SOUND_PLAYING, QString::fromUtf8("Existe som tocando?"));
+    pushConditionData(COND_IS_MUSIC_PLAYING, QString::fromUtf8(QApplication::tr("Existe música tocando?").toStdString().c_str()));
+    pushConditionData(COND_IS_SOUND_PLAYING, QString::fromUtf8(QApplication::tr("Existe som tocando?").toStdString().c_str()));
 
-    pushConditionData(COND_IS_CURRENT_MAP, QString::fromUtf8("É o mapa atual"));
+    pushConditionData(COND_IS_CURRENT_MAP, QString::fromUtf8(QApplication::tr("É o mapa atual").toStdString().c_str()));
 
-    pushConditionData(COND_EVERY_SECONDS, QString::fromUtf8("A cada __ segundos"));
+    pushConditionData(COND_EVERY_SECONDS, QString::fromUtf8(QApplication::tr("A cada __ segundos").toStdString().c_str()));
 
-    pushConditionData(COND_IS_LEFT_SIDE, QString::fromUtf8("No canto esquerdo"));
-    pushConditionData(COND_IS_UP_SIDE, QString::fromUtf8("No canto de cima"));
-    pushConditionData(COND_IS_RIGHT_SIDE, QString::fromUtf8("No canto direito"));
-    pushConditionData(COND_IS_DOWN_SIDE, QString::fromUtf8("No canto debaixo"));
+    pushConditionData(COND_IS_LEFT_SIDE, QString::fromUtf8(QApplication::tr("No canto esquerdo").toStdString().c_str()));
+    pushConditionData(COND_IS_UP_SIDE, QString::fromUtf8(QApplication::tr("No canto de cima").toStdString().c_str()));
+    pushConditionData(COND_IS_RIGHT_SIDE, QString::fromUtf8(QApplication::tr("No canto direito").toStdString().c_str()));
+    pushConditionData(COND_IS_DOWN_SIDE, QString::fromUtf8(QApplication::tr("No canto debaixo").toStdString().c_str()));
 
-    pushActionData(ACTION_SET_VALUE, QString::fromUtf8("Determina valor"));
-    pushActionData(ACTION_ADD_VALUE, QString::fromUtf8("Adiciona valor"));
-    pushActionData(ACTION_MULT_VALUE, QString::fromUtf8("Multiplica valor"));
-    pushActionData(ACTION_DIV_VALUE, QString::fromUtf8("Divide valor"));
-    pushActionData(ACTION_DIV_VALUE, QString::fromUtf8("Divide valor"));
+    pushActionData(ACTION_SET_VALUE, QString::fromUtf8(QApplication::tr("Determina valor").toStdString().c_str()));
+    pushActionData(ACTION_ADD_VALUE, QString::fromUtf8(QApplication::tr("Adiciona valor").toStdString().c_str()));
+    pushActionData(ACTION_MULT_VALUE, QString::fromUtf8(QApplication::tr("Multiplica valor").toStdString().c_str()));
+    pushActionData(ACTION_DIV_VALUE, QString::fromUtf8(QApplication::tr("Divide valor").toStdString().c_str()));
+    pushActionData(ACTION_DIV_VALUE, QString::fromUtf8(QApplication::tr("Divide valor").toStdString().c_str()));
 
-    pushActionData(ACTION_PLAY_MUSIC, QString::fromUtf8("Toca música"));
-    pushActionData(ACTION_TOOGLE_PAUSE_MUSIC, QString::fromUtf8("Pausa/resume música"));
-    pushActionData(ACTION_STOP_MUSIC, QString::fromUtf8("Para música"));
+    pushActionData(ACTION_PLAY_MUSIC, QString::fromUtf8(QApplication::tr("Toca música").toStdString().c_str()));
+    pushActionData(ACTION_TOOGLE_PAUSE_MUSIC, QString::fromUtf8(QApplication::tr("Pausa/resume música").toStdString().c_str()));
+    pushActionData(ACTION_STOP_MUSIC, QString::fromUtf8(QApplication::tr("Para música").toStdString().c_str()));
 
-    pushActionData(ACTION_PLAY_SOUND, QString::fromUtf8("Toca som"));
-    pushActionData(ACTION_TOGGLE_PAUSE_SOUND, QString::fromUtf8("Pausa/resume som"));
-    pushActionData(ACTION_STOP_SOUND, QString::fromUtf8("Para som"));
+    pushActionData(ACTION_PLAY_SOUND, QString::fromUtf8(QApplication::tr("Toca som").toStdString().c_str()));
+    pushActionData(ACTION_TOGGLE_PAUSE_SOUND, QString::fromUtf8(QApplication::tr("Pausa/resume som").toStdString().c_str()));
+    pushActionData(ACTION_STOP_SOUND, QString::fromUtf8(QApplication::tr("Para som").toStdString().c_str()));
 
-    pushActionData(ACTION_SET_MAP, QString::fromUtf8("Pula para mapa"));
-    pushActionData(ACTION_RESET_MAP, QString::fromUtf8("Reseta mapa"));
+    pushActionData(ACTION_SET_MAP, QString::fromUtf8(QApplication::tr("Pula para mapa").toStdString().c_str()));
+    pushActionData(ACTION_RESET_MAP, QString::fromUtf8(QApplication::tr("Reseta mapa").toStdString().c_str()));
 
-    pushActionData(ACTION_CALL_PROCEDURE, QString::fromUtf8("Chama procedimento"));
+    pushActionData(ACTION_CALL_PROCEDURE, QString::fromUtf8(QApplication::tr("Chama procedimento").toStdString().c_str()));
 
-    pushActionData(ACTION_RESET_MAP_TIMER, QString::fromUtf8("Reinicia timer do mapa"));
-    pushActionData(ACTION_RESET_GAME_TIMER, QString::fromUtf8("Reinicia timer do jogo"));
+    pushActionData(ACTION_RESET_MAP_TIMER, QString::fromUtf8(QApplication::tr("Reinicia timer do mapa").toStdString().c_str()));
+    pushActionData(ACTION_RESET_GAME_TIMER, QString::fromUtf8(QApplication::tr("Reinicia timer do jogo").toStdString().c_str()));
 
-    pushActionData(ACTION_PLATFORM_JUMP, QString::fromUtf8("Pula"));
+    pushActionData(ACTION_PLATFORM_JUMP, QString::fromUtf8(QApplication::tr("Pula").toStdString().c_str()));
 
-    pushActionData(ACTION_BOUNCE, QString::fromUtf8("Quica"));
+    pushActionData(ACTION_BOUNCE, QString::fromUtf8(QApplication::tr("Quica").toStdString().c_str()));
 
-    pushActionData(ACTION_BOOST, QString::fromUtf8("Impulsiona"));
+    pushActionData(ACTION_BOOST, QString::fromUtf8(QApplication::tr("Impulsiona").toStdString().c_str()));
 
-    pushActionData(ACTION_THROW_OBJECT, QString::fromUtf8("Atira objeto na velocidade:"));
+    pushActionData(ACTION_THROW_OBJECT, QString::fromUtf8(QApplication::tr("Atira objeto na velocidade:").toStdString().c_str()));
 
-    pushActionData(ACTION_FOLLOW_OBJECT, QString::fromUtf8("Segue objeto na velocidade:"));
-    pushActionData(ACTION_UNFOLLOW_OBJECT, QString::fromUtf8("Foge do objeto na velocidade:"));
+    pushActionData(ACTION_FOLLOW_OBJECT, QString::fromUtf8(QApplication::tr("Segue objeto na velocidade:").toStdString().c_str()));
+    pushActionData(ACTION_UNFOLLOW_OBJECT, QString::fromUtf8(QApplication::tr("Foge do objeto na velocidade:").toStdString().c_str()));
 
-    pushActionData(ACTION_NEXT_MAP, QString::fromUtf8("Próximo mapa"));
+    pushActionData(ACTION_NEXT_MAP, QString::fromUtf8(QApplication::tr("Próximo mapa").toStdString().c_str()));
 
     GameObject *specialGameObject = new GameObject(-1);
     specialGameObject->specialIconPath = std::string(":/icones_editor_eventos/data/event_editor_icons/globe-icon.png");
-    specialGameObject->name = std::string("Globais");
+    specialGameObject->name = std::string(QApplication::tr("Globais").toStdString().c_str());
 
     specialObjectList.push_back(specialGameObject);
 
     specialGameObject = new GameObject(-2);
     specialGameObject->specialIconPath = std::string(":/icones_editor_eventos/data/event_editor_icons/joystick-icon.png");
-    specialGameObject->name = std::string("Controles");
+    specialGameObject->name = std::string(QApplication::tr("Controles").toStdString().c_str());
 
     specialObjectList.push_back(specialGameObject);
 
     specialGameObject = new GameObject(-3);
     specialGameObject->specialIconPath = std::string(":/icones_editor_eventos/data/event_editor_icons/clock-icon.png");
-    specialGameObject->name = std::string("Tempo");
+    specialGameObject->name = std::string(QApplication::tr("Tempo").toStdString().c_str());
 
     specialObjectList.push_back(specialGameObject);
 
     specialGameObject = new GameObject(-4);
     specialGameObject->specialIconPath = std::      string(":/icones_editor_eventos/data/event_editor_icons/music-icon.png");
-    specialGameObject->name = QString::fromUtf8("Música/Som").toStdString();
+    specialGameObject->name = QString::fromUtf8(QApplication::tr("Música/Som").toStdString().c_str()).toStdString();
 
     specialObjectList.push_back(specialGameObject);
 

@@ -98,17 +98,17 @@ void ObjectGraphicsItem::setColorizeEffect(bool value) {
 
 void ObjectGraphicsItem::contextMenuEvent(QGraphicsSceneContextMenuEvent *event) {
     QMenu menu;
-    QAction *mainObjectAction = menu.addAction("Objeto Principal");
-    QAction *cameraCenterAction = menu.addAction("Centro da camera");
+    QAction *mainObjectAction = menu.addAction(QApplication::tr("Objeto Principal"));
+    QAction *cameraCenterAction = menu.addAction(QApplication::tr("Centro da camera"));
     menu.addSeparator();
     QAction *dialogueAction = NULL;
     if(gameObjectInstance->gameObject->type == GameObject::NPC) {
-        dialogueAction = menu.addAction(QString::fromUtf8("Editar diálogos"));
+        dialogueAction = menu.addAction(QString::fromUtf8(QApplication::tr("Editar diálogos").toStdString().c_str()));
         menu.addSeparator();
     }
 
-    QAction *editarPropriedadesAction = menu.addAction("Editar propriedades");
-    QAction *removeAction = menu.addAction("Remover");
+    QAction *editarPropriedadesAction = menu.addAction(QApplication::tr("Editar propriedades"));
+    QAction *removeAction = menu.addAction(QApplication::tr("Remover"));
 
 
     mainObjectAction->setCheckable(true);
@@ -149,7 +149,7 @@ void ObjectGraphicsItem::contextMenuEvent(QGraphicsSceneContextMenuEvent *event)
 
         }
     } else if(selectedAction == removeAction) {
-        if(MessageBoxes::showConfirmBox(std::string("Deseja mesmo remover?"))) {
+        if(MessageBoxes::showConfirmBox(std::string(QApplication::tr("Deseja mesmo remover?").toStdString().c_str()))) {
             GameData *gameData = GameData::getInstance();
             gameData->editingMap->gameObjectInstances->erase(
                     std::find(gameData->editingMap->gameObjectInstances->begin(),

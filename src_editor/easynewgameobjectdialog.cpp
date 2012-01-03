@@ -421,10 +421,10 @@ void EasyNewGameObjectDialog::preencheComboMovementStyle() {
         ui->comboBoxMovementStyle->setEnabled(true);
         ui->comboBoxMovementType->setEnabled(true);
 
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Sempre na posição do mouse"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Sempre na posição do mouse quando clicar"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Sempre segue o mouse"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Segue o mouse quando clicar"));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Sempre na posição do mouse").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Sempre na posição do mouse quando clicar").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Sempre segue o mouse").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Segue o mouse quando clicar").toStdString().c_str()));
         ui->comboBoxMovementStyle->setCurrentIndex(2);
         break;
     case GameObject::STATIC_OBJECT:
@@ -438,12 +438,12 @@ void EasyNewGameObjectDialog::preencheComboMovementStyle() {
         ui->comboBoxMovementStyle->clear();
         ui->comboBoxMovementStyle->setEnabled(true);
         ui->comboBoxMovementType->setEnabled(true);
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Parado"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Segue personagem"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Foge do personagem"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Move esquerda/direita"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Move cima/baixo"));
-        ui->comboBoxMovementStyle->addItem(QString::fromUtf8("Movimento circular"));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Parado").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Segue personagem").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Foge do personagem").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Move esquerda/direita").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Move cima/baixo").toStdString().c_str()));
+        ui->comboBoxMovementStyle->addItem(QString::fromUtf8(tr("Movimento circular").toStdString().c_str()));
         break;
     case GameObject::ITEM:
         ui->comboBoxMovementStyle->clear();
@@ -462,22 +462,22 @@ void EasyNewGameObjectDialog::on_comboBoxType_currentIndexChanged(int index)
 void EasyNewGameObjectDialog::on_buttonBox_accepted()
 {
     if(ui->lineEditName->text().isEmpty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Erro: O objeto precisa ter um nome!"));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Erro: O objeto precisa ter um nome!").toStdString().c_str()));
         return;
     }
 
     if(ui->checkBoxObjectThrow->isChecked() && ui->comboBoxObjectThrow->count() == 0) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Erro: é necessário escolher um ítem para marcar a opção de atirar objeto."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Erro: é necessário escolher um ítem para marcar a opção de atirar objeto.").toStdString().c_str()));
         return;
     }
 
     if(ui->checkBoxObjectThrowClick->isChecked() && ui->comboBoxObjectThrowClick->count() == 0) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Erro: é necessário escolher um ítem para marcar a opção de atirar objeto com clique."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Erro: é necessário escolher um ítem para marcar a opção de atirar objeto com clique.").toStdString().c_str()));
         return;
     }
 
     if(ui->checkBoxSwordUse->isChecked() && ui->comboBoxObjectSword->count() == 0) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Erro: é necessário escolher um ítem para marcar a opção de atirar objeto com clique."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Erro: é necessário escolher um ítem para marcar a opção de atirar objeto com clique.").toStdString().c_str()));
         return;
     }
 
@@ -503,7 +503,7 @@ void EasyNewGameObjectDialog::on_pushButtonEditGraphics_pressed()
                                                        NULL,
                                                        this);
 
-    configsObjAnimationChooserWindow->setWindowTitle("Graficos do objeto");
+    configsObjAnimationChooserWindow->setWindowTitle(tr("Graficos do objeto").toStdString().c_str());
 
     configsObjAnimationChooserWindow->exec();
 

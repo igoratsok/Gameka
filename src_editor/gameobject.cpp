@@ -44,7 +44,7 @@ GameObject::GameObject()
 
     GameObjectAnimation *gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 0;
-    gameObjectAnimation->name = std::string("Parado");
+    gameObjectAnimation->name = std::string(QApplication::tr("Parado").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
 
 
@@ -61,44 +61,44 @@ GameObject::GameObject()
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 1;
-    gameObjectAnimation->name = std::string("Andando");
+    gameObjectAnimation->name = std::string(QApplication::tr("Andando").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 2;
-    gameObjectAnimation->name = std::string("Correndo");
+    gameObjectAnimation->name = std::string(QApplication::tr("Correndo").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 3;
-    gameObjectAnimation->name = std::string("Pulando");
+    gameObjectAnimation->name = std::string(QApplication::tr("Pulando").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 4;
-    gameObjectAnimation->name = std::string("Caindo");
+    gameObjectAnimation->name = std::string(QApplication::tr("Caindo").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 5;
-    gameObjectAnimation->name = std::string("Atacando");
+    gameObjectAnimation->name = std::string(QApplication::tr("Atacando").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 6;
-    gameObjectAnimation->name = std::string("Levando dano");
+    gameObjectAnimation->name = std::string(QApplication::tr("Levando dano").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
     gameObjectAnimation = new GameObjectAnimation();
     gameObjectAnimation->id = 7;
-    gameObjectAnimation->name = std::string("Morrendo");
+    gameObjectAnimation->name = std::string(QApplication::tr("Morrendo").toStdString().c_str());
     gameObjectAnimation->type = GameObjectAnimation::STATIC;
     gameObjectAnimations->push_back(gameObjectAnimation);
 
@@ -106,13 +106,13 @@ GameObject::GameObject()
 
 
     procedureGlobalAlways = new ProcedureData();
-    procedureGlobalAlways->name = QString::fromUtf8("Sempre").toStdString();
+    procedureGlobalAlways->name = QString::fromUtf8(QApplication::tr("Sempre").toStdString().c_str()).toStdString();
     procedureGlobalAlways->nameEditable = false;
     procedureGlobalStart = new ProcedureData();
-    procedureGlobalStart->name = QString::fromUtf8("Criação do objeto").toStdString();
+    procedureGlobalStart->name = QString::fromUtf8(QApplication::tr("Criação do objeto").toStdString().c_str()).toStdString();
     procedureGlobalStart->nameEditable = false;
     procedureGlobalEnd = new ProcedureData();
-    procedureGlobalEnd->name = QString::fromUtf8("Destrução do objeto").toStdString();
+    procedureGlobalEnd->name = QString::fromUtf8(QApplication::tr("Destrução do objeto").toStdString().c_str()).toStdString();
     procedureGlobalEnd->nameEditable = false;
 
 

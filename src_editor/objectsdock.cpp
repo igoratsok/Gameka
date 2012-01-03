@@ -53,19 +53,19 @@ void ObjectsDock::populaArvoreObjetos() {
     QTreeWidgetItem *itemPersonagem, *itemNPC, *itemItem, *itemEstatico;
 
     itemPersonagem = new QTreeWidgetItem((QTreeWidget*)0);
-    itemPersonagem->setText(0, QString("Personagem"));
+    itemPersonagem->setText(0, QString(tr("Personagem")));
     itemPersonagem->setData(0, Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     itemNPC = new QTreeWidgetItem((QTreeWidget*)0);
-    itemNPC->setText(0, QString("NPC"));
+    itemNPC->setText(0, QString(tr("NPC")));
     itemNPC->setData(0, Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     itemItem = new QTreeWidgetItem((QTreeWidget*)0);
-    itemItem->setText(0, QString("Item"));
+    itemItem->setText(0, QString(tr("Item")));
     itemItem->setData(0, Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     itemEstatico = new QTreeWidgetItem((QTreeWidget*)0);
-    itemEstatico->setText(0, QString("Estatico"));
+    itemEstatico->setText(0, QString(tr("Estatico")));
     itemEstatico->setData(0, Qt::UserRole, QVariant::fromValue((void*) NULL));
 
     ui->treeWidget->clear();
@@ -124,7 +124,7 @@ void ObjectsDock::on_treeWidget_customContextMenuRequested(QPoint pos)
 {
     if(ui->treeWidget->currentItem() != NULL) {
         QMenu menu;
-        QAction *editarPropriedadesAction = menu.addAction("Editar propriedades");
+        QAction *editarPropriedadesAction = menu.addAction(tr("Editar propriedades"));
         GameObject* gameObject = (GameObject*) ui->treeWidget->currentItem()->data(0, Qt::UserRole).value<void*>();
 
 

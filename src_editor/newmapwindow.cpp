@@ -82,12 +82,12 @@ void NewMapWindow::on_buttonBox_2_accepted()
     map->mapName = ui->tab_geral->getNomeMapa().toStdString();
 
     if(ui->tab_geral->getNomeMapa().isEmpty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("O mapa precisa ter nome!"));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("O mapa precisa ter nome!").toStdString().c_str()));
         return;
     }
 
     if(map->tileSets->empty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("É necessário ter ao menos um Tileset escolhido."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("É necessário ter ao menos um Tileset escolhido.").toStdString().c_str()));
         ui->tabWidget->setCurrentIndex(1);
         return;
     }

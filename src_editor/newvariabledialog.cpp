@@ -77,7 +77,7 @@ void NewVariableDialog::preencheCampos() {
 void NewVariableDialog::on_buttonBox_accepted()
 {
     if(ui->lineEditVariableName->text().isEmpty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("É necessário que a variável tenha um nome!"));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("É necessário que a variável tenha um nome!").toStdString().c_str()));
         return;
     }
 

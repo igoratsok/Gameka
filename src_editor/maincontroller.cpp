@@ -82,7 +82,7 @@ void MainController::init()
 #endif
 
     mainWindow->moveToCenter();
-    mainWindow->setWindowTitle("Gameka");
+    mainWindow->setWindowTitle(QApplication::tr("Gameka"));
 
 
     /* inicializando o vboxlayout */
@@ -113,7 +113,7 @@ void MainController::openNewProjectWindow(QString projectsDirectory, QWidget *pa
     newProjectWindow->setModal(true);
     newProjectWindow->show();
 
-    newProjectWindow->setWindowTitle("Novo Projeto");
+    newProjectWindow->setWindowTitle(QApplication::tr("Novo Projeto"));
 
 
 
@@ -145,7 +145,7 @@ void MainController::changeWindowTitle() {
     gameData = GameData::getInstance();
 
     QString nomeTela;
-    nomeTela.append("Gameka - ");
+    nomeTela.append(QApplication::tr("Gameka - "));
     nomeTela.append(gameData->gameName->c_str());
 
     mainWindow->setWindowTitle(nomeTela);
@@ -197,7 +197,7 @@ void MainController::saveProject() {
     gameData = GameData::getInstance();
 
     QMessageBox messageBox;
-    messageBox.setText("Deseja realmente salvar o projeto?");
+    messageBox.setText(QApplication::tr("Deseja realmente salvar o projeto?"));
     messageBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
     messageBox.setDefaultButton(QMessageBox::Cancel);
 
@@ -208,7 +208,7 @@ void MainController::saveProject() {
         dataWriter->save(gameData->filePath);
 
         QMessageBox sucessMessageBox;
-        sucessMessageBox.setText("Projeto gravado com sucesso!");
+        sucessMessageBox.setText(QApplication::tr("Projeto gravado com sucesso!"));
         sucessMessageBox.exec();
     }
 
@@ -219,8 +219,8 @@ void MainController::saveProjectAtExitGameka(QCloseEvent *event) {
     gameData = GameData::getInstance();
 
     QMessageBox messageBox;
-    messageBox.setText("Deseja realmente salvar o projeto?");
-    messageBox.setWindowTitle("Alerta!");
+    messageBox.setText(QApplication::tr("Deseja realmente salvar o projeto?"));
+    messageBox.setWindowTitle(QApplication::tr("Alerta!"));
     messageBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
     messageBox.setDefaultButton(QMessageBox::Cancel);
 
@@ -231,7 +231,7 @@ void MainController::saveProjectAtExitGameka(QCloseEvent *event) {
         dataWriter->save(gameData->filePath);
 
         QMessageBox sucessMessageBox;
-        sucessMessageBox.setText("Projeto gravado com sucesso!");
+        sucessMessageBox.setText(QApplication::tr("Projeto gravado com sucesso!"));
         sucessMessageBox.exec();
     }
 
@@ -598,8 +598,8 @@ void MainController::reopenWelcomeScreen(bool openNewProject) {
     gameData = GameData::getInstance();
 
     QMessageBox messageBox;
-    messageBox.setText("Deseja salvar o projeto antes?");
-    messageBox.setWindowTitle("Alerta!");
+    messageBox.setText(QApplication::tr("Deseja salvar o projeto antes?"));
+    messageBox.setWindowTitle(QApplication::tr("Alerta!"));
     messageBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
     messageBox.setDefaultButton(QMessageBox::Cancel);
 
@@ -610,7 +610,7 @@ void MainController::reopenWelcomeScreen(bool openNewProject) {
         dataWriter->save(gameData->filePath);
 
         QMessageBox sucessMessageBox;
-        sucessMessageBox.setText("Projeto gravado com sucesso!");
+        sucessMessageBox.setText(QApplication::tr("Projeto gravado com sucesso!"));
         sucessMessageBox.exec();
     }
 

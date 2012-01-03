@@ -51,7 +51,7 @@ void ConfigsNewObjectWindow::on_buttonBox_accepted()
 {
     /* validação */
     if(ui->lineEditName->text().isEmpty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Necessita digitar o nome."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Necessita digitar o nome.").toStdString().c_str()));
 
         this->show();
     } else {

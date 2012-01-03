@@ -29,7 +29,7 @@ SoundPickerDialog::SoundPickerDialog(int tipo, QWidget *parent) :
     ui(new Ui::SoundPickerDialog)
 {
     ui->setupUi(this);
-    setWindowTitle(QString("Escolher som/musica."));
+    setWindowTitle(QString(tr("Escolher som/musica.")));
 
     populaListaMusica();
     populaListaSom();

@@ -138,7 +138,7 @@ void ConfigsImportDialog::populaLista() {
 void ConfigsImportDialog::on_botaoSelecionar_clicked()
 {
     if(ui->listWidget->currentItem() == NULL) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Necessário importar um recurso antes."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Necessário importar um recurso antes.").toStdString().c_str()));
     } else {
         switch(importType) {
         case IMPORT_TILESETS:

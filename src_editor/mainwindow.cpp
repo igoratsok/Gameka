@@ -279,7 +279,7 @@ void MainWindow::on_actionRefazer_triggered()
 void MainWindow::on_actionAbout_triggered()
 {
     About *about = new About();
-    about->setWindowTitle(QString::fromUtf8("Sobre o Gameka"));
+    about->setWindowTitle(QString::fromUtf8(QApplication::tr("Sobre o Gameka").toStdString().c_str()));
 
     about->exec();
 

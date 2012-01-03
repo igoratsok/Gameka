@@ -61,7 +61,7 @@ void ConfigsObjectsWidget::on_pushButton_clicked()
 {
     configsNewObjectWindow = new ConfigsNewObjectWindow(optionsController, this);
     configsNewObjectWindow->setModal(true);
-    configsNewObjectWindow->setWindowTitle(QString("Novo objeto"));
+    configsNewObjectWindow->setWindowTitle(QString(tr("Novo objeto").toStdString().c_str()));
     configsNewObjectWindow->show();
 }
 
@@ -101,7 +101,7 @@ void ConfigsObjectsWidget::populaListaPersonagem() {
     QListWidgetItem *specialItem;
 
     specialItem = new QListWidgetItem();
-    specialItem->setText(QString::fromUtf8("---Personagens---"));
+    specialItem->setText(QString::fromUtf8(tr("---Personagens---").toStdString().c_str()));
     specialItem->setTextAlignment(Qt::AlignHCenter);
     specialItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
@@ -127,7 +127,7 @@ void ConfigsObjectsWidget::populaListaPersonagem() {
     }
 
     specialItem = new QListWidgetItem();
-    specialItem->setText(QString::fromUtf8("---Itens---"));
+    specialItem->setText(QString::fromUtf8(tr("---Itens---").toStdString().c_str()));
     specialItem->setTextAlignment(Qt::AlignHCenter);
     specialItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
@@ -150,7 +150,7 @@ void ConfigsObjectsWidget::populaListaPersonagem() {
     }
 
     specialItem = new QListWidgetItem();
-    specialItem->setText(QString::fromUtf8("---NPC---"));
+    specialItem->setText(QString::fromUtf8(tr("---NPC---").toStdString().c_str()));
     specialItem->setTextAlignment(Qt::AlignHCenter);
     specialItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
@@ -173,7 +173,7 @@ void ConfigsObjectsWidget::populaListaPersonagem() {
     }
 
     specialItem = new QListWidgetItem();
-    specialItem->setText(QString::fromUtf8("---Estáticos---"));
+    specialItem->setText(QString::fromUtf8(tr("---Estáticos---").toStdString().c_str()));
     specialItem->setTextAlignment(Qt::AlignHCenter);
     specialItem->setData(Qt::UserRole, QVariant::fromValue((void*) NULL));
 
@@ -231,13 +231,13 @@ void ConfigsObjectsWidget::on_removeObject_pressed()
     if(ui->listPersonagem->currentItem() != NULL) {
         currentObject = (GameObject*) ui->listPersonagem->currentItem()->data(Qt::UserRole).value<void*>();
         if(currentObject != NULL) {
-            if(MessageBoxes::showConfirmBox(std::string("Deseja realmente remover o objeto?"))) {
+            if(MessageBoxes::showConfirmBox(std::string(tr("Deseja realmente remover o objeto?").toStdString().c_str()))) {
                 if(!gameData->verifyObjectUsedById(currentObject->id)) {
                     this->optionsController->removeObject(currentObject);
                     ui->scrollArea->setWidget(NULL);
                     specificWidget->removeAllWidgets();
                 } else {
-                    MessageBoxes::showMessageBox(QString::fromUtf8("Não é possível remover o objeto, pois ele é utilizado em outro lugar."));
+                    MessageBoxes::showMessageBox(QString::fromUtf8(tr("Não é possível remover o objeto, pois ele é utilizado em outro lugar.").toStdString().c_str()));
                 }
 
             }

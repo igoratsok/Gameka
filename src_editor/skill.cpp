@@ -33,7 +33,7 @@ std::vector<Skill*>* Skill::getEditorSkills() {
 
     skillList = new std::vector<Skill*>();
 
-    skillList->push_back(createSkill(0, "Atira objeto", "", true, true, 6,
+    skillList->push_back(createSkill(0, QApplication::tr("Atira objeto").toStdString(), "", true, true, 6,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,
@@ -41,7 +41,7 @@ std::vector<Skill*>* Skill::getEditorSkills() {
                 GameObject::PLATFORM_MOVEMENT_OBJECT,
                 GameObject::PONG_BALL_OBJECT));
 
-    skillList->push_back(createSkill(1, "Atira objeto (clique)", "", true, true, 6,
+    skillList->push_back(createSkill(1, QApplication::tr("Atira objeto (clique)").toStdString(), "", true, true, 6,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,
@@ -49,7 +49,7 @@ std::vector<Skill*>* Skill::getEditorSkills() {
                 GameObject::PLATFORM_MOVEMENT_OBJECT,
                 GameObject::PONG_BALL_OBJECT));
 
-    skillList->push_back(createSkill(2, "Usa espada", "", true, false, 6,
+    skillList->push_back(createSkill(2, QApplication::tr("Usa espada").toStdString(), "", true, false, 6,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,
@@ -57,17 +57,17 @@ std::vector<Skill*>* Skill::getEditorSkills() {
                 GameObject::PLATFORM_MOVEMENT_OBJECT,
                 GameObject::PONG_BALL_OBJECT));
 
-    skillList->push_back(createSkill(3, "Pulo", "", false, true, 2,
+    skillList->push_back(createSkill(3, QApplication::tr("Pulo").toStdString(), "", false, true, 2,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT));
 
-    skillList->push_back(createSkill(4, "Pulo duplo", "", false, true, 4,
+    skillList->push_back(createSkill(4, QApplication::tr("Pulo duplo").toStdString(), "", false, true, 4,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,
                 GameObject::PLATFORM_MOVEMENT_OBJECT));
 
-    skillList->push_back(createSkill(5, "Correr", "", false, true, 6,
+    skillList->push_back(createSkill(5, QApplication::tr("Correr").toStdString(), "", false, true, 6,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,
@@ -75,16 +75,16 @@ std::vector<Skill*>* Skill::getEditorSkills() {
                 GameObject::PLATFORM_MOVEMENT_OBJECT,
                 GameObject::PONG_BALL_OBJECT));
 
-    skillList->push_back(createSkill(6, "Quicar paredes", "", false, true, 1,
+    skillList->push_back(createSkill(6, QApplication::tr("Quicar paredes").toStdString(), "", false, true, 1,
                 GameObject::PLATFORM_MOVEMENT_OBJECT));
 
-    skillList->push_back(createSkill(7, "Planar", "", false, true, 4,
+    skillList->push_back(createSkill(7, QApplication::tr("Planar").toStdString(), "", false, true, 4,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,
                 GameObject::PLATFORM_MOVEMENT_OBJECT));
 
-    skillList->push_back(createSkill(8, "Voar", "", false, true, 4,
+    skillList->push_back(createSkill(8, QApplication::tr("Voar").toStdString(), "", false, true, 4,
                 GameObject::CAR_MOVEMENT_OBJECT,
                 GameObject::EIGHT_MOVEMENT_OBJECT,
                 GameObject::FIGHTING_MOVEMENT_OBJECT,

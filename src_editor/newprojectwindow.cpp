@@ -58,11 +58,11 @@ void NewProjectWindow::changeEvent(QEvent *e)
 void NewProjectWindow::on_buttonBox_accepted()
 {
     if(ui->textNomeJogo->text().isEmpty() || ui->textNomePasta->text().isEmpty()) {
-        MessageBoxes::showMessageBox(QString::fromUtf8("Preencha todos os campos."));
+        MessageBoxes::showMessageBox(QString::fromUtf8(tr("Preencha todos os campos.").toStdString().c_str()));
         this->show();
     } else {
         if(QDir(QString(projectsDirectory).append("/").append(ui->textNomePasta->text())).exists()) {
-            MessageBoxes::showMessageBox(QString::fromUtf8("Pasta de projeto já existe."));
+            MessageBoxes::showMessageBox(QString::fromUtf8(tr("Pasta de projeto já existe.").toStdString().c_str()));
             this->show();
             return;
         }

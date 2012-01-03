@@ -69,7 +69,7 @@ void EventsWidget::populaComboTarget() {
 
     ui->comboBoxTarget->clear();
 
-    ui->comboBoxTarget->addItem(QIcon(":/icones_interface/data/icons/Gear.png"), QString("Global"), QVariant::fromValue((void*) NULL));
+    ui->comboBoxTarget->addItem(QIcon(":/icones_interface/data/icons/Gear.png"), QString(tr("Global").toStdString().c_str()), QVariant::fromValue((void*) NULL));
 
     for(std::vector<GameObject*>::iterator it = eventsEditorController->getObjectList()->begin(); it != eventsEditorController->getObjectList()->end(); ++it) {
         GameObject *gameObject = *it;
@@ -203,9 +203,9 @@ void EventsWidget::activateNewEventItemMenu(QTreeWidgetItem *item) {
     EventData *eventData = (EventData*) item->data(0, Qt::UserRole).value<void*>();
 
     QMenu menu;
-    QAction *newCondition = menu.addAction(QString::fromUtf8("Nova condição"));
-    QAction *newAction = menu.addAction(QString::fromUtf8("Nova ação"));
-    QAction *newDialogue = menu.addAction(QString::fromUtf8("Novo diálogo"));
+    QAction *newCondition = menu.addAction(QString::fromUtf8(tr("Nova condição").toStdString().c_str()));
+    QAction *newAction = menu.addAction(QString::fromUtf8(tr("Nova ação").toStdString().c_str()));
+    QAction *newDialogue = menu.addAction(QString::fromUtf8(tr("Novo diálogo").toStdString().c_str()));
 
 
 
@@ -340,8 +340,8 @@ void EventsWidget::activateCreatedEventItemMenu(QTreeWidgetItem *item) {
 
     QMenu menu;
 
-    QAction *editAction = menu.addAction(QString::fromUtf8("Editar"));
-    QAction *removeAction = menu.addAction(QString::fromUtf8("Remover"));
+    QAction *editAction = menu.addAction(QString::fromUtf8(tr("Editar").toStdString().c_str()));
+    QAction *removeAction = menu.addAction(QString::fromUtf8(tr("Remover").toStdString().c_str()));
 
     QAction *selectedAction = menu.exec(QCursor::pos());
 
@@ -489,7 +489,7 @@ void EventsWidget::on_lineEditProcedureName_textChanged(QString text)
 void EventsWidget::on_pushButtonNewVar_pressed()
 {
     NewVariableDialog *newVariableDialog = new NewVariableDialog(NULL, this);
-    newVariableDialog->setWindowTitle(QString::fromUtf8("Nova variável"));
+    newVariableDialog->setWindowTitle(QString::fromUtf8(tr("Nova variável").toStdString().c_str()));
 
     VariableData *variableData = newVariableDialog->exec();
 
@@ -527,7 +527,7 @@ void EventsWidget::on_pushButtonEditVar_pressed()
         VariableData *variableData = (VariableData*) currentItem->data(Qt::UserRole).value<void*>();
 
         NewVariableDialog *newVariableDialog = new NewVariableDialog(variableData, this);
-        newVariableDialog->setWindowTitle(QString::fromUtf8("Editar variável"));
+        newVariableDialog->setWindowTitle(QString::fromUtf8(tr("Editar variável").toStdString().c_str()));
 
         variableData = newVariableDialog->exec();
 

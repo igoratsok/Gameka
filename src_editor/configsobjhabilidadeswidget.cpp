@@ -45,13 +45,13 @@ ConfigsObjHabilidadesWidget::ConfigsObjHabilidadesWidget(OptionsController *opti
 
     switch(gameObject->type) {
     case GameObject::ITEM:
-        ui->labelSpecialSound->setText(QString::fromUtf8("Som ao pegar ítem: "));
+        ui->labelSpecialSound->setText(QString::fromUtf8(tr("Som ao pegar ítem: ").toStdString().c_str()));
         break;
     case GameObject::PLATFORM_MOVEMENT_OBJECT:
-        ui->labelSpecialSound->setText(QString::fromUtf8("Som ao pular: "));
+        ui->labelSpecialSound->setText(QString::fromUtf8(tr("Som ao pular: ").toStdString().c_str()));
         break;
     case GameObject::PONG_BALL_OBJECT:
-        ui->labelSpecialSound->setText(QString::fromUtf8("Som ao pegar ítem: "));
+        ui->labelSpecialSound->setText(QString::fromUtf8(tr("Som ao pegar ítem: ").toStdString().c_str()));
         break;
 
     default:
@@ -132,7 +132,7 @@ void ConfigsObjHabilidadesWidget::on_botaoAddHabilidade_pressed()
 
     ConfigsObjNewSkillDialog *configsObjNewSkillDialog;
     configsObjNewSkillDialog = new ConfigsObjNewSkillDialog(optionsController, gameObject);
-    configsObjNewSkillDialog->setWindowTitle("Nova habilidade");
+    configsObjNewSkillDialog->setWindowTitle(tr("Nova habilidade"));
 
     skillData = configsObjNewSkillDialog->exec();
 
@@ -171,7 +171,7 @@ void ConfigsObjHabilidadesWidget::on_pushButtonEdit_pressed()
         if(skillData != NULL) {
             ConfigsObjNewSkillDialog *configsObjNewSkillDialog;
             configsObjNewSkillDialog = new ConfigsObjNewSkillDialog(optionsController, gameObject, skillData);
-            configsObjNewSkillDialog->setWindowTitle("Nova habilidade");
+            configsObjNewSkillDialog->setWindowTitle(tr("Nova habilidade"));
 
             configsObjNewSkillDialog->exec();
 
@@ -196,7 +196,7 @@ void ConfigsObjHabilidadesWidget::on_botaoEditorEventos_pressed()
 void ConfigsObjHabilidadesWidget::on_toolButtonDamageSound_pressed()
 {
     SoundPickerDialog *soundPickerDialog = new SoundPickerDialog(SoundPickerDialog::SOM, this);
-    soundPickerDialog->setWindowTitle(QString::fromUtf8("Som ao levar dano"));
+    soundPickerDialog->setWindowTitle(QString::fromUtf8(tr("Som ao levar dano").toStdString().c_str()));
     soundPickerDialog->exec();
 
     if(soundPickerDialog->okPressed()) {
