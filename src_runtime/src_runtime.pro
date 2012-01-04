@@ -173,6 +173,8 @@ HEADERS += \
 
 unix:INCLUDEPATH += /usr/local/include/SDL
 
+unix:INCLUDEPATH += /usr/include/SDL
+
 win32:INCLUDEPATH += C:\QtSDK\mingw\include\SDL
 
 unix:!macx:LIBS += -L/usr/local/lib -lGL -lGLU -lSDL -lSDLmain -lSDL_ttf -lSDL_gfx -lSDL_mixer -lSDL_image -g
