@@ -260,7 +260,7 @@ void MainController::runRuntime() {
 
 
 #ifdef Q_WS_X11
-    myProcess->start(QString(gameData->getProjectDirectory().append("/").append("game_linux").c_str()), QStringList());
+    myProcess->start(QString(gameData->getProjectDirectory().append("/").append("run_game_linux").c_str()), QStringList());
 #endif
 #ifdef Q_WS_MACX
     myProcess->start(QString(gameData->getProjectDirectory().append("/").append("runtime_mac.app/Contents/MacOS/runtime_mac").c_str()), QStringList());
@@ -502,6 +502,13 @@ void MainController::createDirectoryStructure(std::string *filePath) {
         }
     }
 
+    if(QFile().exists(QString(dataFolder).append("project_data/runtime-common/runtime_linux_64"))) {
+        if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/runtime_linux_64"), QString(std::string(destPath.c_str()).append("/game_linux_64").c_str()))) {
+            printf("Falha no carregamento do runtime_linux_64.");
+            exit(1);
+        }
+    }
+
     if(QFile().exists(QString(dataFolder).append("project_data/runtime-common/run_game_linux"))) {
         if(!QFile().copy(QString(dataFolder).append("project_data/runtime-common/run_game_linux"), QString(std::string(destPath.c_str()).append("/run_game_linux").c_str()))) {
             printf("Falha no carregamento do run_game_linux.");
@@ -532,6 +539,7 @@ void MainController::createDirectoryStructure(std::string *filePath) {
     copyFolder(QString("sfx"), destPath);
     copyFolder(QString("tilesets"), destPath);
     copyFolder(QString("libs"), destPath);
+    copyFolder(QString("libs_64"), destPath);
 
     copyWin32dll(QString(destPath.c_str()));
 }
