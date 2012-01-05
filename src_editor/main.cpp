@@ -22,6 +22,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 
 #include <QtGui/QApplication>
+#include <QLocale>
+#include <QTranslator>
 #include <QIcon>
 #include <exception>
 
@@ -43,6 +45,13 @@ class MessageBoxes;
 int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
+
+    QTranslator translator;
+    if(!translator.load("gameka_tr_en")) {
+        std::cout << "Fail!!" << std::endl;
+        system("pwd");
+    }
+    a.installTranslator(&translator);
 
     Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 640);
 
