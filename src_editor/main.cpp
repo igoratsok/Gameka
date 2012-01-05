@@ -62,19 +62,23 @@ int main(int argc, char **argv)
     gameData = GameData::getInstance();
     gameData->argv0 = QString(argv[0]);
 
+    QString argv0;
+    QString appBundlePath;
+    QString dataFolder;
+
     QTranslator translator;
 
     switch(QLocale::system().language()) {
     case QLocale::English:
 #ifdef Q_WS_MACX
-        QString argv0 = GameData::getInstance()->argv0;
-        QString appBundlePath = QString(argv0.toStdString().substr(0, argv0.lastIndexOf('/')).c_str());
-        QString dataFolder = appBundlePath.append("/../Resources/data/translations/gameka_tr_en");
+        argv0 = GameData::getInstance()->argv0;
+        appBundlePath = QString(argv0.toStdString().substr(0, argv0.lastIndexOf('/')).c_str());
+        dataFolder = appBundlePath.append("/../Resources/data/translations/gameka_tr_en");
 
 
         translator.load(dataFolder);
         a.installTranslator(&translator);
-#elsif
+#else
         translator.load("data/translations/gameka_tr_en");
         a.installTranslator(&translator);
 #endif
