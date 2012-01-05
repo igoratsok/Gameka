@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 
     switch(QLocale::system().language()) {
     case QLocale::English:
-        translator.load("gameka_tr_en");
+        translator.load("data/translations/gameka_tr_en");
         a.installTranslator(&translator);
         break;
     case QLocale::Portuguese:
