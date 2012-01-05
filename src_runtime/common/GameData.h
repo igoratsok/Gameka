@@ -233,6 +233,10 @@ public:
 
 
     static GameData *singleton; /**< TODO */
+
+    int language; // 0 = portuguese, 1 = english
+    static const int LANGUAGE_PORTUGUESE = 0;
+    static const int LANGUAGE_ENGLISH = 1;
 };
 
 #endif /* GAMEDATA_H_ */

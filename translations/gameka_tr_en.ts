@@ -77,8 +77,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9pt; color:#000000;&quot;&gt;Each version is given a distinguishing version number. If the Library as you received it specifies that a certain numbered version of the GNU Lesser General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that published version or of any later version published by the Free Software Foundation. If the Library as you received it does not specify a version number of the GNU Lesser General Public License, you may choose any version of the GNU Lesser General Public License ever published by the Free Software Foundation.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9pt; color:#000000;&quot;&gt;If the Library as you received it specifies that a proxy can decide whether future versions of the GNU Lesser General Public License shall apply, that proxy&apos;s public statement of acceptance of any version is permanent authorization for you to choose that version for the Library.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:200;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;
+        <translation>&lt;html&gt;
 &lt;head&gt;
 &lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot;&gt;
 &lt;style type=&quot;text/css&quot;&gt;
@@ -86,167 +85,164 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body
-style=&quot;font-family: &apos;Lucida Grande&apos;; font-size: 13pt; font-weight: 400; font-style: normal;&quot;&gt;
+style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 400; font-style: normal;&quot;&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;center&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 11pt; font-weight: 600;&quot;&gt;Gameka
-0.9.2 &quot;Sawyer&quot;&lt;br&gt;
-&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-size: 11pt; font-weight: 600;&quot;&gt;Gameka 0.9.2 &quot;Sawyer&quot;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;center&quot;&gt;&lt;a
 href=&quot;http://www.gameka.com.br/&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;http://www.gameka.com.br/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;justify&quot;&gt;
-&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;span style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;Game creator
-developed inside University of Brasilia&apos;s Computer Science Department
-as a completition of course work.&lt;/span&gt;&lt;span class=&quot;&quot;
-style=&quot;color: rgb(51, 51, 51); font-family: arial,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(245, 245, 245);&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;http://www.gameka.com.br/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;justify&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Development:
-&lt;/span&gt;&lt;span style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;Ígor
-Augusto de Faria Costa (&lt;/span&gt;&lt;a
+style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;Game creator developed
+inside University of Brasilia&apos;s Computer Science Department as a
+completition of course work.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;justify&quot;&gt;&lt;span
+style=&quot;font-weight: 600;&quot;&gt;Development: &lt;/span&gt;Ígor Augusto de Faria
+Costa (&lt;a
 href=&quot;http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4423494Y4&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;lattes&lt;/span&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;lattes&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;justify&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Guidance:&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt; Profª Drª Carla Denise
-Castanho (&lt;/span&gt;&lt;a
+style=&quot;font-weight: 600;&quot;&gt;Guidance:&lt;/span&gt; Profª Drª Carla Denise
+Castanho (&lt;a
 href=&quot;http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4777334H6&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;lattes&lt;/span&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;lattes&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot; align=&quot;justify&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Pedagogical
-assistance: &lt;/span&gt;&lt;span style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;Alessandra
-Silva de Souza (&lt;/span&gt;&lt;a
+style=&quot;font-weight: 600;&quot;&gt;Pedagogic Assistance: &lt;/span&gt;Alessandra
+Silva de Souza (&lt;a
 href=&quot;http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&amp;amp;id=K4245749T9&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;lattes&lt;/span&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;lattes&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Collaboration:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Tilesets:
+style=&quot;font-weight: 600;&quot;&gt;&lt;br&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;- Silveira Neto (&lt;/span&gt;&lt;a
+style=&quot;font-weight: 600;&quot;&gt;Collaboration:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
+style=&quot;font-weight: 600;&quot;&gt;Tilesets: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;- Silveira Neto (&lt;a
 href=&quot;http://silveiraneto.net/&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;website&lt;/span&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;website&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;- Kevin Hansen&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;- Kevin Hansen&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Icons:&lt;br&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;Mihaiciuc Bogdan (&lt;/span&gt;&lt;a
+style=&quot;font-weight: 600;&quot;&gt;Icons:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;- Mihaiciuc Bogdan (&lt;a
 href=&quot;http://bogo-d.deviantart.com/&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;deviantArt&lt;/span&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;deviantArt&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 600;&quot;&gt;Special
-Thanks:&lt;br&gt;
+style=&quot;font-weight: 600;&quot;&gt;&lt;br&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt;&quot;&gt;Júlio César Kiyuna Higa
-(for helping in the Mac OSX version)&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-weight: 600;&quot;&gt;Translations:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Ubuntu&apos;; font-size: 9pt; font-weight: 200;&quot;&gt;Este
-software está licensiado sobre a licensa LGPL, cuja cópia está
-disponibilizada abaixo:&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-weight: 600;&quot;&gt;Inglês:&lt;/span&gt; Matheus Rocha Pitta&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt; Ígor Augusto de Faria Costa&lt;/p&gt;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+Special Thanks&lt;/span&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;- Júlio César Kiyuna Higa &lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt; (helped me to compile Gameka
+in Mac OSX)&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;- Coreh (&lt;a
+href=&quot;https://github.com/coreh/&quot;&gt;&lt;span
+style=&quot;text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;github&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt; (helped me in random tasks
+and listened to me talking about the software)&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;GNU
+style=&quot;font-weight: 200;&quot;&gt;Este software está licensiado sobre a
+licensa LGPL, cuja cópia está disponibilizada abaixo:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;GNU
 LESSER GENERAL PUBLIC LICENSE&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;Version
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;Version
 3, 29 June 2007&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;Copyright
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;Copyright
 © 2007 Free Software Foundation, Inc. &amp;lt;&lt;/span&gt;&lt;a
 href=&quot;http://fsf.org/&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;http://fsf.org/&lt;/span&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; text-decoration: underline; color: rgb(0, 0, 255);&quot;&gt;http://fsf.org/&lt;/span&gt;&lt;/a&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;Everyone
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;Everyone
 is permitted to copy and distribute verbatim copies of this license
 document, but changing it is not allowed.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;This
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;This
 version of the GNU Lesser General Public License incorporates the terms
 and conditions of version 3 of the GNU General Public License,
 supplemented by the additional permissions listed below.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section0&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;0&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;0&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Additional Definitions.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;As
-used herein, “this License” refers to version 3 of the GNU Lesser
-General Public License, and the “GNU GPL” refers to version 3 of the
-GNU General Public License.&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;As used
+herein, “this License” refers to version 3 of the GNU Lesser General
+Public License, and the “GNU GPL” refers to version 3 of the GNU
+General Public License.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;“The
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;“The
 Library” refers to a covered work governed by this License, other than
 an Application or a Combined Work as defined below.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;An
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;An
 “Application” is any work that makes use of an interface provided by
 the Library, but which is not otherwise based on the Library. Defining
 a subclass of a class defined by the Library is deemed a mode of using
 an interface provided by the Library.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;A
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;A
 “Combined Work” is a work produced by combining or linking an
 Application with the Library. The particular version of the Library
 with which the Combined Work was made is also called the “Linked
 Version”.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;The
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;The
 “Minimal Corresponding Source” for a Combined Work means the
 Corresponding Source for the Combined Work, excluding any source code
 for portions of the Combined Work that, considered in isolation, are
 based on the Application, and not on the Linked Version.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;The
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;The
 “Corresponding Application Code” for a Combined Work means the object
 code and/or source code for the Application, including any data and
 utility programs needed for reproducing the Combined Work from the
 Application, but excluding the System Libraries of the Combined Work.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section1&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;1&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;1&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Exception to Section 3 of the GNU GPL.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;You
-may convey a covered work under sections 3 and 4 of this License
-without being bound by section 3 of the GNU GPL.&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;You may
+convey a covered work under sections 3 and 4 of this License without
+being bound by section 3 of the GNU GPL.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section2&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;2&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;2&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Conveying Modified Versions.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;If
-you modify a copy of the Library, and, in your modifications, a
-facility refers to a function or data to be supplied by an Application
-that uses the facility (other than as an argument passed when the
-facility is invoked), then you may convey a copy of the modified
-version:&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;If you
+modify a copy of the Library, and, in your modifications, a facility
+refers to a function or data to be supplied by an Application that uses
+the facility (other than as an argument passed when the facility is
+invoked), then you may convey a copy of the modified version:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin: 0px;&quot;&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;a) under this License, provided that you
 make a good faith effort to ensure that, in the event an Application
 does not supply the function or data, the facility still operates, and
 performs whatever part of its purpose remains meaningful, or&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;b) under the GNU GPL, with none of the
 additional permissions of this License applicable to that copy.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section3&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;3&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;3&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Object Code Incorporating Material from Library Header Files.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;The
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;The
 object code form of an Application may incorporate material from a
 header file that is part of the Library. You may convey such object
 code under terms of your choice, provided that, if the incorporated
@@ -254,48 +250,41 @@ material is not limited to numerical parameters, data structure layouts
 and accessors, or small macros, inline functions and templates (ten or
 fewer lines in length), you do both of the following:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin: 0px;&quot;&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;a) Give prominent notice with each copy of
 the object code that the Library is used in it and that the Library and
 its use are covered by this License.&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;b) Accompany the object code with a copy of
 the GNU GPL and this license document.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section4&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;4&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;4&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Combined Works.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;You
-may convey a Combined Work under terms of your choice that, taken
-together, effectively do not restrict modification of the portions of
-the Library contained in the Combined Work and reverse engineering for
-debugging such modifications, if you also do each of the following:&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;You may
+convey a Combined Work under terms of your choice that, taken together,
+effectively do not restrict modification of the portions of the Library
+contained in the Combined Work and reverse engineering for debugging
+such modifications, if you also do each of the following:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin: 0px;&quot;&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;a) Give prominent notice with each copy of
 the Combined Work that the Library is used in it and that the Library
 and its use are covered by this License.&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;b) Accompany the Combined Work with a copy
 of the GNU GPL and this license document.&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;c) For a Combined Work that displays
 copyright notices during execution, include the copyright notice for
 the Library among these notices, as well as a reference directing the
 user to the copies of the GNU GPL and this license document.&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;d) Do one of the following:&lt;/span&gt;&lt;/li&gt;
 &lt;ul style=&quot;margin: 0px;&quot; type=&quot;circle&quot;&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;0) Convey the Minimal Corresponding Source
 under the terms of this License, and the Corresponding Application Code
 in a form suitable for, and under terms that permit, the user to
@@ -303,16 +292,14 @@ recombine or relink the Application with a modified version of the
 Linked Version to produce a modified Combined Work, in the manner
 specified by section 6 of the GNU GPL for conveying Corresponding
 Source.&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;1) Use a suitable shared library mechanism
 for linking with the Library. A suitable mechanism is one that (a) uses
 at run time a copy of the Library already present on the user&apos;s
 computer system, and (b) will operate properly with a modified version
 of the Library that is interface-compatible with the Linked Version.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;e) Provide Installation Information, but
 only if you would otherwise be required to provide such information
 under section 6 of the GNU GPL, and only to the extent that such
@@ -325,40 +312,38 @@ must provide the Installation Information in the manner specified by
 section 6 of the GNU GPL for conveying Corresponding Source.)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section5&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;5&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;5&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Combined Libraries.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;You
-may place library facilities that are a work based on the Library side
-by side in a single library together with other library facilities that
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;You may
+place library facilities that are a work based on the Library side by
+side in a single library together with other library facilities that
 are not Applications and are not covered by this License, and convey
 such a combined library under terms of your choice, if you do both of
 the following:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin: 0px;&quot;&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;a) Accompany the combined library with a
 copy of the same work based on the Library, uncombined with any other
 library facilities, conveyed under the terms of this License.&lt;/span&gt;&lt;/li&gt;
-&lt;li
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;&lt;span
+&lt;li style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;&lt;span
 style=&quot;font-size: medium;&quot;&gt;b) Give prominent notice with the combined
 library that part of it is a work based on the Library, and explaining
 where to find the accompanying uncombined form of the same work.&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p style=&quot;margin: 0px; text-indent: 0px;&quot;&gt;&lt;a name=&quot;section6&quot;&gt;&lt;/a&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;6&lt;/span&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;6&lt;/span&gt;&lt;span
+style=&quot;font-family: &apos;Times New Roman&apos;; font-weight: 600; color: rgb(0, 0, 0);&quot;&gt;.
 Revised Versions of the GNU Lesser General Public License.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;The
-Free Software Foundation may publish revised and/or new versions of the
-GNU Lesser General Public License from time to time. Such new versions
-will be similar in spirit to the present version, but may differ in
-detail to address new problems or concerns.&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;The Free
+Software Foundation may publish revised and/or new versions of the GNU
+Lesser General Public License from time to time. Such new versions will
+be similar in spirit to the present version, but may differ in detail
+to address new problems or concerns.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;Each
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;Each
 version is given a distinguishing version number. If the Library as you
 received it specifies that a certain numbered version of the GNU Lesser
 General Public License “or any later version” applies to it, you have
@@ -369,11 +354,11 @@ a version number of the GNU Lesser General Public License, you may
 choose any version of the GNU Lesser General Public License ever
 published by the Free Software Foundation.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;margin: 12px 0px; text-indent: 0px;&quot;&gt;&lt;span
-style=&quot;font-family: &apos;Times New Roman&apos;; font-size: 9pt; color: rgb(0, 0, 0);&quot;&gt;If
-the Library as you received it specifies that a proxy can decide
-whether future versions of the GNU Lesser General Public License shall
-apply, that proxy&apos;s public statement of acceptance of any version is
-permanent authorization for you to choose that version for the Library.&lt;/span&gt;&lt;/p&gt;
+style=&quot;font-family: &apos;Times New Roman&apos;; color: rgb(0, 0, 0);&quot;&gt;If the
+Library as you received it specifies that a proxy can decide whether
+future versions of the GNU Lesser General Public License shall apply,
+that proxy&apos;s public statement of acceptance of any version is permanent
+authorization for you to choose that version for the Library.&lt;/span&gt;&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
@@ -408,12 +393,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsanimations.ui" line="46"/>
         <source>Numero de frames na horizontal:</source>
-        <translation>Horizontal frame number:</translation>
+        <translation>Number of Horizontal frames:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsanimations.ui" line="60"/>
         <source>Numero de frames na vertical:</source>
-        <translation>Vertical frame number:</translation>
+        <translation>Number of Vertical frames:</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configsanimations.ui" line="74"/>
@@ -428,7 +413,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsanimations.ui" line="94"/>
         <source>Velocidade:</source>
-        <translation>Velocity:</translation>
+        <translation>Speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsanimations.ui" line="111"/>
@@ -453,7 +438,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsanimations.ui" line="141"/>
         <source>Cima para baixo primeiro</source>
-        <translation>Up to down first</translation>
+        <translation>Top to bottom</translation>
     </message>
     <message>
         <location filename="../src_editor/configsanimations.ui" line="149"/>
@@ -581,7 +566,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsbackgrounds.ui" line="136"/>
         <source>Configurações da camada</source>
-        <translation>Background settings</translation>
+        <translation>Layer settings</translation>
     </message>
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="142"/>
@@ -596,7 +581,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="163"/>
         <source>Deslocamento:</source>
-        <translation>Displacement:</translation>
+        <translation>Distance from origin:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="177"/>
@@ -633,7 +618,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="240"/>
         <source>Estatica</source>
-        <translation>Choose</translation>
+        <translation>Static</translation>
     </message>
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="245"/>
@@ -643,17 +628,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsbackgrounds.ui" line="250"/>
         <source>Flutuando com relação a posição do personagem</source>
-        <translation>Floating relative with character position</translation>
+        <translation>Floating relative to character position</translation>
     </message>
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="255"/>
         <source>Flutuando com velocidade</source>
-        <translation>Floating with velocity</translation>
+        <translation>Floating with speed</translation>
     </message>
     <message>
         <location filename="../src_editor/configsbackgrounds.ui" line="263"/>
         <source>Velocidade:</source>
-        <translation>Velocity:</translation>
+        <translation>Speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsbackgrounds.cpp" line="292"/>
@@ -790,17 +775,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsgeneralwidget.ui" line="315"/>
         <source>Ao morrer:</source>
-        <translation>When you&apos;re dead:</translation>
+        <translation>When dead:</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configsgeneralwidget.ui" line="321"/>
         <source>Número de vidas:</source>
-        <translation>Number os lives:</translation>
+        <translation>Number of lives:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsgeneralwidget.ui" line="338"/>
         <source>Perde vida</source>
-        <translation>Loose life</translation>
+        <translation>Lose life</translation>
     </message>
     <message>
         <location filename="../src_editor/configsgeneralwidget.ui" line="348"/>
@@ -816,7 +801,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsgeneralwidget.ui" line="368"/>
         <source>Ao perder todas vidas:</source>
-        <translation>When you loose all lives:</translation>
+        <translation>When all lives are lost:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsgeneralwidget.ui" line="374"/>
@@ -826,7 +811,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsgeneralwidget.ui" line="391"/>
         <source>Desliga jogo</source>
-        <translation>Turnoff game</translation>
+        <translation>Turn off game</translation>
     </message>
     <message>
         <location filename="../src_editor/configsgeneralwidget.cpp" line="93"/>
@@ -894,7 +879,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsimportdialog.ui" line="90"/>
         <source>Apagar</source>
-        <translation>Erase</translation>
+        <translation>Delete</translation>
     </message>
     <message>
         <location filename="../src_editor/configsimportdialog.ui" line="97"/>
@@ -987,7 +972,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsnewobjectwindow.cpp" line="54"/>
         <source>Necessita digitar o nome.</source>
-        <translation>It&apos;s necessary to input the object game.</translation>
+        <translation>It&apos;s necessary to input the object name.</translation>
     </message>
 </context>
 <context>
@@ -1030,7 +1015,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="132"/>
         <source>Deixe essa aba ativada se não quiser animação!</source>
-        <translation>Let this tab activated if you don&apos;t want any animation or sprite to this direction/state!</translation>
+        <translation>Keep this tab active if you don&apos;t want any animation or sprite in this direction/state!</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="140"/>
@@ -1040,7 +1025,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="153"/>
         <source>Escolher sprite</source>
-        <translation>Choose</translation>
+        <translation>Choose sprite</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="160"/>
@@ -1070,13 +1055,13 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="205"/>
         <source>*clique na visualização para determinar o colorkey</source>
-        <translation>*click in the preview to choose the colorkey</translation>
+        <translation>*click preview to choose the colorkey</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="212"/>
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="267"/>
         <source>Deslocamento:</source>
-        <translation>Displacement:</translation>
+        <translation>Distance to origin:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjanimationchooserwindow.ui" line="219"/>
@@ -1141,7 +1126,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjattributeswidget.ui" line="59"/>
         <source>Magia (MP):</source>
-        <translation>Magic (MP):</translation>
+        <translation>Magic points (MP):</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjattributeswidget.ui" line="82"/>
@@ -1176,7 +1161,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjattributeswidget.ui" line="167"/>
         <source>Experiência necessária para subir de nível (EXP):</source>
-        <translation>Necessary experience points (EXP) to level up:</translation>
+        <translation>Experience points (EXP) to level up:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjattributeswidget.ui" line="174"/>
@@ -1186,17 +1171,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjattributeswidget.ui" line="184"/>
         <source>Velocidade de evolução:</source>
-        <translation>Evolution velocity:</translation>
+        <translation>Evolution speed:</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configsobjattributeswidget.ui" line="207"/>
         <source>EXP = velocidade de evolução * nível atual</source>
-        <translation>EXP = evolution velocity * current level</translation>
+        <translation>EXP = evolution speed * current level</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjattributeswidget.cpp" line="73"/>
         <source>Velocidade de evoluÃ§Ã£o: </source>
-        <translation>Evolution velocity:</translation>
+        <translation>Evolution speed:</translation>
     </message>
 </context>
 <context>
@@ -1289,7 +1274,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjdadosgeraiswidget.ui" line="203"/>
         <source>Sprite único que gira</source>
-        <translation>Unique rotating sprite</translation>
+        <translation>Rotating Unique sprite</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configsobjdadosgeraiswidget.ui" line="208"/>
@@ -1309,7 +1294,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjdadosgeraiswidget.ui" line="231"/>
         <source>Pode ser arrastado pelo mouse?</source>
-        <translation>Is draggeable by mouse?</translation>
+        <translation>Is draggable by mouse?</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjdadosgeraiswidget.cpp" line="95"/>
@@ -1319,7 +1304,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjdadosgeraiswidget.cpp" line="124"/>
         <source>Deseja realmente trocar o tipo do objeto? Todas as informaÃ§Ãµes, exceto forma grÃ¡fica, serÃ£o apagadas.</source>
-        <translation>Do you really wish to change the object typew All it&apos;s informations, except the graphic form, will be erased.</translation>
+        <translation>Do you really wish to change the object type? All it&apos;s informations, except the graphic form, will be erased.</translation>
     </message>
 </context>
 <context>
@@ -1467,7 +1452,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjitem.ui" line="90"/>
         <source>Incrementa variável:</source>
-        <translation>Increase variable:</translation>
+        <translation>Increment variable:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="100"/>
@@ -1482,12 +1467,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="120"/>
         <source>*use valores negativos para PERDER vida, pontos, magia, etc</source>
-        <translation>*use negative values to make LOOSE life/points/magic</translation>
+        <translation>*use negative values to LOSE life/points/magic</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="133"/>
         <source>Ao encostar no personagem:</source>
-        <translation>When hitting character:</translation>
+        <translation>When touching character:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="140"/>
@@ -1497,7 +1482,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="150"/>
         <source>Envia para o inventario, onde pode ser usado</source>
-        <translation>Throw item to inventory</translation>
+        <translation>Send item to inventory</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="166"/>
@@ -1512,12 +1497,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="183"/>
         <source>Desaparece ao encostar em personagem</source>
-        <translation>Disappears when hitting character</translation>
+        <translation>Disappears when touching character</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjitem.ui" line="190"/>
         <source>Desaparece ao encostar em paredes</source>
-        <translation>Disappears when hitting walls</translation>
+        <translation>Disappears when touching walls</translation>
     </message>
 </context>
 <context>
@@ -1530,7 +1515,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjnewskilldialog.ui" line="20"/>
         <source>Sobre a habilidade</source>
-        <translation>Skill settings</translation>
+        <translation>About skill</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnewskilldialog.ui" line="26"/>
@@ -1555,7 +1540,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjnewskilldialog.ui" line="78"/>
         <source>É ataque mágico (usa inteligência)</source>
-        <translation>Is it magic attack? (uses inteligence)</translation>
+        <translation>Is magic attack (uses inteligence)</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnewskilldialog.ui" line="85"/>
@@ -1600,7 +1585,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjnewskilldialog.cpp" line="276"/>
         <source>NÃ£o existem itens para serem escolhidos.</source>
-        <translation>There aren&apos;t items to be chosen.</translation>
+        <translation>No items to be chosen.</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnewskilldialog.cpp" line="295"/>
@@ -1648,7 +1633,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="50"/>
         <source>Foge do personagem</source>
-        <translation>Run out of character</translation>
+        <translation>Run away from character</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="55"/>
@@ -1668,12 +1653,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="73"/>
         <source>Velocidade de movimentação:</source>
-        <translation>Movement velocity:</translation>
+        <translation>Movement speed:</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="83"/>
         <source>Raio de movimentação</source>
-        <translation>Movement range</translation>
+        <translation>Movement radius</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="93"/>
@@ -1693,22 +1678,22 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="128"/>
         <source>Encostando no inimigo</source>
-        <translation>Leaning enemy</translation>
+        <translation>Touching enemy</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="135"/>
         <source>Atirando item/magia sobre inimigo</source>
-        <translation>Throwing item/magic over enemy</translation>
+        <translation>Using item/magic on enemy</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="142"/>
         <source>Acertando espada sobre inimigo</source>
-        <translation>Hitting sword on enemy</translation>
+        <translation>Hitting enemy with sword</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="149"/>
         <source>Pulando sobre inimigo (caso do objeto de plataforma)</source>
-        <translation>Jumping over the enemy (platform movement case)</translation>
+        <translation>Jumping over enemy (platform movement case)</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="162"/>
@@ -1718,7 +1703,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="169"/>
         <source>Encosta no personagem</source>
-        <translation>Leaning the character</translation>
+        <translation>Touching the character</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="176"/>
@@ -1741,17 +1726,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="213"/>
         <source>Atira item/magia direção que estiver</source>
-        <translation>Throw item/magic in it&apos;s own direction</translation>
+        <translation>Use item/magic in direction</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="230"/>
         <source>Atira item/magia direção do personagem principal</source>
-        <translation>Throw item/magic in main character&apos;s direction</translation>
+        <translation>Use item/magic in main character&apos;s direction</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="247"/>
         <source>Periodicidade de ataque (segundos):</source>
-        <translation>Attack periodicity (seconds):</translation>
+        <translation>Attack cycle (seconds):</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjnpcbehaviorwidget.ui" line="261"/>
@@ -1830,7 +1815,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
         <location filename="../src_editor/configsobjphysicswidget.ui" line="302"/>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="498"/>
         <source>Velocidade:</source>
-        <translation>Velocity:</translation>
+        <translation>Speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="70"/>
@@ -1859,7 +1844,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
         <location filename="../src_editor/configsobjphysicswidget.ui" line="241"/>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="526"/>
         <source>Desaceleração:</source>
-        <translation>Deacceleration:</translation>
+        <translation>Deceleration:</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="255"/>
@@ -1879,12 +1864,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="370"/>
         <source>Velocidade (eixo X):</source>
-        <translation>Velocity (x axis):</translation>
+        <translation>Speed (x axis):</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="384"/>
         <source>Velocidade (eixo Y):</source>
-        <translation>Velocity (y axis):</translation>
+        <translation>Speed (y axis):</translation>
     </message>
     <message>
         <location filename="../src_editor/configsobjphysicswidget.ui" line="404"/>
@@ -2096,12 +2081,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/configstilesetwidget.ui" line="130"/>
         <source>Marca tudo não colisível (&quot;O&quot;)</source>
-        <translation>Mark all as non collideable (&quot;O&quot;)</translation>
+        <translation>Mark all as non collidable (&quot;O&quot;)</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/configstilesetwidget.ui" line="137"/>
         <source>Marca tudo colisível (&quot;X&quot;)</source>
-        <translation>Mark all as collideable (&quot;X&quot;)</translation>
+        <translation>Mark all as collidable (&quot;X&quot;)</translation>
     </message>
     <message>
         <location filename="../src_editor/configstilesetwidget.ui" line="144"/>
@@ -2121,7 +2106,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/configstilesetwidget.cpp" line="178"/>
         <source>Tem certeza que deseja alterar o valor? A matriz de colisÃ£o serÃ¡ reinicializada.</source>
-        <translation>Do you really wish to change the value? The collision matrix will be resetted.</translation>
+        <translation>Do you really wish to change the value? The collision matrix will be reset.</translation>
     </message>
     <message>
         <location filename="../src_editor/configstilesetwidget.cpp" line="204"/>
@@ -2219,7 +2204,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/easynewgameobjectdialog.ui" line="150"/>
         <source>Velocidade de movimentação:</source>
-        <translation>Movement velocity:</translation>
+        <translation>Movement speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/easynewgameobjectdialog.ui" line="161"/>
@@ -2274,7 +2259,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/easynewgameobjectdialog.ui" line="247"/>
         <source>Atira objeto  (clique)</source>
-        <translation>Throw object (w/ a click)</translation>
+        <translation>Throw object (w/ click)</translation>
     </message>
     <message>
         <location filename="../src_editor/easynewgameobjectdialog.ui" line="254"/>
@@ -2354,7 +2339,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/easynewgameobjectdialog.cpp" line="443"/>
         <source>Foge do personagem</source>
-        <translation>Run out of character</translation>
+        <translation>Run away from character</translation>
     </message>
     <message>
         <location filename="../src_editor/easynewgameobjectdialog.cpp" line="444"/>
@@ -2390,7 +2375,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/easynewgameobjectdialog.cpp" line="506"/>
         <source>Graficos do objeto</source>
-        <translation>Character - Static</translation>
+        <translation>Object graphics</translation>
     </message>
 </context>
 <context>
@@ -2480,7 +2465,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/eventswidget.cpp" line="208"/>
         <source>Novo diÃ¡logo</source>
-        <translation>New dialogue</translation>
+        <translation>New dialog</translation>
     </message>
     <message>
         <location filename="../src_editor/eventswidget.cpp" line="344"/>
@@ -2508,7 +2493,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/imagecolorpicker.ui" line="20"/>
         <source>Clique na imagem abiaxo para escolher a cor:</source>
-        <translation>Click in the image to choose the color:</translation>
+        <translation>Click image to choose color:</translation>
     </message>
     <message>
         <location filename="../src_editor/imagecolorpicker.ui" line="49"/>
@@ -2541,7 +2526,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/mainwindow.ui" line="37"/>
         <source>Visualizador de mapas</source>
-        <translation>Map visualizer</translation>
+        <translation>Map preview</translation>
     </message>
     <message>
         <location filename="../src_editor/mainwindow.ui" line="60"/>
@@ -2686,7 +2671,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/mainwindow.ui" line="403"/>
         <source>Adicione áreas com eventos/teletransportes. </source>
-        <translation>Add areas with events/teletransports.</translation>
+        <translation>Add areas with events/teleports.</translation>
     </message>
     <message>
         <location filename="../src_editor/mainwindow.ui" line="418"/>
@@ -2723,7 +2708,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/mainwindow.ui" line="454"/>
         <source>Personagens</source>
-        <translation>Character</translation>
+        <translation>Characters</translation>
     </message>
     <message>
         <location filename="../src_editor/mainwindow.ui" line="459"/>
@@ -2784,7 +2769,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/newdialoguedialog.ui" line="20"/>
         <source>Sequência de diálogos</source>
-        <translation>Dialogue sequence</translation>
+        <translation>Dialog sequence</translation>
     </message>
     <message>
         <location filename="../src_editor/newdialoguedialog.ui" line="30"/>
@@ -2845,7 +2830,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/newdialoguedialog.cpp" line="261"/>
         <source>NÃ£o hÃ¡ procedimentos para adicionar.</source>
-        <translation>There aren&apos;t procedures to add.</translation>
+        <translation>No procedures to add.</translation>
     </message>
 </context>
 <context>
@@ -2871,7 +2856,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/neweventdialog.ui" line="42"/>
         <source>Relações</source>
-        <translation>Connection</translation>
+        <translation>Relations</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/neweventdialog.ui" line="48"/>
@@ -2954,7 +2939,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/neweventdialog.cpp" line="531"/>
         <source>Ao menos uma das caixas de valores deve ser marcada.</source>
-        <translation>At lease one checkbox must be checked.</translation>
+        <translation>At least one checkbox must be checked.</translation>
     </message>
 </context>
 <context>
@@ -3000,7 +2985,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/newmapwindowgeneralwidget.ui" line="20"/>
         <source>Informações básicas</source>
-        <translation>Basic informations</translation>
+        <translation>Basic information</translation>
     </message>
     <message>
         <location filename="../src_editor/newmapwindowgeneralwidget.ui" line="26"/>
@@ -3054,7 +3039,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/newmapwindowgeneralwidget.ui" line="165"/>
         <source>Som</source>
-        <translation>Sound;</translation>
+        <translation>Sound</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/newmapwindowgeneralwidget.ui" line="171"/>
@@ -3074,12 +3059,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/newmapwindowgeneralwidget.ui" line="255"/>
         <source>Editar diálogo no início do mapa</source>
-        <translation>Edit dialogue that happes when the map starts</translation>
+        <translation>Edit map start dialog</translation>
     </message>
     <message>
         <location filename="../src_editor/newmapwindowgeneralwidget.cpp" line="110"/>
         <source>Nao existe nenhum fundo cadastrado.</source>
-        <translation>There isn&apos;t any background registered.</translation>
+        <translation>No background registered.</translation>
     </message>
     <message>
         <location filename="../src_editor/newmapwindowgeneralwidget.cpp" line="114"/>
@@ -3246,7 +3231,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/newteleportareadialog.ui" line="20"/>
         <source>Mapa a teletransportar:</source>
-        <translation>Map to teletransport:</translation>
+        <translation>Map to teleport:</translation>
     </message>
     <message utf8="true">
         <location filename="../src_editor/newteleportareadialog.ui" line="30"/>
@@ -3319,7 +3304,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/newvariabledialog.cpp" line="80"/>
         <source>Ã necessÃ¡rio que a variÃ¡vel tenha um nome!</source>
-        <translation>It&apos;s necessary to give the variable a name!</translation>
+        <translation>The variable needs a name!</translation>
     </message>
 </context>
 <context>
@@ -3460,17 +3445,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="344"/>
         <source>Velocidade</source>
-        <translation>Velocity</translation>
+        <translation>Speed</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="346"/>
         <source>Velocidade X</source>
-        <translation>X Velocity</translation>
+        <translation>X Speed</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="348"/>
         <source>Velocidade Y</source>
-        <translation>Y Velocity</translation>
+        <translation>Y Speed</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="350"/>
@@ -3631,7 +3616,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="541"/>
         <source>Diferente de</source>
-        <translation>Different of</translation>
+        <translation>Not equal</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="542"/>
@@ -3671,17 +3656,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="551"/>
         <source>BotÃ£o segurado</source>
-        <translation>Button holded</translation>
+        <translation>Button held</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="553"/>
         <source>Mouse apertado</source>
-        <translation>Mouse pressed</translation>
+        <translation>Mouse button pressed</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="554"/>
         <source>Mouse segurado</source>
-        <translation>Mouse holded</translation>
+        <translation>Mouse button held</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="556"/>
@@ -3721,7 +3706,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="566"/>
         <source>No canto debaixo</source>
-        <translation>Down edge</translation>
+        <translation>Lower edge</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="568"/>
@@ -3817,17 +3802,17 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="596"/>
         <source>Atira objeto na velocidade:</source>
-        <translation>Throw object in velocity:</translation>
+        <translation>Throw object at speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="598"/>
         <source>Segue objeto na velocidade:</source>
-        <translation>Follow object in velocity:</translation>
+        <translation>Follow object at speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="599"/>
         <source>Foge do objeto na velocidade:</source>
-        <translation>Flee from object in velocity:</translation>
+        <translation>Run away from object in speed:</translation>
     </message>
     <message>
         <location filename="../src_editor/eventcombodataprovider.cpp" line="601"/>
@@ -3905,7 +3890,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/gameobject.cpp" line="64"/>
         <source>Andando</source>
-        <translation>Waling</translation>
+        <translation>Walking</translation>
     </message>
     <message>
         <location filename="../src_editor/gameobject.cpp" line="70"/>
@@ -3973,7 +3958,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
         <location filename="../src_editor/maincontroller.cpp" line="234"/>
         <location filename="../src_editor/maincontroller.cpp" line="613"/>
         <source>Projeto gravado com sucesso!</source>
-        <translation>Project save sucessfully!</translation>
+        <translation>Project saved sucessfully!</translation>
     </message>
     <message>
         <location filename="../src_editor/maincontroller.cpp" line="223"/>
@@ -4040,7 +4025,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
         <location filename="../src_editor/optionscontroller.cpp" line="621"/>
         <location filename="../src_editor/optionscontroller.cpp" line="637"/>
         <source>Editar diÃ¡logos</source>
-        <translation>Edit dialogues</translation>
+        <translation>Edit dialogs</translation>
     </message>
     <message>
         <location filename="../src_editor/objectgraphicsitem.cpp" line="110"/>
@@ -4170,12 +4155,12 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/teleportareagraphicsitem.cpp" line="53"/>
         <source>Editar teletransporte</source>
-        <translation>Edit teletransport</translation>
+        <translation>Edit teleport</translation>
     </message>
     <message>
         <location filename="../src_editor/teleportareagraphicsitem.cpp" line="54"/>
         <source>Remover teletransporte</source>
-        <translation>Remove teletransport</translation>
+        <translation>Remove telesport</translation>
     </message>
     <message>
         <location filename="../src_editor/undochangetilecommand.cpp" line="31"/>
@@ -4285,7 +4270,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
         <location filename="../src_editor/tilemapscene.cpp" line="454"/>
         <location filename="../src_editor/tilemapscene.cpp" line="468"/>
         <source>Novo teletransporte</source>
-        <translation>New teletransport</translation>
+        <translation>New teleport</translation>
     </message>
 </context>
 <context>
@@ -4321,7 +4306,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message>
         <location filename="../src_editor/updatemanagerwindow.ui" line="43"/>
         <source>Arquivo</source>
-        <translation>FIle</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location filename="../src_editor/updatemanagerwindow.ui" line="57"/>
@@ -4360,7 +4345,7 @@ permanent authorization for you to choose that version for the Library.&lt;/span
     <message utf8="true">
         <location filename="../src_editor/welcomescreen.ui" line="129"/>
         <source>Projetos no diretório</source>
-        <translation>Directory projects</translation>
+        <translation>Projects in directory</translation>
     </message>
     <message>
         <location filename="../src_editor/welcomescreen.ui" line="139"/>

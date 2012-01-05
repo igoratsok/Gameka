@@ -42,6 +42,23 @@ int main(int argc, char **argv) {
 	gameData->resWidth = 640;
 	gameData->resHeight = 480;
 
+        // check the locale
+        std::string localeString = std::locale("").name();
+
+        if(localeString.empty()) {
+            gameData->language = GameData::LANGUAGE_ENGLISH;
+        } else {
+            if(localeString.at(0) == 'p' && localeString.at(1) == 't') {
+                gameData->language = GameData::LANGUAGE_PORTUGUESE;
+            } else if(localeString.at(0) == 'e' && localeString.at(1) == 'n') {
+                gameData->language = GameData::LANGUAGE_ENGLISH;
+            } else {
+                gameData->language = GameData::LANGUAGE_ENGLISH;
+            }
+        }
+
+
+
 
 
 	Sphere sphere = Sphere(Vector2(0, 10), 2);

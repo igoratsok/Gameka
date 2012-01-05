@@ -50,11 +50,20 @@ void TitleState::load() {
 	ChoiceText *choiceText;
 
 	choiceText = new ChoiceText(ChoiceText::POS_DOWN);
-	choiceText->addChoice("Novo jogo");
-	//choiceText->addChoice("Carregar jogo");
-	//choiceText->addChoice("Opções");
-	//choiceText->addChoice("Créditos");
-	choiceText->addChoice("Sair do jogo");
+        if(gameData->language == GameData::LANGUAGE_PORTUGUESE) {
+            choiceText->addChoice("Novo jogo");
+            //choiceText->addChoice("Carregar jogo");
+            //choiceText->addChoice("Opções");
+            //choiceText->addChoice("Créditos");
+            choiceText->addChoice("Sair do jogo");
+        } else {
+            choiceText->addChoice("New Game");
+            //choiceText->addChoice("Load game");
+            //choiceText->addChoice("Options");
+            //choiceText->addChoice("Credits");
+            choiceText->addChoice("Exit game");
+        }
+
 
 	modalManager->pushModal(choiceText);
 

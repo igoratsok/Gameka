@@ -23,6 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include <QtGui/QApplication>
 #include <QLocale>
+
 #include <QTranslator>
 #include <QIcon>
 #include <exception>
@@ -47,11 +48,25 @@ int main(int argc, char **argv)
     QApplication a(argc, argv);
 
     QTranslator translator;
-    if(!translator.load("gameka_tr_en")) {
-        std::cout << "Fail!!" << std::endl;
-        system("pwd");
+
+    switch(QLocale::system().language()) {
+    case QLocale::English:
+        translator.load("gameka_tr_en");
+        a.installTranslator(&translator);
+        break;
+    case QLocale::Portuguese:
+
+        break;
+    default:
+        translator.load("gameka_tr_en");
+        a.installTranslator(&translator);
+        break;
     }
-    a.installTranslator(&translator);
+
+
+
+
+
 
     Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 640);
 
