@@ -57,6 +57,12 @@ int main(int argc, char **argv)
     case QLocale::Portuguese:
 
         break;
+    case QLocale::Brazil:
+
+        break;
+    case QLocale::Portugal:
+
+        break;
     default:
         translator.load("gameka_tr_en");
         a.installTranslator(&translator);
