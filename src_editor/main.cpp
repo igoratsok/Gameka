@@ -23,6 +23,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include <QtGui/QApplication>
 #include <QLocale>
+#include <QString>
 
 #include <QTranslator>
 #include <QIcon>
@@ -47,12 +48,37 @@ int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
 
+
+
+
+
+
+
+
+    Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 640);
+
+    /* inicializando uma instância do GameData */
+    GameData *gameData;
+    gameData = GameData::getInstance();
+    gameData->argv0 = QString(argv[0]);
+
     QTranslator translator;
 
     switch(QLocale::system().language()) {
     case QLocale::English:
+#ifdef Q_WS_MACX
+        QString argv0 = GameData::getInstance()->argv0;
+        QString appBundlePath = QString(argv0.toStdString().substr(0, argv0.lastIndexOf('/')).c_str());
+        QString dataFolder = appBundlePath.append("/../Resources/data/translations/gameka_tr_en");
+
+
+        translator.load(dataFolder);
+        a.installTranslator(&translator);
+#elsif
         translator.load("data/translations/gameka_tr_en");
         a.installTranslator(&translator);
+#endif
+
         break;
     case QLocale::Portuguese:
 
@@ -68,18 +94,6 @@ int main(int argc, char **argv)
         a.installTranslator(&translator);
         break;
     }
-
-
-
-
-
-
-    Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 640);
-
-    /* inicializando uma instância do GameData */
-    GameData *gameData;
-    gameData = GameData::getInstance();
-    gameData->argv0 = QString(argv[0]);
 
 
     /* construindo o sistema */
